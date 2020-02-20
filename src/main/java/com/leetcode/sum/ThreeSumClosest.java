@@ -43,6 +43,7 @@ public class ThreeSumClosest {
     }
 
     /**
+     * 排序 + 二分查找
      * Runtime: 7 ms, faster than 30.18% of Java online submissions for 3Sum Closest.
      * Memory Usage: 38.5 MB, less than 6.67% of Java online submissions for 3Sum Closest.
      */
@@ -97,6 +98,7 @@ public class ThreeSumClosest {
     }
 
     /**
+     * 排序 + 双指针
      * Runtime: 3 ms, faster than 98.36% of Java online submissions for 3Sum Closest.
      * Memory Usage: 38.6 MB, less than 6.67% of Java online submissions for 3Sum Closest.
      */
