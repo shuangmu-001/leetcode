@@ -1,4 +1,6 @@
-package com.leetcode.integerAndRoman;
+package com.leetcode.integers;
+
+import com.leetcode.integers.RomanToInteger;
 
 /**
  * @author wcl
