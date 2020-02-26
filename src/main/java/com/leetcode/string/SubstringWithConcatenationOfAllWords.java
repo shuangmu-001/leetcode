@@ -9,6 +9,7 @@ import java.util.List;
  * TODO {@link "https://leetcode.com/problems/substring-with-concatenation-of-all-words/"}
  * 实现排列组合
  * @see GenerateParentheses
+ * @see com.leetcode.arrays.Permutations
  */
 public class SubstringWithConcatenationOfAllWords {
     /**
@@ -38,7 +39,9 @@ public class SubstringWithConcatenationOfAllWords {
         }
 
 
-        return null;
+
+
+        return result;
     }
 
 //    public static void
