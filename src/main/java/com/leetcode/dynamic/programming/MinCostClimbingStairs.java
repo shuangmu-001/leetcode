@@ -4,6 +4,7 @@ package com.leetcode.dynamic.programming;
  * @author wcl
  * @date 12:02 PM 2020/2/26
  * {@link "https://leetcode.com/problems/min-cost-climbing-stairs/"}
+ * @see ClimbingStairs
  */
 public class MinCostClimbingStairs {
     /**
