@@ -1,9 +1,11 @@
 package com.leetcode.dynamic.programming;
 
+import com.leetcode.Utils;
+
 /**
  * @author wcl
  * @date 7:48 PM 2020/2/25
- * TODO {@link "https://leetcode.com/problems/divisor-game/"}
+ * {@link "https://leetcode.com/problems/divisor-game/"}
  */
 public class DivisorGame {
     /**
@@ -26,13 +28,36 @@ public class DivisorGame {
      *
      * Note:1 <= N <= 1000
      *
-     *
      */
     public static boolean divisorGame(int N) {
-        return true;
+        if(N == 1) {
+            return false;
+        }
+
+        if(N == 2) {
+            return true;
+        }
+        // 如果 A
+        int[] dp = new int[N + 1];
+        dp[1] = -1;
+        dp[2] = 1;
+        for (int i = 3; i <= N; i++) {
+            for (int j = 1; j < i; j++) {
+                if(i % j == 0 && dp[i - j] == 0) {
+                    dp[i] = 1;
+                    break;
+                }
+            }
+            if(dp[i] == 0) {
+                // 奇数和偶数的关系 --> (N & 1) == 0
+                dp[i] = -dp[i - 1];
+            }
+        }
+        return dp[N] == 1;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(divisorGame(100));
+        System.out.println(!divisorGame(101));
     }
 }
