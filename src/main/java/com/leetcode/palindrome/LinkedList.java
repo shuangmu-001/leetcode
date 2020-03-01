@@ -1,7 +1,7 @@
 package com.leetcode.palindrome;
 
 
-import com.leetcode.ListNode;
+import com.leetcode.graph.tree.linkedList.ListNode;
 
 /**
  * @author wcl

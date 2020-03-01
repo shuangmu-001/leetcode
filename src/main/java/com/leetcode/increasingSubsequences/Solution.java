@@ -1,7 +1,6 @@
 package com.leetcode.increasingSubsequences;
 
-import com.leetcode.Utils;
-import com.leetcode.dynamic.programming.NumberOfLongestIncreasingSubsequence;
+import com.leetcode.dp.NumberOfLongestIncreasingSubsequence;
 
 import java.util.*;
 
