@@ -1,4 +1,4 @@
-package com.leetcode.graph.tree;
+package com.leetcode.graph.tree.bt;
 
 /**
  * @author wcl
