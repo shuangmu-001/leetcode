@@ -1,13 +1,10 @@
-package com.leetcode.palindrome;
-
-
-import com.leetcode.graph.tree.linkedList.ListNode;
+package com.leetcode.graph.tree.linkedList;
 
 /**
  * @author wcl
  * @date 4:19 PM 2019/12/23
  */
-public class LinkedList {
+public class Palindrome {
     /**
      * Given a singly linked list, determine if it is a palindrome.
      */
@@ -71,5 +68,4 @@ public class LinkedList {
         System.out.println(isPalindrome(listNode1));
 
     }
-
 }
