@@ -1,5 +1,6 @@
 package com.leetcode.graph.tree.bt;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,6 +25,26 @@ public class BinaryTreePaths {
      * Explanation: All root-to-leaf paths are: 1->2->5, 1->3
      */
     public List<String> binaryTreePaths(TreeNode root) {
-        return null;
+        List<String> results = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        traversal(root, sb, results);
+        return results;
+    }
+
+    public void traversal(TreeNode root, StringBuilder sb, List<String> strs) {
+        if(root == null) {
+            return;
+        }
+        int length = sb.length();
+        sb.append(root.val);
+        if(root.left == null && root.right == null) {
+            strs.add(sb.toString());
+        } else {
+            sb.append("->");
+            traversal(root.left, sb, strs);
+            traversal(root.right, sb, strs);
+        }
+        sb.setLength(length);
+
     }
 }
