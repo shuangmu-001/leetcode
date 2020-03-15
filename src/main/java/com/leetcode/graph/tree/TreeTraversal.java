@@ -1,5 +1,7 @@
 package com.leetcode.graph.tree;
 
+import com.leetcode.graph.tree.bt.TreeNode;
+
 import java.util.List;
 
 /**
@@ -46,4 +48,17 @@ public class TreeTraversal {
             System.out.println(root.val);
         }
     }
+
+    public static int sum(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        // 左边节点和
+        int left = sum(root.left);
+        // 右边节点和
+        int right = sum(root.right);
+
+        return left + right + root.val;
+    }
+
 }

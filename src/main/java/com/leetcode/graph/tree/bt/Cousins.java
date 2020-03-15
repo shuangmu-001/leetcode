@@ -1,5 +1,8 @@
 package com.leetcode.graph.tree.bt;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * @author wcl
  * @date 3:58 PM 2020/3/13
@@ -28,8 +31,33 @@ public class Cousins {
      *      The number of nodes in the tree will be between 2 and 100.
      *      Each node has a unique integer value from 1 to 100.
      */
+    // 深度相同，父节点不同
+    int xP = -1;
+    int yP = -1;
+    int xDepth = -1;
+    int yDepth = -1;
     public boolean isCousins(TreeNode root, int x, int y) {
-        return false;
+        cousinsHelper(root, root, 0, x, y);
+        return xP != yP && xDepth == yDepth;
+    }
+
+    public void cousinsHelper(TreeNode root, TreeNode parent, int depth, int x, int y) {
+        if(xP != -1 && yP != -1) {
+            return;
+        }
+        if(root != null) {
+            int len = depth + 1;
+            cousinsHelper(root.left, root, len, x, y);
+            if(root.val == x) {
+                xP = parent.val;
+                xDepth = depth;
+            }
+            if(root.val == y) {
+                yP = parent.val;
+                yDepth = depth;
+            }
+            cousinsHelper(root.right, root, len, x, y);
+        }
     }
 
 }

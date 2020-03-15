@@ -5,7 +5,7 @@ package com.leetcode.graph.tree.bt;
  * @date 8:26 PM 2020/3/9
  * {@link "https://leetcode.com/problems/maximum-depth-of-binary-tree/"}
  */
-public class MaximumDepthOfBinaryTree {
+public class MaximumDepth {
     /**
      * Given a binary tree, find its maximum depth.
      * The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
@@ -38,7 +38,7 @@ public class MaximumDepthOfBinaryTree {
             postOrder(root.right, len);
         }
     }
-
+    // other
     public int maxDepth(TreeNode root) {
         if(root==null) {
             return 0;
