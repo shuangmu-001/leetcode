@@ -31,6 +31,6 @@ public class FindMode {
      * (Assume that the implicit stack space incurred due to recursion does not count).
      */
     public int[] findMode(TreeNode root) {
-
+        return null;
     }
 }

@@ -27,6 +27,14 @@ public class TreeTraversal {
         }
     }
 
+    public void preOrder(TreeNode root) {
+        if(root != null) {
+            System.out.println(root.val);
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+    }
+
     public void inOrder(Node root) {
 
         if(root.children != null) {
