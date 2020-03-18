@@ -1,7 +1,5 @@
 package com.leetcode.graph.tree.bt;
 
-import com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST;
-
 import static com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST.sortedArrayToBST;
 
 /**
@@ -36,9 +34,6 @@ public class Tilt {
      */
     private static int tilt;
     public int findTilt(TreeNode root) {
-        if(root == null) {
-            return 0;
-        }
         findTiltHelper(root);
         return tilt;
     }

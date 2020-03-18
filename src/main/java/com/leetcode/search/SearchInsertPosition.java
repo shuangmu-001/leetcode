@@ -1,12 +1,14 @@
-package com.leetcode.searchInsertPosition;
+package com.leetcode.search;
 
 /**
  * @author wcl
  * @date 2:24 PM 2020/1/15
  * {@link "https://leetcode.com/problems/search-insert-position/"}
  * 二分查找法
+ * @see com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST
+ * @see com.leetcode.graph.tree.bt.CountCompleteTreeNodes
  */
-public class Solution {
+public class SearchInsertPosition {
     /**
      * Given a sorted array and a target value,
      * return the index if the target is found. If not,

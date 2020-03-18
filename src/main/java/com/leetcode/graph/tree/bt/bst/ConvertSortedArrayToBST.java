@@ -47,7 +47,10 @@ public class ConvertSortedArrayToBST {
         return root;
     }
 
-
+    /**
+     * 二分
+     * @see com.leetcode.graph.tree.bt.CountCompleteTreeNodes
+     */
     private TreeNode sortedArrayToBST(int[] nums, int start, int end){
         if(start >= end) return null;
         // if(start == end) return new TreeNode(nums[start]);
