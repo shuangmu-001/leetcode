@@ -1,6 +1,5 @@
 package com.leetcode.graph.tree.bt;
 
-import java.util.Stack;
 
 /**
  * @author wcl
@@ -74,10 +73,12 @@ public class CountCompleteTreeNodes {
      */
     private int countLastLevel(TreeNode root, int depth) {
         if(depth == 1) {
-            if(root.right == null) {
+            if(root.right != null) {
+                return 2;
+            } else if(root.left != null){
                 return 1;
             } else {
-                return 2;
+                return 0;
             }
         }
         int level = 1;
