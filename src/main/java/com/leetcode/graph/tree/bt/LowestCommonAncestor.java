@@ -31,6 +31,36 @@ public class LowestCommonAncestor {
      * p and q are different and both values will exist in the binary tree.
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        return null;
+        return lowestCommonAncestor(root, p, q, root);
+    }
+    boolean pFlag = false;
+    boolean qFlag = false;
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q, TreeNode ancestor) {
+        if(root == null) {
+            return null;
+        }
+        if(root.val == p.val) {
+            pFlag = true;
+        }
+        if(root.val == q.val) {
+            qFlag = true;
+        }
+        TreeNode left;
+        TreeNode right;
+        if(pFlag && qFlag) {
+            return ancestor;
+        }
+        if(pFlag || qFlag) {
+            left = lowestCommonAncestor(root.left, p, q, ancestor);
+        } else {
+            left = lowestCommonAncestor(root.left, p, q, root.left);
+        }
+
+        if(pFlag || qFlag) {
+            right = lowestCommonAncestor(root.right, p, q, ancestor);
+        } else {
+            right = lowestCommonAncestor(root.right, p, q, root.right);
+        }
+        return left != null ? left : right;
     }
 }
