@@ -5,7 +5,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 /**
  * @author wcl
  * @date 10:48 PM 2020/3/20
- * <a href="https://leetcode.com/problems/balance-a-binary-search-tree/">
+ * TODO <a href="https://leetcode.com/problems/balance-a-binary-search-tree/">
  *     Balance a Binary Search Tree</a>
  */
 public class Balance {

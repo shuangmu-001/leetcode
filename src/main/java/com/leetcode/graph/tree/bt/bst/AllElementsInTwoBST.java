@@ -2,6 +2,7 @@ package com.leetcode.graph.tree.bt.bst;
 
 import com.leetcode.graph.tree.bt.TreeNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,6 +10,7 @@ import java.util.List;
  * @date 10:21 AM 2020/3/20
  * <a href="https://leetcode.com/problems/all-elements-in-two-binary-search-trees/">
  *     All Elements in Two Binary Search Trees</a>
+ * @see com.leetcode.graph.tree.bt.MorrisTraversal
  */
 public class AllElementsInTwoBST {
     /**
@@ -38,8 +40,68 @@ public class AllElementsInTwoBST {
      * Constraints:
      *      Each tree has at most 5000 nodes.
      *      Each node's value is between [-10^5, 10^5].
+     *
      */
+
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
-        return null;
+        List<Integer> results = new ArrayList<>();
+        TreeNode cur1 = root1;
+        TreeNode cur2 = root2;
+        while (cur1 != null && cur2 != null) {
+            if(cur1.left == null && cur2.left == null) {
+                if(cur1.val < cur2.val) {
+                    results.add(cur1.val);
+                    cur1 = cur1.right;
+                } else {
+                    results.add(cur2.val);
+                    cur2 = cur2.right;
+                }
+            }else {
+                cur1 = getCur(cur1);
+                cur2 = getCur(cur2);
+            }
+
+        }
+        addElements(cur1, results);
+        addElements(cur2, results);
+        return results;
+    }
+
+    public void addElements(TreeNode root, List<Integer> result) {
+        TreeNode cur = root;
+        TreeNode before;
+        while (cur != null) {
+            if(cur.left == null) {
+                result.add(cur.val);
+                cur = cur.right;
+            } else {
+                before = cur.left;
+                while(before.right != null) {
+                    before = before.right;
+                }
+                before.right = cur;
+                TreeNode temp = cur;
+                cur = cur.left;
+                temp.left = null;
+            }
+        }
+    }
+
+    public TreeNode getCur(TreeNode root) {
+        if(root == null ) {
+            return null;
+        }
+        if(root.left == null) {
+            return root;
+        }
+        TreeNode before = root.left;
+        while (before.right != null) {
+            before = before.right;
+        }
+        before.right = root;
+        TreeNode temp = root;
+        root = root.left;
+        temp.left = null;
+        return root;
     }
 }
