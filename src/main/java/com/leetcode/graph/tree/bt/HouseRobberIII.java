@@ -42,17 +42,7 @@ public class HouseRobberIII {
     public int rob(TreeNode root) {
         return robHelper(root).second;
     }
-    public void robHelper(TreeNode root, int level, List<Integer> levelSum) {
-        if(root == null) {
-            return;
-        }
-        if(levelSum.size() <= level) {
-            levelSum.add(0);
-        }
-        levelSum.set(level, levelSum.get(level) + root.val);
-        robHelper(root.left, level + 1, levelSum);
-        robHelper(root.right, level + 1, levelSum);
-    }
+
     // first + first + root.val, second + second
     public RobInfo robHelper(TreeNode root) {
         if(root == null) {

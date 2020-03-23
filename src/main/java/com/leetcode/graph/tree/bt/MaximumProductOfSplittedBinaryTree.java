@@ -5,6 +5,7 @@ package com.leetcode.graph.tree.bt;
  * @date 2:50 PM 2020/3/20
  * <a href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/">
  *     Maximum Product of Splitted Binary Tree</a>
+ * long 解决 int 数据溢出
  */
 public class MaximumProductOfSplittedBinaryTree {
     /**
@@ -33,4 +34,37 @@ public class MaximumProductOfSplittedBinaryTree {
      *      Each tree has at most 50000 nodes and at least 2 nodes.
      *      Each node's value is between [1, 10000].
      */
+    private long sum;
+    private long max;
+    static int MOD = 1000000007;
+    public int maxProduct(TreeNode root) {
+        sum(root);
+        dfs(root);
+        return (int)(max % MOD);
+    }
+
+    public void sum(TreeNode root) {
+        if(root == null) {
+            return;
+        }
+        sum += root.val;
+        sum(root.left);
+        sum(root.right);
+    }
+
+    public long dfs(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        long left = dfs(root.left);
+        long right =dfs(root.right);
+        long sum1 = left + right + root.val;
+        long sum2 = sum - sum1;
+
+        max = Math.max(sum1 * sum2, max);
+
+        return sum1;
+    }
+
+
 }
