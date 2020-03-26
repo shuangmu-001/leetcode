@@ -31,18 +31,35 @@ public class ConstructBTFromInorderAndPostorderTraversal {
     private Set<Integer> set = new HashSet<>();
     boolean first = true;
     public TreeNode buildTree(int[] inorder, int[] postorder) {
+
         if(first) {
-            postIndex = postorder.length;
-            
+            postIndex = postorder.length - 1;
+            inIndex = inorder.length - 1;
+            first = false;
         }
-        return null;
+        if(postIndex < 0) {
+            return null;
+        }
+        if (postIndex < postorder.length - 1 && postorder[postIndex + 1] == inorder[inIndex]) {
+            inIndex--;
+            return null;
+        }
+        if(set.contains(inorder[inIndex])) {
+            inIndex--;
+            return null;
+        }
+        TreeNode root = new TreeNode(postorder[postIndex--]);
+        set.add(root.val);
+        root.right = buildTree(inorder, postorder);
+        root.left = buildTree(inorder, postorder);
+        return root;
     }
     public static void main(String[] args) {
-        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{3,9,20,15,7}, new int[]{9,3,15,20,7}));
-        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{3,9,11,20,15,7}, new int[]{9,11,3,15,20,7}));
-        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{3,9,11,6,20,15,7}, new int[]{9,6,11,3,15,20,7}));
-        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{1,2,3,4,5,6}, new int[]{1,2,3,4,5,6}));
-        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{1,2,3,4,5,6}, new int[]{6,5,4,3,2,1}));
+
+
+        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{9,3,15,20,7}, new int[]{9,15,7,20,3}));
+        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{9,11,3,15,20,7}, new int[]{11,9,15,7,20,3}));
+        System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{9,6,11,3,15,20,7}, new int[]{6,11,9,15,7,20,3}));
         System.out.println(new ConstructBTFromInorderAndPostorderTraversal().buildTree(new int[]{1}, new int[]{1}));
     }
 }

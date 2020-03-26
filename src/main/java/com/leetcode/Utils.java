@@ -27,6 +27,15 @@ public class Utils {
         System.out.println();
     }
 
+    public static void printArrays(long[] arr) {
+        System.out.println("------一维数组的打印----------");
+        for (long ints : arr) {
+            System.out.print(ints);
+            System.out.print(",");
+        }
+        System.out.println();
+    }
+
     public static void printArrays(char[] arr) {
         System.out.println("------一维数组的打印----------");
         for (char ints : arr) {

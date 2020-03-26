@@ -1,4 +1,4 @@
-package com.leetcode.arrays;
+package com.leetcode.dp;
 
 /**
  * @author wcl
@@ -39,6 +39,7 @@ public class BestTimeToBuyAndSellStock {
         }
         return price;
     }
+
 
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[]{7,1,5,3,6,4}) == 5);
