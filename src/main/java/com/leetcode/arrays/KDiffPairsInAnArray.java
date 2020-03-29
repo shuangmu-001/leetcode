@@ -1,4 +1,4 @@
-package com.leetcode.KDiffPairsInAnArray;
+package com.leetcode.arrays;
 
 import com.leetcode.Utils;
 
@@ -11,7 +11,7 @@ import java.util.Map;
  * @date 2:40 PM 2020/1/3
  * {@link <https://leetcode.com/problems/k-diff-pairs-in-an-array/>}
  */
-public class Solution {
+public class KDiffPairsInAnArray {
     /**
      * Given an array of integers and an integer k,
      * you need to find the number of unique k-diff pairs in the array.

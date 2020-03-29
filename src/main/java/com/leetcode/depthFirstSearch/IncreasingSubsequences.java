@@ -1,4 +1,4 @@
-package com.leetcode.increasingSubsequences;
+package com.leetcode.depthFirstSearch;
 
 import com.leetcode.dp.NumberOfLongestIncreasingSubsequence;
 
@@ -10,7 +10,7 @@ import java.util.*;
  * TODO {@link "https://leetcode.com/problems/increasing-subsequences/"}
  * @see NumberOfLongestIncreasingSubsequence
  */
-public class Solution {
+public class IncreasingSubsequences {
     /**
      * Given an integer array,
      * your task is to find all the different possible increasing subsequences of the given array,

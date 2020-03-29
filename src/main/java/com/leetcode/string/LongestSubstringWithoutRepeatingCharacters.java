@@ -1,4 +1,4 @@
-package com.leetcode.longestSubstringWithoutRepeatingCharacters;
+package com.leetcode.string;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.List;
  * Explanation: The answer is "wke", with the length of 3.
  *              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
-public class Solution {
+public class LongestSubstringWithoutRepeatingCharacters {
 
     public static int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;

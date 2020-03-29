@@ -1,10 +1,10 @@
-package com.leetcode.palindrome;
+package com.leetcode.integers;
 
 /**
  * @author wcl
  * @date 4:18 PM 2019/12/23
  */
-public class Number {
+public class Palindrome {
     public static boolean isPalindrome(int x) {
         if(x < 0) {
             return false;

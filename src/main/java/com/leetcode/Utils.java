@@ -18,6 +18,19 @@ public class Utils {
         }
     }
 
+    public static void printThreeArrays(int[][][] arr) {
+        System.out.println("------三维数组的打印----------");
+        for (int[][] ints : arr) {
+            System.out.println("----------------");
+            for (int[] i : ints) {
+                for (int j : i) {
+                    System.out.print(String.format("%11d,", j));
+                }
+                System.out.println();
+            }
+        }
+    }
+
     public static void printArrays(int[] arr) {
         System.out.println("------一维数组的打印----------");
         for (int ints : arr) {

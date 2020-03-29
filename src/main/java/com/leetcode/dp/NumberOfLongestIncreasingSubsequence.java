@@ -1,6 +1,8 @@
 package com.leetcode.dp;
 
 
+import com.leetcode.depthFirstSearch.IncreasingSubsequences;
+
 import static com.leetcode.Utils.printTwoArrays;
 
 
@@ -8,7 +10,7 @@ import static com.leetcode.Utils.printTwoArrays;
  * @author wcl
  * @date 10:40 AM 2020/1/3
  * TODO {@link "https://leetcode.com/problems/number-of-longest-increasing-subsequence/"}
- * @see com.leetcode.increasingSubsequences.Solution
+ * @see IncreasingSubsequences
  * @see LongestIncreasingSubsequence
  */
 public class NumberOfLongestIncreasingSubsequence {

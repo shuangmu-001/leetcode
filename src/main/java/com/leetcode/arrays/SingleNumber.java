@@ -1,4 +1,4 @@
-package com.leetcode.singleNumber;
+package com.leetcode.arrays;
 
 /**
  * Given a non-empty array of integers, every element appears twice except for one. Find that single one

@@ -1,4 +1,4 @@
-package com.leetcode.minimumAbsoluteDifference;
+package com.leetcode.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.List;
  * @date 11:30 AM 2020/1/15
  * {@link "https://leetcode.com/problems/minimum-absolute-difference/"}
  */
-public class Solution {
+public class MinimumAbsoluteDifference {
     /**
      * Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.
      * <p>

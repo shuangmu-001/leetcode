@@ -1,4 +1,4 @@
-package com.leetcode.medianOfTwoSortedArrays;
+package com.leetcode.arrays;
 
 /**
  * There are two sorted arrays nums1 and nums2 of size m and n respectively.
@@ -20,7 +20,7 @@ package com.leetcode.medianOfTwoSortedArrays;
  *
  * The median is (2 + 3)/2 = 2.5
  */
-public class Solution {
+public class MedianOfTwoSortedArrays {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
@@ -54,7 +54,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        MedianOfTwoSortedArrays solution = new MedianOfTwoSortedArrays();
         int[] nums1 = {1, 3};
         int[] nums2 = {2};
         System.out.println(solution.findMedianSortedArrays(nums1, nums2) == 2.0);

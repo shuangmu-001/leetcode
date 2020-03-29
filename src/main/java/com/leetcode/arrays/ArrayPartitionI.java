@@ -1,4 +1,4 @@
-package com.leetcode.arrayPartitionI;
+package com.leetcode.arrays;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @Date: Create in 下午2:19 2018/8/29
  * @Modified By:
  */
-public class Solution {
+public class ArrayPartitionI {
     /**
      * Given an array of 2n integers, your task is to group these integers into n pairs of integer,
      * say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n

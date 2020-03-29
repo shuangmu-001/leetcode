@@ -1,10 +1,10 @@
-package com.leetcode.containerWithMostWater;
+package com.leetcode.arrays;
 
 /**
  * @author wcl
  * @date 2:32 PM 2019/12/26
  */
-public class Solution {
+public class ContainerWithMostWater {
 
     /**
      * Given n non-negative integers a1, a2, ..., an ,

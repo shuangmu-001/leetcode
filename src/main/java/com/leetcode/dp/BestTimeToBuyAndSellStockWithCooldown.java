@@ -23,7 +23,7 @@ public class BestTimeToBuyAndSellStockWithCooldown {
      * Output: 3
      * Explanation: transactions = [buy, sell, cooldown, buy, sell]
      */
-    public static int maxProfit1(int[] prices) {
+    public static int maxProfit(int[] prices) {
         if(prices == null || prices.length < 2) {
             return 0;
         }
@@ -44,24 +44,7 @@ public class BestTimeToBuyAndSellStockWithCooldown {
 
         return max;
     }
-    // TODO
-    public static int maxProfit(int[] prices) {
-        if(prices == null || prices.length < 2) {
-            return 0;
-        }
 
-        int cash = 0, hold = -prices[0], frost = 0;
-        // cash 是利润， hold是持有 frost 冻结
-        for (int i = 1; i < prices.length; i++) {
-            cash = Math.max(cash, hold + prices[i] - frost);
-            // cash
-            hold = Math.max(hold, cash - prices[i]);
-            if(i >= 2) {
-               frost = Math.max(frost, hold - prices[i]);
-            }
-        }
-        return cash;
-    }
 
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[]{6,1,6,4,3,0,2}) == 7);

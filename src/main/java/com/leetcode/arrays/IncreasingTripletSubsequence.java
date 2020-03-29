@@ -1,11 +1,11 @@
-package com.leetcode.increasingTripletSubsequence;
+package com.leetcode.arrays;
 
 /**
  * @author wcl
  * @date 3:13 PM 2020/1/2
  * {@link <https://leetcode.com/problems/increasing-triplet-subsequence/>}
  */
-public class Solution {
+public class IncreasingTripletSubsequence {
     /**
      * Given an unsorted array return whether an increasing subsequence
      * of length 3 exists or not in the array.

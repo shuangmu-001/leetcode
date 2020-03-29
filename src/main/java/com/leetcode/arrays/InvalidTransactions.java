@@ -1,4 +1,4 @@
-package com.leetcode.invalidTransactions;
+package com.leetcode.arrays;
 
 import com.leetcode.Utils;
 
@@ -10,7 +10,7 @@ import java.util.*;
  * TODO {@link <https://leetcode.com/problems/invalid-transactions/>}
  * TODO 基数排序
  */
-public class Solution {
+public class InvalidTransactions {
     /**
      * A transaction is possibly invalid if:
      * <p>

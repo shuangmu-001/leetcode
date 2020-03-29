@@ -1,4 +1,4 @@
-package com.leetcode.arrayPartitionI;
+package com.leetcode;
 
 /**
  * @Author: wcl
