@@ -30,6 +30,9 @@ public class AsFarFromLandAsPossible {
      *      grid[i][j] is 0 or 1
      */
     public int maxDistance(int[][] grid) {
+
         return 0;
     }
+
+
 }

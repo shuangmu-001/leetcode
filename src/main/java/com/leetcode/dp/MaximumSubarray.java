@@ -1,4 +1,4 @@
-package com.leetcode.sumSub;
+package com.leetcode.dp;
 
 /**
  * @Author: wcl
@@ -6,7 +6,7 @@ package com.leetcode.sumSub;
  * @Date: Create in 11:14 上午 2019/11/12
  * @Modified By:
  */
-public class Solution {
+public class MaximumSubarray {
 
     public static void main(String[] args) {
 //        new Thread(() ->{

@@ -18,8 +18,6 @@ package com.leetcode.arrays;
 public class SingleNumber {
     /**
      *
-     * @param nums
-     * @return
      */
     public int singleNumber(int[] nums) {
         int s = 0;

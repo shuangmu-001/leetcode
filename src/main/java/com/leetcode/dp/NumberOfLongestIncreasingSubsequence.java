@@ -1,7 +1,10 @@
 package com.leetcode.dp;
 
 
-import com.leetcode.depthFirstSearch.IncreasingSubsequences;
+
+import com.leetcode.Utils;
+
+import java.util.Arrays;
 
 import static com.leetcode.Utils.printTwoArrays;
 
@@ -10,7 +13,6 @@ import static com.leetcode.Utils.printTwoArrays;
  * @author wcl
  * @date 10:40 AM 2020/1/3
  * TODO {@link "https://leetcode.com/problems/number-of-longest-increasing-subsequence/"}
- * @see IncreasingSubsequences
  * @see LongestIncreasingSubsequence
  */
 public class NumberOfLongestIncreasingSubsequence {
@@ -33,7 +35,7 @@ public class NumberOfLongestIncreasingSubsequence {
      * @param nums an unsorted array of integers
      * @return num
      */
-    public static int findNumberOfLIS(int[] nums) {
+    public static int findNumberOfLIS1(int[] nums) {
         int length = nums.length;
         if (length == 0 || length == 1) {
             return length;
@@ -63,6 +65,43 @@ public class NumberOfLongestIncreasingSubsequence {
         }
         printTwoArrays(results);
         return result + 1;
+    }
+
+    public static int findNumberOfLIS(int[] nums) {
+        int length = nums.length;
+        if (length == 0 || length == 1) {
+            return length;
+        }
+        int result = 0;
+        int[] dp = new int[length];
+        int[] count = new int[length];
+        int num = 0;
+        Arrays.fill(dp, 1);
+        Arrays.fill(count, 1);
+        for (int i = 1; i < length; i++) {
+            for (int j = 0; j < i; j++) {
+                if(nums[j] < nums[i]) {
+                    if(dp[j] + 1 > dp[i]) {
+                       dp[i] = dp[j] + 1;
+                    } else if(dp[j] + 1 == dp[i]) {
+                        count[i] += count[j];
+                    } else {
+                        count[i] = 1;
+                    }
+                }
+            }
+            if(result < dp[i]) {
+                result = dp[i];
+                num = count[i];
+            } else if(result == dp[i]) {
+                num++;
+            }
+        }
+        if(result == 1) {
+            return length;
+        }
+        Utils.printArrays(count);
+        return num;
     }
 
     public static void main(String[] args) {

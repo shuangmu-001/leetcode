@@ -25,50 +25,36 @@ public class LongestValidParentheses {
     // 考虑所有情况 考虑细节
     // 什么情况下把所有的细节都包括呢
     public static int longestValidParentheses(String s) {
-        int maxResult = 0;
-        int before = 0;
-        int current = 0;
-        Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < s.length(); i++) {
+        if(s == null || s.length() < 1) {
+            return 0;
+        }
+        int[] dp = new int[s.length()];
+        dp[0] = s.charAt(0) == '(' ? 1 : 0;
+        int len = 0;
+        int result = 0;
+        for (int i = 1; i < s.length(); i++) {
             if(s.charAt(i) == '(') {
-                if(stack.isEmpty()) {
-                    before += current;
-                    current = 0;
-                }
-                stack.push('(');
-            } else if(!stack.isEmpty()){
-                current++;
-                stack.pop();
+                dp[i] = dp[i - 1] + 1;
+            } else if(dp[i - 1] > 0) {
+                len += 2;
+                dp[i] = dp[i - 1] - 1;
             } else {
-                current = before + current;
-                maxResult = Math.max(current, maxResult);
-                current = 0;
-                before = 0;
-            }
-            if(i == s.length() - 1) {
-                if(s.charAt(i) == '(') {
-                    before += current;
-                    maxResult = Math.max(before, maxResult);
-                } else if(!stack.isEmpty()){
-                    maxResult = Math.max(current, maxResult);
-                } else {
-                    current += before;
-                    maxResult = Math.max(current, maxResult);
-                }
+                result = Math.max(len, result);
+                len = 0;
             }
         }
-
-        return maxResult << 1;
+        result = Math.max(len, result);
+        return result;
     }
 
     public static void main(String[] args) {
-//        System.out.println(longestValidParentheses("(()") == 2);
-//        System.out.println(longestValidParentheses(")()())") == 4);
-//        System.out.println(longestValidParentheses(")()(()") == 2);
-//        System.out.println(longestValidParentheses(")()(())") == 6);
-//        System.out.println(longestValidParentheses(")()(()))()") == 6);
-//        System.out.println(longestValidParentheses(")()(((())))(") == 10);
-//        System.out.println(longestValidParentheses(")(((((()())()()))()(()))(") == 22);
+        System.out.println(longestValidParentheses("(()") == 2);
+        System.out.println(longestValidParentheses(")()())") == 4);
+        System.out.println(longestValidParentheses(")()(()") == 2);
+        System.out.println(longestValidParentheses(")()(())") == 6);
+        System.out.println(longestValidParentheses(")()(()))()") == 6);
+        System.out.println(longestValidParentheses(")()(((())))(") == 10);
+        System.out.println(longestValidParentheses(")(((((()())()()))()(()))(") == 22);
         System.out.println(longestValidParentheses("(()(((()") == 2);
     }
 

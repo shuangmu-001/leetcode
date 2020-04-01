@@ -1,4 +1,4 @@
-package com.leetcode.depthFirstSearch;
+package com.leetcode.graph.dfs;
 
 import com.leetcode.dp.NumberOfLongestIncreasingSubsequence;
 

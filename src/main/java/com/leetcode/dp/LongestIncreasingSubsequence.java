@@ -3,12 +3,14 @@ package com.leetcode.dp;
 
 import com.leetcode.Utils;
 
+import java.util.*;
+
 import static com.leetcode.Utils.printTwoArrays;
 
 /**
  * @author wcl
  * @date 6:15 PM 2019/12/26
- * TODO {@link "https://leetcode.com/problems/longest-increasing-subsequence/"}
+ * {@link "https://leetcode.com/problems/longest-increasing-subsequence/"}
  * @see NumberOfLongestIncreasingSubsequence
  */
 public class LongestIncreasingSubsequence {
@@ -128,20 +130,44 @@ public class LongestIncreasingSubsequence {
         }
         return result;
     }
-
-    public static int lengthOfLIS(int[] nums) {
+    // dp
+    public static int lengthOfLIS4(int[] nums) {
         int length = nums.length;
         if (length == 0 || length == 1) {
             return length;
         }
         int result = 1;
         int[] dp = new int[length];
-        for (int i = 0; i < length; i++) {
+        Arrays.fill(dp, 1);
+        for (int i = 1; i < length; i++) {
             for (int j = 0; j < i; j++) {
+                if(nums[j] < nums[i]) {
+                    dp[i] = Math.max(dp[j] + 1, dp[i]);
+                }
+            }
+            result = Math.max(result, dp[i]);
+        }
+        return result;
+    }
+    // O(nlogn）
+    public static int lengthOfLIS(int[] nums) {
+        int length = nums.length;
+        if (length == 0 || length == 1) {
+            return length;
+        }
+        List<Integer> lIS = new ArrayList<>();
+        lIS.add(nums[0]);
+        for (int i = 1; i < length; i++) {
+            int index = Collections.binarySearch(lIS, nums[i]);
+            if(index < 0) {
+                if(~index == lIS.size()) {
+                    lIS.add(nums[i]);
+                } else {
+                    lIS.set(~index, nums[i]);
+                }
             }
         }
-        Utils.printArrays(dp);
-        return result;
+        return lIS.size();
     }
 
     public static void main(String[] args) {
