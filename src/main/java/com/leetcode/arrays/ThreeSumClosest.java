@@ -1,4 +1,4 @@
-package com.leetcode.sum;
+package com.leetcode.arrays;
 
 
 import java.util.Arrays;

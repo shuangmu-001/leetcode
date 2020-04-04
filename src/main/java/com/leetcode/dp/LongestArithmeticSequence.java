@@ -1,5 +1,7 @@
 package com.leetcode.dp;
 
+import com.leetcode.Utils;
+
 import java.util.*;
 
 /**
@@ -37,7 +39,52 @@ public class LongestArithmeticSequence {
      * 2 <= A.length <= 2000
      * 0 <= A[i] <= 10000
      */
-    public int longestArithSeqLength(int[] A) {
-        return 0;
+    public static int longestArithSeqLength1(int[] A) {
+        Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
+        int max = 2;
+        for (int i = 0; i < A.length; i++) {
+            map.put(i, new HashMap<>());
+            for (int j = 0; j < i; j++) {
+                int arith = A[i] - A[j];
+                Map<Integer, Integer> curSubMap = map.get(i);
+                if(map.containsKey(j)) {
+                    Map<Integer, Integer> subMap = map.get(j);
+                    int count = subMap.getOrDefault(arith,1) + 1;
+                    curSubMap.put(arith, count);
+                } else {
+                    curSubMap.put(arith, 2);
+                }
+                max = Math.max(curSubMap.get(arith), max);
+            }
+        }
+        return max;
+    }
+
+    public static int longestArithSeqLength(int[] A) {
+        int n = A.length, res = 0;
+        int[][] dp = new int[n][n];
+        int[] index = new int[20001];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                // 前一个值
+                int prev = A[i] - (A[j] - A[i]);
+                if (prev < 0 || index[prev] == 0) {
+                    continue;
+                }
+                dp[i][j] = dp[index[prev] - 1][i] + 1;
+                res = Math.max(res, dp[i][j]);
+            }
+            index[A[i]] = i + 1;
+        }
+        Utils.printTwoArrays(dp);
+        return res + 2;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestArithSeqLength(new int[]{3,6,9,12}) == 4);
+        System.out.println(longestArithSeqLength(new int[]{9,4,7,2,10}) == 3);
+        System.out.println(longestArithSeqLength(new int[]{20,1,15,3,10,5,8}) == 4);
+        System.out.println(longestArithSeqLength(new int[]{20,1,15,3,10,5,8,0}) == 5);
     }
 }

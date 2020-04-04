@@ -1,5 +1,6 @@
 package com.leetcode.graph.tree.bt.bst;
 
+import com.leetcode.arrays.TwoSum;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import static com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST.sortedArray
  * @author wcl
  * @date 8:12 PM 2020/3/12
  * {@link "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"}
- * @see com.leetcode.sum.TwoSum
+ * @see TwoSum
  */
 public class TwoSumIV {
     /**
