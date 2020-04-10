@@ -3,7 +3,8 @@ package com.leetcode.greedy;
 /**
  * @author wcl
  * @date 6:38 PM 2020/2/28
- * TODO
+ * <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">
+ *     Best Time to Buy and Sell Stock II</a>
  */
 public class BestTimeToBuyAndSellStockII {
     /**
@@ -33,8 +34,24 @@ public class BestTimeToBuyAndSellStockII {
      *      Output: 0
      *      Explanation: In this case, no transaction is done, i.e. max profit = 0.
      */
+    public static int maxProfit1(int[] prices) {
+        int max = 0;
+        for (int i = 0; i < prices.length - 1; i++) {
+            if(prices[i + 1] > prices[i]) {
+                max += prices[i + 1] - prices[i];
+            }
+        }
+        return max;
+    }
+    // TODO DFS
     public static int maxProfit(int[] prices) {
-        return 0;
+        int max = 0;
+        for (int i = 0; i < prices.length - 1; i++) {
+            if(prices[i + 1] > prices[i]) {
+                max += prices[i + 1] - prices[i];
+            }
+        }
+        return max;
     }
 
     public static void main(String[] args) {

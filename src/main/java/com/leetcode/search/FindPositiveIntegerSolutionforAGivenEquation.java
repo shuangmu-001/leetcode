@@ -54,14 +54,13 @@ public class FindPositiveIntegerSolutionforAGivenEquation {
 
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 1; i <= z ; i++) {
-            int x = i;
             int left = 1;
             int right = z;
             while (left <= right) {
                 int mid = (left + right) / 2;
-                if(customfunction.f(x,mid) == z) {
-                    res.add(Arrays.asList(x, mid));
-                } else if (customfunction.f(x,mid) < z){
+                if(customfunction.f(i,mid) == z) {
+                    res.add(Arrays.asList(i, mid));
+                } else if (customfunction.f(i,mid) < z){
                     left = mid + 1;
                 } else {
                     right = mid - 1;
