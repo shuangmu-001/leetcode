@@ -23,7 +23,7 @@ public class UglyNumberII {
      *      1 is typically treated as an ugly number.
      *      n does not exceed 1690.
      */
-    // 暴力破解
+    // 暴力破解  Brute force
     public int nthUglyNumber1(int n) {
         if(n <= 6) {
             return n;

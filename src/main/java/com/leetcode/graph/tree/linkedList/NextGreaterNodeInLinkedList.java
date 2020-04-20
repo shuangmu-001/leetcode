@@ -1,7 +1,11 @@
 package com.leetcode.graph.tree.linkedList;
 
+import com.leetcode.Utils;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author wcl
@@ -35,35 +39,93 @@ public class NextGreaterNodeInLinkedList {
      *      1 <= node.val <= 10^9 for each node in the linked list.
      *      The given list has length in the range [0, 10000].
      */
-    public int[] nextLargerNodes(ListNode head) {
-      List<Integer> vals = new ArrayList<>();
-      while(head != null && head.next != null) {
-        if(head.next.val < head.val) {
-            vals.add(0);
+    // 暴力破解
+    public static int[] nextLargerNodes1(ListNode head) {
+        List<Integer> vals = new ArrayList<>();
+        while (head != null) {
+            vals.add(head.val);
+            head = head.next;
         }
-      }
-      vals.add(0);
-      int[] res = new int[vals.size()];
-      int index = 0;
-      for(int val : vals) {
-          res[index++] = val;
-      }
-      return res;
+        int[] res = new int[vals.size()];
+        for (int i = 0; i < vals.size() - 1; i++) {
+            for (int j = i + 1; j < vals.size(); j++) {
+                if (vals.get(i) < vals.get(j)) {
+                    res[i] = vals.get(j);
+                    break;
+                }
+            }
+        }
+        return res;
     }
 
-    private int max;
-    public void nextLargerNodesHelper(ListNode head, List<Integer> nodes) {
-//        if(head == null) {
-//            return;
-//        }
-//        nextLargerNodesHelper(head.next, nodes);
-//
-//        if(head.next == null || max > head.val) {
-//            nodes.add(0);
-//        } else {
-//            max = Math.max()
-//            nodes.add(Math.max())
-//        }
+    public static int[] nextLargerNodes2(ListNode head) {
+        List<Integer> vals = new ArrayList<>();
+        while (head != null) {
+            int val = head.val;
+            vals.add(val);
+            head = head.next;
+        }
+
+        int[] res = new int[vals.size()];
+        for (int i = vals.size() - 2; i >= 0 ; i--) {
+            if(vals.get(i) < vals.get(i + 1)) {
+                res[i] = vals.get(i + 1);
+            } else if (vals.get(i).equals(vals.get(i + 1))){
+                res[i] = res[i + 1];
+            } else {
+                for (int j = i + 1; j < vals.size(); j++) {
+                    if(vals.get(i) < res[j]) {
+                        res[i] = res[j];
+                        break;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    public static int[] nextLargerNodes(ListNode head) {
+        if(head == null) {
+            return new int[0];
+        }
+        int len = 0;
+        Stack<Integer> stack = new Stack<>();
+        while (head != null) {
+            int val = head.val;
+            stack.push(val);
+            head = head.next;
+            len++;
+        }
+
+        int[] res = new int[len];
+        Stack<Integer> stack1 = new Stack<>();
+        for (int i = len - 1; i >= 0 ; i--) {
+            int cur = stack.pop();
+            while(!stack1.isEmpty()) {
+                int before = stack1.pop();
+                if(before > cur) {
+                    res[i] = before;
+                    stack1.push(before);
+                    break;
+                }
+            }
+            stack1.push(cur);
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        ListNode node1 = Utils.arrayToListNode(new int[]{2,1,5});
+        System.out.println(Arrays.toString(nextLargerNodes(node1)));
+
+        ListNode node2 = Utils.arrayToListNode(new int[]{2,7,4,3,5});
+        System.out.println(Arrays.toString(nextLargerNodes(node2)));
+
+        ListNode node3 = Utils.arrayToListNode(new int[]{1,7,5,1,9,2,5,1});
+        System.out.println(Arrays.toString(nextLargerNodes(node3)));
+
+        ListNode node4 = Utils.arrayToListNode(new int[]{9,7,6,7,6,9});
+        System.out.println(Arrays.toString(nextLargerNodes(node4)));
     }
 
 }

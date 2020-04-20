@@ -1,6 +1,12 @@
 package com.leetcode;
 
+import com.leetcode.graph.tree.bt.TreeNode;
+import com.leetcode.graph.tree.linkedList.ListNode;
 import edu.princeton.cs.algs4.StdDraw;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
  * @author wcl
@@ -156,6 +162,55 @@ public class Utils {
         String a = s.substring(0, n / 2);
         String b = s.substring(n / 2, n);
         return mystery(b) + mystery(a);
+    }
+
+    public static ListNode arrayToListNode(int[] num) {
+        if(num == null || num.length == 0) {
+            return null;
+        }
+        ListNode res = new ListNode(0);
+        ListNode dummy = res;
+        for (int arr : num) {
+            dummy.next = new ListNode(arr);
+            dummy = dummy.next;
+        }
+        return res.next;
+    }
+
+    public static void printBT(TreeNode node) {
+        if(node == null) {
+            return;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(node);
+        System.out.print(node.val + ", ");
+        while(!queue.isEmpty()) {
+            TreeNode pop = queue.poll();
+            if(pop.left == null) {
+                System.out.print(null + ", ");
+            } else {
+                System.out.print(pop.left.val + ", ");
+                queue.add(pop.left);
+            }
+            if(pop.right == null) {
+                System.out.print(null + ", ");
+            } else {
+                System.out.print(pop.right.val + ", ");
+                queue.add(pop.right);
+            }
+        }
+        System.out.println();
+    }
+
+    public static void printLinkedList(ListNode node) {
+        if(node == null) {
+            return;
+        }
+        while(node != null) {
+            System.out.print(node.val + ", ");
+            node = node.next;
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {

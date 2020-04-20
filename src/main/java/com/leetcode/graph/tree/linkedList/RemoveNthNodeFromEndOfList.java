@@ -1,5 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
+import com.leetcode.Utils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,7 @@ public class RemoveNthNodeFromEndOfList {
             return nodes.get(1);
         }
     }
-
+    // 先走一步
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -66,14 +68,8 @@ public class RemoveNthNodeFromEndOfList {
     }
 
     public static void main(String[] args) {
-        ListNode listNode4 = new ListNode(4);
-        ListNode listNode3 = new ListNode(3);
-        listNode3.next = listNode4;
-        ListNode listNode2 = new ListNode(2);
-        listNode2.next = listNode3;
-        ListNode listNode1 = new ListNode(1);
-        listNode1.next = listNode2;
-        System.out.println(removeNthFromEnd(listNode1, 1));
+        ListNode head = Utils.arrayToListNode(new int[]{4, 3, 2, 1});
+        Utils.printLinkedList(removeNthFromEnd(head, 1));
 
     }
 
