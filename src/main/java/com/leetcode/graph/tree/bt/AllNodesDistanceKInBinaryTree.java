@@ -1,11 +1,12 @@
 package com.leetcode.graph.tree.bt;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author wcl
  * @date 11:07 AM 2020/3/23
- * <a href="https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/">
+ * TODO <a href="https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/">
  *     All Nodes Distance K in Binary Tree</a>
  */
 public class AllNodesDistanceKInBinaryTree {
@@ -32,8 +33,25 @@ public class AllNodesDistanceKInBinaryTree {
      */
     private TreeNode target1;
     private TreeNode target2;
+    List<Integer> res;
     public List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
+        res = new ArrayList<>();
         return null;
+    }
+
+    public void distanceKHelper(TreeNode root, TreeNode target, int K, int distance) {
+        if(root == null) {
+            return;
+        }
+        if(distance == K) {
+            res.add(root.val);
+            return;
+        }
+        if(root.val == target.val) {
+            distance = 0;
+        }
+        distanceKHelper(root.left, target, K, distance + 1);
+        distanceKHelper(root.right, target, K, distance + 1);
     }
 
 }

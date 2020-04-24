@@ -1,12 +1,11 @@
 package com.leetcode;
 
 import com.leetcode.graph.tree.bt.TreeNode;
+import com.leetcode.graph.tree.linkedList.FlattenAMultilevelDoublyLinkedList;
 import com.leetcode.graph.tree.linkedList.ListNode;
-import edu.princeton.cs.algs4.StdDraw;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * @author wcl
@@ -175,6 +174,49 @@ public class Utils {
             dummy = dummy.next;
         }
         return res.next;
+    }
+
+    public static FlattenAMultilevelDoublyLinkedList.Node arrayToMultilevleDoublyNode(Integer[]...num) {
+        FlattenAMultilevelDoublyLinkedList.Node head = null;
+        int preIndex = 0;
+        int childIndex = Integer.MAX_VALUE;
+        FlattenAMultilevelDoublyLinkedList.Node child = null;
+        for (int i = num.length - 1; i >= 0; i--) {
+            Integer[] n = num[i];
+            int index = 0;
+            while(n[index] == null) {
+                index++;
+            }
+            if(index > childIndex) {
+                throw new IllegalArgumentException("请检验参数");
+            }
+            preIndex = index;
+            FlattenAMultilevelDoublyLinkedList.Node start = null;
+            FlattenAMultilevelDoublyLinkedList.Node pre = null;
+
+            for (int j = index; j < n.length; j++) {
+                if(n[j] == null) {
+                    throw new IllegalArgumentException("请检验参数");
+                }
+                FlattenAMultilevelDoublyLinkedList.Node node = new FlattenAMultilevelDoublyLinkedList.Node(n[j]);
+                if(index == j) {
+                    start = node;
+                } else {
+                    pre.next = node;
+                }
+                if(j == childIndex) {
+                    node.child = child;
+                    child = start;
+                }
+                pre = node;
+            }
+            child = start;
+            childIndex = preIndex;
+            if (i == 0) {
+                head = start;
+            }
+        }
+        return head;
     }
 
     public static void printBT(TreeNode node) {
