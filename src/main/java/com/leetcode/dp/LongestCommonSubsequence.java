@@ -1,5 +1,7 @@
 package com.leetcode.dp;
 
+import com.leetcode.Utils;
+
 /**
  * @author wcl
  * @date 11:33 AM 2020/4/1
@@ -37,34 +39,29 @@ public class LongestCommonSubsequence {
      *      The input strings consist of lowercase English characters only.
      */
     public static int longestCommonSubsequence(String text1, String text2) {
-        if(text1.length() < text2.length()) {
-            String temp = text1;
-            text1 = text2;
-            text2 = temp;
-        }
-        int start = 0;
-        while(start < text2.length() && text1.indexOf(text2.charAt(start)) < 0) {
-            start++;
-        }
-        if(start >= text2.length()) {
+        if(text1.isEmpty() || text2.isEmpty()) {
             return 0;
         }
-        int result = 0;
-        for (int i = start; i < text2.length(); i++) {
-            int len = 0;
-            int begin = 0;
-            for (int j = i; j < text2.length(); j++) {
-                int index = text1.indexOf(text2.charAt(j), begin);
-                if(index >= 0) {
-                    begin = index + 1;
-                    len++;
+        int len1 = text1.length();
+        int len2 = text2.length();
+        char[] chars1 = text1.toCharArray();
+        char[] chars2 = text2.toCharArray();
+        int[][] dp = new int[len1 + 1][len2 + 1];
+        for (int i = 1; i <= len1; i++) {
+            char c1 = chars1[i - 1];
+            for (int j = 1; j <= len2; j++) {
+                char c2 = chars2[j - 1];
+                if(c1 == c2) {
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                } else {
+                    dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
                 }
             }
-            result = Math.max(len, result);
         }
-
-        return result;
+        return dp[len1][len2];
     }
+
+
 
     public static void main(String[] args) {
         System.out.println(longestCommonSubsequence("abcde", "ace") == 3);
@@ -73,5 +70,6 @@ public class LongestCommonSubsequence {
         System.out.println(longestCommonSubsequence("abcde", "f") == 0);
         System.out.println(longestCommonSubsequence("bsbininm","jmjkbkjkv") == 1);
         System.out.println(longestCommonSubsequence("mhunuzqrkzsnidwbun", "szulspmhwpazoxijwbq") == 6);
+        System.out.println(longestCommonSubsequence("ezupkr","ubmrapg") == 2);
     }
 }
