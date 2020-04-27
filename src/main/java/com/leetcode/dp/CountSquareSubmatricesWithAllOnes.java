@@ -1,9 +1,12 @@
 package com.leetcode.dp;
 
+import com.leetcode.Utils;
+
 /**
  * @author wcl
  * @date 7:38 AM 2020/2/28
- * TODO {@link "https://leetcode.com/problems/count-square-submatrices-with-all-ones/"}
+ * {@link "https://leetcode.com/problems/count-square-submatrices-with-all-ones/"}
+ * @see MaximalSquare
  */
 public class CountSquareSubmatricesWithAllOnes {
     /**
@@ -39,10 +42,27 @@ public class CountSquareSubmatricesWithAllOnes {
      *      0 <= arr[i][j] <= 1
      */
     public static int countSquares(int[][] matrix) {
-        return 0;
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int[][] dp = new int[m + 1][n + 1];
+        int res = 0;
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if(matrix[i - 1][j - 1] == 1) {
+                    dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j])) + 1;
+                    res += dp[i][j];
+                }
+            }
+        }
+        Utils.printTwoArrays(dp);
+        return res;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(countSquares(new int[][]{
+                {1,0,1},
+                {1,1,0},
+                {1,1,0}
+        }));
     }
 }

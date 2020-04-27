@@ -58,6 +58,7 @@ public class LongestCommonSubsequence {
                 }
             }
         }
+        Utils.printTwoArrays(dp);
         return dp[len1][len2];
     }
 

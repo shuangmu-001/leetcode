@@ -6,12 +6,10 @@ import java.util.Map;
 /**
  * @author wcl
  * @date 4:18 PM 2019/12/23
- * TODO
+ * TODO {link "https://leetcode.com/problems/longest-palindromic-substring/"}
  */
 public class LongestPalindromicSubstring {
     /**
-     * https://leetcode.com/problems/longest-palindromic-substring/
-     *
      * Given a string s, find the longest palindromic substring in s.
      * You may assume that the maximum length of s is 1000.
      *

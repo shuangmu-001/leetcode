@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author wcl
  * @date 6:57 PM 2020/4/24
- * TODO <a href="https://leetcode.com/problems/letter-case-permutation/">
+ * <a href="https://leetcode.com/problems/letter-case-permutation/">
  *     Letter Case Permutation</a>
  */
 public class LetterCasePermutation {
@@ -28,9 +28,41 @@ public class LetterCasePermutation {
      * S will be a string with length between 1 and 12.
      * S will consist only of letters or digits.
      */
-    public List<String> letterCasePermutation(String S) {
-        List<String> res = new ArrayList<>();
+    static List<String> res;
+    public static List<String> letterCasePermutation(String S) {
+        res = new ArrayList<>();
         char[] chars = S.toCharArray();
+        letterCasePermutation(chars, -1, new char[S.length()]);
         return res;
     }
+
+    public static void letterCasePermutation(char[] chars, int start, char[] newChars) {
+        if(start > chars.length - 1) {
+            return;
+        }
+        if(start == chars.length - 1) {
+            res.add(new String(newChars));
+            return;
+        }
+        char c = chars[start + 1];
+        newChars[start + 1] = c;
+        letterCasePermutation(chars, start + 1, newChars);
+        if(c >= 'a' && c <= 'z') {
+            newChars[start + 1] = (char)(c - 32);
+            letterCasePermutation(chars, start + 1, newChars);
+        } else if(c >= 'A' && c <= 'Z') {
+            newChars[start + 1] = (char)(c + 32);
+            letterCasePermutation(chars, start + 1, newChars);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(letterCasePermutation("a1b2"));
+        System.out.println(letterCasePermutation("3z4"));
+        System.out.println(letterCasePermutation("12345"));
+        System.out.println(letterCasePermutation("a1b2cser"));
+
+    }
+
 }

@@ -22,6 +22,15 @@ public class Utils {
             System.out.println();
         }
     }
+    public static void printTwoArrays(Object[][] arr) {
+        System.out.println("------二维数组的打印----------");
+        for (Object[] ints : arr) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(ints[j] + ",          ");
+            }
+            System.out.println();
+        }
+    }
 
     public static void printThreeArrays(int[][][] arr) {
         System.out.println("------三维数组的打印----------");
