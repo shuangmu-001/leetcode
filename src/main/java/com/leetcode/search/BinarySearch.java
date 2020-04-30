@@ -44,14 +44,24 @@ public class BinarySearch {
                 right = mid - 1;
             }
         }
+        System.out.println(left);
         return -1;
     }
 
     public static void main(String[] args) {
-        System.out.println(search(new int[]{-1,0,3,5,9,12}, 9) == 4);
-        System.out.println(search(new int[]{9,12}, 9) == 0);
-        System.out.println(search(new int[]{-1,0,3,5,9}, 9) == 4);
-        System.out.println(search(new int[]{9}, 9) == 0);
-        System.out.println(search(new int[]{-1,0,3,5,9,12}, 2) == -1);
+//        System.out.println(search(new int[]{-1,0,3,5,9,12}, 9) == 4);
+//        System.out.println(search(new int[]{9,12}, 9) == 0);
+//        System.out.println(search(new int[]{-1,0,3,5,9}, 9) == 4);
+//        System.out.println(search(new int[]{9}, 9) == 0);
+//        System.out.println(search(new int[]{-1,0,3,5,9,12}, 2) == -1);
+
+
+//        System.out.println(search(new int[]{-1,0,3,5,9,12}, 11) == 4);
+//        System.out.println(search(new int[]{-1,0,3,5,9}, 10) == 4);
+//        System.out.println(search(new int[]{-1,0,3,5}, -2) == 4);
+//        System.out.println(search(new int[]{9,12}, 9) == 0);
+//        System.out.println(search(new int[]{-1,0,3,5,9}, 9) == 4);
+//        System.out.println(search(new int[]{9}, 9) == 0);
+//        System.out.println(search(new int[]{-1,0,3,5,9,12}, 2) == -1);
     }
 }

@@ -185,6 +185,35 @@ public class Utils {
         return res.next;
     }
 
+    public static TreeNode arrayToTreeNode(Integer[] num) {
+        if(num == null || num.length == 0) {
+            return null;
+        }
+        TreeNode res = new TreeNode(num[0]);
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(res);
+        for (int i = 1; i < num.length; i++) {
+            TreeNode poll = queue.poll();
+            if(poll == null) {
+                return null;
+            }
+            if(num[i] != null) {
+                TreeNode node = new TreeNode(num[i]);
+                poll.left = node;
+                queue.add(node);
+            }
+            i++;
+
+            if(i < num.length && num[i] != null) {
+                TreeNode node = new TreeNode(num[i]);
+                poll.right = node;
+                queue.add(node);
+            }
+        }
+        return res;
+    }
+
+
     public static FlattenAMultilevelDoublyLinkedList.Node arrayToMultilevleDoublyNode(Integer[]...num) {
         FlattenAMultilevelDoublyLinkedList.Node head = null;
         int preIndex = 0;
