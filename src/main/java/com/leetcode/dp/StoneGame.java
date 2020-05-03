@@ -67,5 +67,6 @@ public class StoneGame {
     public static void main(String[] args) {
         System.out.println(stoneGame(new int[]{5,3,4,5}));
         System.out.println(stoneGame(new int[]{3,2,10,4}));
+        System.out.println(stoneGame(new int[]{3,2,111,10,10,4}));
     }
 }
