@@ -14,6 +14,7 @@
             <groupId>edu.princeton.cs</groupId>
             <artifactId>algs4</artifactId>
             <scope>system</scope>
+            <version>1.0.0</version>
             <systemPath>${pom.basedir}/lib/algs4.jar</systemPath>
         </dependency>
     </dependencies>

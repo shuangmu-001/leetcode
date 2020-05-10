@@ -6,8 +6,8 @@ import java.util.List;
 /**
  * @author wcl
  * @date 7:48 PM 2020/2/21
- * TODO {@link "https://leetcode.com/problems/substring-with-concatenation-of-all-words/"}
- * 实现排列组合
+ * {@link "https://leetcode.com/problems/substring-with-concatenation-of-all-words/"}
+ * TODO 实现排列组合
  * @see GenerateParentheses
  * @see com.leetcode.arrays.Permutations
  */

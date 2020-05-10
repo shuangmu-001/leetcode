@@ -5,8 +5,9 @@ import com.leetcode.Utils;
 /**
  * @author wcl
  * @date 5:22 PM 2020/4/23
- * TODO <a href="https://leetcode.com/problems/majority-element/">
+ * <a href="https://leetcode.com/problems/majority-element/">
  *     Majority Element</a>
+ * TODO 多数投票算法（Boyer-Moore Voting Algorithm）
  */
 public class MajorityElement {
     /**

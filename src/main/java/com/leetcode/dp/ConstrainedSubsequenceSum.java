@@ -10,8 +10,9 @@ import java.util.TreeSet;
 /**
  * @author wcl
  * @date 6:00 PM 2020/4/30
- * TODO <a href="https://leetcode.com/problems/constrained-subsequence-sum/">
+ * <a href="https://leetcode.com/problems/constrained-subsequence-sum/">
  *     Constrained Subsequence Sum</a>
+ * TODO 滑动窗口的最大值
  */
 public class ConstrainedSubsequenceSum {
     /**
@@ -95,6 +96,10 @@ public class ConstrainedSubsequenceSum {
             Integer last = deque.getFirst();
             dp[i] = Math.max(nums[i], last + nums[i]);
             max = Math.max(max, dp[i]);
+            deque.add(dp[i]);
+            while(deque.getLast() < dp[i]) {
+                deque.pollLast();
+            }
             deque.add(dp[i]);
             if(i >= k) {
                 deque.removeFirstOccurrence(dp[i - k]);

@@ -4,6 +4,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 import com.leetcode.graph.tree.linkedList.FlattenAMultilevelDoublyLinkedList;
 import com.leetcode.graph.tree.linkedList.ListNode;
 
+import java.io.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -294,9 +295,35 @@ public class Utils {
     }
 
     public static void main(String[] args) {
+
         System.out.println(mystery("12345"));
+        System.out.println(new File("./src/main/resources/non-negative.txt").exists());
+        printArrays(read("./src/main/resources/non-negative.txt", 1000));
     }
 
 
     // TODO 1、读取文件数据作为输出 (Time Limit Exceeded)
+    public static int[] read(String file, int len) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file));){
+            String s = br.readLine();
+            String[] split = s.split(",");
+            System.out.println("输入数据的个数是 : " + split.length);
+            len = len == 0 ? split.length : len;
+            int[] nums = new int[len];
+            int index = 0;
+            for (String str : split) {
+                nums[index++] = Integer.parseInt(str) % 1000;
+                if(index >= len) {
+                    return nums;
+                }
+            }
+            return nums;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

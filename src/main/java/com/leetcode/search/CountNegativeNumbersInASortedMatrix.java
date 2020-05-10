@@ -1,6 +1,5 @@
 package com.leetcode.search;
 
-import java.util.Arrays;
 
 /**
  * @author wcl

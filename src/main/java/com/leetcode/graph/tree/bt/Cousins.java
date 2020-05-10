@@ -1,7 +1,5 @@
 package com.leetcode.graph.tree.bt;
 
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * @author wcl
