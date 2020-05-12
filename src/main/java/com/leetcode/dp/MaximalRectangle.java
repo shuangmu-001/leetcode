@@ -5,7 +5,7 @@ import com.leetcode.Utils;
 /**
  * @author wcl
  * @date 10:54 AM 2020/4/28
- * TODO <a href="https://leetcode.com/problems/maximal-rectangle/">
+ * <a href="https://leetcode.com/problems/maximal-rectangle/">
  *     Maximal Rectangle</a>
  */
 public class MaximalRectangle {
@@ -110,7 +110,7 @@ public class MaximalRectangle {
         }
         return max;
     }
-    // TODO
+    // TODO 优化
     public static int maximalRectangle(char[][] matrix) {
         if(matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return 0;

@@ -10,7 +10,7 @@ import java.util.Set;
  * @author wcl
  * @date 5:48 PM 2020/2/25
  * {@link "https://leetcode.com/problems/permutations/"}
- * TODO 实现排列
+ * TODO 实现排列 (不用添加，用交换数据完成)
  */
 public class Permutations {
     /**
@@ -54,6 +54,15 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
-        System.out.println(permute(new int[]{1,2,3}));
+
+//        System.out.println(permute(new int[]{1}));
+//        System.out.println(permute(new int[]{1,2}));
+//        System.out.println(permute(new int[]{1,2,3}));
+//        System.out.println(permute(new int[]{1,2,3,4}));
+//        System.out.println(permute(new int[]{1,2,3,4,5}));
+//        System.out.println(permute(new int[]{1,2,3,4,5,6}));
+//        System.out.println(permute(new int[]{1,2,3,4,5,6,7}));
+//        System.out.println(permute(new int[]{1,2,3,4,5,6,7,8}));
+        System.out.println(permute(new int[]{1,2,3,4,5,6,7,8,9}));
     }
 }
