@@ -114,6 +114,6 @@ public class MaximumSumCircularSubarray {
 
         //1173096
         System.out.println(maxSubarraySumCircular
-                (Objects.requireNonNull(Utils.read("./src/main/resources/array.txt", 30000))) == 1173096);
+                (Objects.requireNonNull(Utils.read("./src/main/resources/array.txt", 30000)).get(0)) == 1173096);
     }
 }
