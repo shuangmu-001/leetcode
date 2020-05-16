@@ -3,10 +3,14 @@ package com.leetcode;
 import com.leetcode.graph.tree.bt.TreeNode;
 import com.leetcode.graph.tree.linkedList.FlattenAMultilevelDoublyLinkedList;
 import com.leetcode.graph.tree.linkedList.ListNode;
+import edu.princeton.cs.algs4.In;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+import java.util.stream.Collectors;
 
 /**
  * @author wcl
@@ -298,32 +302,31 @@ public class Utils {
 
         System.out.println(mystery("12345"));
         System.out.println(new File("./src/main/resources/non-negative.txt").exists());
-        printArrays(read("./src/main/resources/non-negative.txt", 1000));
+        System.out.println(read("./src/main/resources/array.txt", 30000));
     }
 
 
     // TODO 1、读取文件数据作为输出 (Time Limit Exceeded)
-    public static int[] read(String file, int len) {
-        try (BufferedReader br = new BufferedReader(new FileReader(file));){
-            String s = br.readLine();
-            String[] split = s.split(",");
-            System.out.println("输入数据的个数是 : " + split.length);
-            len = len == 0 ? split.length : len;
-            int[] nums = new int[len];
-            int index = 0;
-            for (String str : split) {
-                nums[index++] = Integer.parseInt(str) % 1000;
-                if(index >= len) {
-                    return nums;
-                }
-            }
-            return nums;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+    public static List<int[]> read(String file, final int len) {
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))){
+            return br.lines()
+                    .map(s -> s.split(","))
+                    .map(strs -> strArrayToIntArray(strs, len))
+                    .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static int[] strArrayToIntArray(String[] strs, int len) {
+        int length = len == 0 ? strs.length : len;
+        int[] nums = new int[len];
+        for (int i = 0; i < length; i++) {
+            nums[i] = Integer.parseInt(strs[i]);
+        }
+        return nums;
     }
 
 }
