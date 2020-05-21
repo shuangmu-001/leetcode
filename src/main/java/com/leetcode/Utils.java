@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 /**
@@ -23,6 +24,15 @@ public class Utils {
         for (int[] ints : arr) {
             for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(String.format("%11d,", ints[j]));
+            }
+            System.out.println();
+        }
+    }
+    public static void printTwoArrays(boolean[][] arr) {
+        System.out.println("------二维数组的打印----------");
+        for (boolean[] ints : arr) {
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(String.format("%5s, ", ints[j]));
             }
             System.out.println();
         }
@@ -98,8 +108,13 @@ public class Utils {
     public static void printArrays(Object[] arr) {
         System.out.println("------一维数组的打印----------");
         for (Object ints : arr) {
-            System.out.println(ints);
-//            System.out.print(";");
+            if(ints != null) {
+                System.out.print(ints + "---" + ints.hashCode());
+            } else {
+                System.out.print(ints);
+            }
+
+            System.out.print(";");
         }
         System.out.println();
     }
@@ -325,6 +340,35 @@ public class Utils {
         int[] nums = new int[len];
         for (int i = 0; i < length; i++) {
             nums[i] = Integer.parseInt(strs[i]);
+        }
+        return nums;
+    }
+
+    public static List<int[]> read(String file, final int len, boolean random) {
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))){
+            return br.lines()
+                    .map(s -> s.split(","))
+                    .map(strs -> strArrayToIntArray(strs, len, random))
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public static int[] strArrayToIntArray(String[] strs, int len, boolean random) {
+        if(strs.length < len && random) {
+            throw new IllegalArgumentException("数据太少不能随机");
+        }
+        int[] nums = new int[len];
+        ThreadLocalRandom current = ThreadLocalRandom.current();
+
+        for (int i = 0; i < len; i++) {
+            if(random) {
+                nums[i] = Integer.parseInt(strs[current.nextInt(0, strs.length - 1)]);
+            } else {
+                nums[i] = Integer.parseInt(strs[i]);
+            }
         }
         return nums;
     }

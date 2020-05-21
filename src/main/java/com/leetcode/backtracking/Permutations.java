@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * @author wcl
  * @date 5:48 PM 2020/2/25
- * {@link "https://leetcode.com/problems/permutations/"}
+ * {@link "https://leetcode.com/problems/permut ations/"}
  * TODO 实现排列 (不用添加，用交换数据完成)
  */
 public class Permutations {

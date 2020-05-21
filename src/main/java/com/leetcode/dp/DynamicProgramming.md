@@ -7,3 +7,13 @@
 3、状态转义方程:opt[n] = best_of(opt[n-1],opt[n-2]....)
 4、最优子结构
 
+```text
+1、0/1 Knapsack
+2、Unbounded Knapsack
+3、Fibonacci Numbers
+4、Palindromic Subsequence
+5、Longest Common Substring
+```
+
+
+
