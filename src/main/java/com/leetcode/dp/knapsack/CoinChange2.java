@@ -70,8 +70,21 @@ public class CoinChange2 {
     }
 
     public static void main(String[] args) {
-        int[] coins = new int[]{1,2,5};
+        int[] coins = new int[]{2,3,7};
         System.out.println(change(5, coins));
         System.out.println(change1(5, coins));
+        System.out.println(change(100, coins));
+
+        int count = 0;
+        for (int i = 0; i <= (100 / 7); i++) {
+            for (int j = 0; j <= (100 / 3); j++) {
+                for (int k = 0; k <= (100 / 2); k++) {
+                    if (i * 7 + j * 3 + k * 2 == 100) {
+                        count += 1;
+                    }
+                }
+            }
+        }
+        System.out.println(count);
     }
 }

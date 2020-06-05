@@ -5,7 +5,6 @@ package com.leetcode.slidingwindow;
  * @date 6:26 PM 2020/5/7
  * <a href="https://leetcode.com/problems/max-consecutive-ones-iii/">
  *     Max Consecutive Ones III</a>
- * TODO 滑动窗口最大值和最小值
  */
 public class MaxConsecutiveOnesIII {
     /**
@@ -31,34 +30,46 @@ public class MaxConsecutiveOnesIII {
      * 0 <= K <= A.length
      * A[i] is 0 or 1
      */
-    public int longestOnes(int[] A, int K) {
-        int count = 0;
-        int res = 0;
+
+    public static int longestOnes(int[] A, int K) {
+
+
         int length = A.length;
         if(K == length) {
             return length;
         }
         int left = 0;
         int right = 0;
-        int len = 0;
-        while(left < length && right < length) {
-            if(left == right) {
-                count = 0;
-            }
-            if(A[right] == 0) {
-                count++;
-            }
-            if(count < K) {
-                right++;
-                len++;
-                res = Math.max(len, res);
-            } else {
-                if(A[left] == 0) {
-                    count--;
-                }
-                left++;
+//        int len = 0;
+//        int res = 0;
+//        while(left < length && right < length) {
+//            if(A[right] == 0) {
+//                len++;
+//            }
+//            while(len > K) {
+//                if(A[left] == 0) {
+//                    len--;
+//                }
+//                left++;
+//            }
+//            res = Math.max(res, right - left + 1);
+//            right++;
+//        }
+        // window一旦扩大以后就不会变小 最大的尺寸会保留到最后
+        // count 表示one的个数
+        int count = 0;
+        while(right < length) {
+            count += A[right++];
+            if(right - left - count > K) {
+                count -= A[left++];
             }
         }
-        return 0;
+        return right - left;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestOnes(new int[]{0,0,0,1,0}, 0) == 1);
+        System.out.println(longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2) == 6);
+        System.out.println(longestOnes(new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}, 3) == 10);
     }
 }

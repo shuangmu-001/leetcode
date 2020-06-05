@@ -39,41 +39,41 @@ public class MakeArrayStrictlyIncreasing {
      * 0 <= arr1[i], arr2[i] <= 10^9
      */
     public static int makeArrayIncreasing(int[] arr1, int[] arr2) {
-        int arr1Len = arr1.length;
-        if(arr1Len == 1) {
-            return 0;
-        }
-        Arrays.sort(arr2);
-        int arr2Len = arr2.length;
-
-        int[][] dp = new int[arr1Len + 1][arr1Len + 1];
-        for (int i = 0; i < dp.length; i++) {
-            Arrays.fill(dp[i], Integer.MAX_VALUE);
-        }
-        dp[0][0] = Integer.MIN_VALUE;
-        for (int j = 1; j < dp.length; j++) {
-            for (int i = 0; i <= j; i++) {
-                if (arr1[j - 1] > dp[i][j - 1]) {
-                    dp[i][j] = arr1[j - 1];
-                }
-
-                if (i > 0 ) {
-                    int index = getIndex(arr2, dp[i - 1][j - 1]);
-                    if(index < arr2Len - 1) {
-                        int i1 = arr2[index];
-                        if( i1 == dp[i - 1][j - 1]) {
-                            i1 = arr2[index + 2];
-                        }
-                        dp[i][j] = Math.min(dp[i][j], i1);
-                    }
-
-                }
-                printTwoArrays(dp);
-                if (j == dp.length - 1 && dp[i][j] != Integer.MAX_VALUE) {
-                    return i;
-                }
-            }
-        }
+//        int arr1Len = arr1.length;
+//        if(arr1Len == 1) {
+//            return 0;
+//        }
+//        Arrays.sort(arr2);
+//        int arr2Len = arr2.length;
+//
+//        int[][] dp = new int[arr1Len + 1][arr1Len + 1];
+//        for (int[] ints : dp) {
+//            Arrays.fill(ints, Integer.MAX_VALUE);
+//        }
+//        dp[0][0] = Integer.MIN_VALUE;
+//        for (int j = 1; j < dp.length; j++) {
+//            for (int i = 0; i <= j; i++) {
+//                if (arr1[j - 1] > dp[i][j - 1]) {
+//                    dp[i][j] = arr1[j - 1];
+//                }
+//
+//                if (i > 0 ) {
+//                    int index = getIndex(arr2, dp[i - 1][j - 1]);
+//                    if(index < arr2Len - 1) {
+//                        int i1 = arr2[index];
+//                        if( i1 == dp[i - 1][j - 1]) {
+//                            i1 = arr2[index + 2];
+//                        }
+//                        dp[i][j] = Math.min(dp[i][j], i1);
+//                    }
+//
+//                }
+//                printTwoArrays(dp);
+//                if (j == dp.length - 1 && dp[i][j] != Integer.MAX_VALUE) {
+//                    return i;
+//                }
+//            }
+//        }
         return -1;
     }
 
@@ -97,10 +97,10 @@ public class MakeArrayStrictlyIncreasing {
     }
 
     public static void main(String[] args) {
-//        System.out.println(makeArrayIncreasing(new int[]{1,5,3,6,7}, new int[]{1,3,2,4}));
-//        System.out.println(makeArrayIncreasing(new int[]{1,5,3,6,7}, new int[]{4,3,1}));
-//        System.out.println(makeArrayIncreasing2(new int[]{1,5,3,6,7}, new int[]{1,6,3,3}));
-//        System.out.println(makeArrayIncreasing2(new int[]{1,6,7,3}, new int[]{3,4,5}));
+        System.out.println(makeArrayIncreasing(new int[]{1,5,3,6,7}, new int[]{1,3,2,4}));
+        System.out.println(makeArrayIncreasing(new int[]{1,5,3,6,7}, new int[]{4,3,1}));
+        System.out.println(makeArrayIncreasing2(new int[]{1,5,3,6,7}, new int[]{1,6,3,3}));
+        System.out.println(makeArrayIncreasing2(new int[]{1,6,7,3}, new int[]{3,4,5}));
         System.out.println(makeArrayIncreasing2(new int[]{7,6,3}, new int[]{3,4,5}));
 
         System.out.println("---------------二分查找分割线-------------------");

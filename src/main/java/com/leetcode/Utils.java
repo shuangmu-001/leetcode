@@ -11,6 +11,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -371,6 +373,13 @@ public class Utils {
             }
         }
         return nums;
+    }
+
+    public static long consumeTime(Consumer<Object> consumer, Object t) {
+        long before = System.currentTimeMillis();
+        consumer.accept(t);
+        long end = System.currentTimeMillis();
+        return end - before;
     }
 
 }
