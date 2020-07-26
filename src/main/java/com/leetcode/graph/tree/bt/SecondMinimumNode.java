@@ -49,7 +49,6 @@ public class SecondMinimumNode {
                 second = second != -1 ? Math.min(poll.val, second) : poll.val;
             }
 
-
             if(poll.left != null) {
                 queue.add(poll.left);
             }

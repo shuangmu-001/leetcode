@@ -39,29 +39,37 @@ public class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(candidates);
-        dfs(candidates, target, new ArrayList<>(), res, 0, 0);
+        dfs(candidates, target, new ArrayList<>(), res, 0);
         return res;
     }
-    public static void dfs(int [] candidates, int target, List<Integer> list, List<List<Integer>> res, int sum, int index) {
+    public static void dfs(int [] candidates, int target, List<Integer> list, List<List<Integer>> res, int index) {
         for (int i = index; i < candidates.length; i++) {
-            sum += candidates[i];
-            if(sum > target) {
+
+//            if(i != index && candidates[i] == candidates[i - 1]) {
+//                continue;
+//            }
+
+            target -= candidates[i];
+            if(target < 0) {
                 return;
             }
             list.add(candidates[i]);
-            if(sum == target) {
+            if(0 == target) {
                 res.add(new ArrayList<>(list));
-            } else if(sum < target) {
-                dfs(candidates, target, list, res, sum, i);
+            } else {
+//                dfs(candidates, target, list, res, i + 1);
+                dfs(candidates, target, list, res, i);
             }
-            sum -= candidates[i];
+            target += candidates[i];
             list.remove(list.size() - 1);
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(combinationSum(new int[]{2, 3, 5}, 8));
-        System.out.println(combinationSum(new int[]{3, 5, 2}, 8));
-        System.out.println(combinationSum(new int[]{3, 6, 7, 2}, 7));
+//        System.out.println(combinationSum(new int[]{2, 3, 5}, 8));
+//        System.out.println(combinationSum(new int[]{3, 5, 2}, 8));
+//        System.out.println(combinationSum(new int[]{3, 6, 7, 2}, 7));
+        System.out.println(combinationSum(new int[] {2,3,4,2,3,6,7}, 7));
     }
+
 }
