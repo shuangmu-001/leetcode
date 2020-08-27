@@ -1,17 +1,14 @@
 package com.leetcode.graph.dfs;
 
-import com.leetcode.Utils;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author wcl
  * @date 4:43 下午 2020/7/24
  * <a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">
  * Number of Nodes in the Sub-Tree With the Same Label</a>
- * TODO graph的遍历 DFS BFS
+ * graph(无向，连通图)的遍历 DFS
  */
 public class NumberOfNodesInTheSubTreeWithTheSameLabel {
     /**
@@ -66,43 +63,81 @@ public class NumberOfNodesInTheSubTreeWithTheSameLabel {
      * labels.length == n
      * labels is consisting of only of lower-case English letters.
      */
+    static int[] result;
+    static boolean[] flags;
+    // graph的定义 (无向，无环，连通图)
+    static List<Integer>[] graph;
+
     public static int[] countSubTrees(int n, int[][] edges, String labels) {
-
-
-        Arrays.sort(edges, Comparator.comparingInt(a -> a[0]));
-        int[][] allCount = new int[n][26];
-        int[] result = new int[n];
-
-        for (int i = edges.length - 1; i >= 0; i--) {
-            int index = edges[i][1];
-            int parent = edges[i][0];
-            char c = labels.charAt(index);
-            for (int j = 0; j < 26; j++) {
-                allCount[parent][j] += allCount[index][j];
-                if (c - 'a' == j) {
-                    allCount[parent][j]++;
-                }
-            }
-//            result[index] = allCount[index][c - 'a'] + 1;
-        }
-
+        graph = new ArrayList[n];
+        result = new int[n];
+        flags = new boolean[n];
         for (int i = 0; i < n; i++) {
-            char c = labels.charAt(i);
-            result[i] = allCount[i][c - 'a'] + 1;
+            graph[i] = new ArrayList<>();
         }
 
+        for (int[] edge : edges) {
+            graph[edge[0]].add(edge[1]);
+            graph[edge[1]].add(edge[0]);
+        }
+        dfs(0, labels);
         return result;
     }
 
+    public static int[] dfs(int point, String labels) {
+        int[] count = new int[26];
+
+        flags[point] = true;
+        List<Integer> integers = graph[point];
+        for (int i : integers) {
+            if (!flags[i]) {
+                int[] before = dfs(i, labels);
+                int index = 0;
+                for (int j : before) {
+                    count[index++] += j;
+                }
+            }
+        }
+        char c = labels.charAt(point);
+        count[c - 'a']++;
+        result[point] = count[c - 'a'];
+        return count;
+    }
+
     public static void main(String[] args) {
-//        System.out.println(Arrays.toString(countSubTrees(7, new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}}, "aaabaaa")));
-//        System.out.println(Arrays.toString(countSubTrees(7, new int[][]{{0, 1}, {0, 2}, {2, 3}, {1, 4}, {1, 5}, {2, 6}}, "abaedcd")));
-//        System.out.println(Arrays.toString(countSubTrees(4, new int[][]{{0, 1}, {1, 2}, {0, 3}}, "bbbb")));
-//        System.out.println(Arrays.toString(countSubTrees(5, new int[][]{{0, 1}, {0, 2}, {1, 3}, {0, 4}}, "aabab")));
-//        System.out.println(Arrays.toString(countSubTrees(6, new int[][]{{0, 1}, {0, 2}, {1, 3}, {3, 4}, {4, 5}}, "cbabaa")));
+        int n = 7;
+        int[][] edges = new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}};
+        String labels = "aaabaaa";
+        System.out.println("目标 : [6, 5, 4, 1, 3, 2, 1]; 实际 : " + (get(n, edges, labels)));
+
+        edges = new int[][]{{0, 1}, {0, 2}, {2, 3}, {1, 4}, {1, 5}, {2, 6}};
+        labels = "abaedcd";
+        System.out.println("目标 : [2, 1, 1, 1, 1, 1, 1]; 实际 : " + (get(n, edges, labels)));
+
+        n = 4;
+        edges = new int[][]{{0, 1}, {1, 2}, {0, 3}};
+        labels = "bbbb";
+        System.out.println("目标 : [4, 2, 1, 1]; 实际 : " + (get(n, edges, labels)));
+
+        n = 5;
+        edges = new int[][]{{0, 1}, {0, 2}, {1, 3}, {0, 4}};
+        labels = "aabab";
+        System.out.println("目标 : [3, 2, 1, 1, 1]; 实际 : " + (get(n, edges, labels)));
+
+        n = 6;
+        edges = new int[][]{{0, 1}, {0, 2}, {1, 3}, {3, 4}, {4, 5}};
+        labels = "cbabaa";
+        System.out.println("目标 : [1, 2, 1, 1, 2, 1]; 实际 : " + (get(n, edges, labels)));
+
+        n = 4;
+        edges = new int[][]{{0, 2}, {0, 3}, {1, 2}};
+        labels = "aeed";
+        System.out.println("目标 : [1, 1, 2, 1]; 实际 : " + get(n, edges, labels));
 
 
-        System.out.println(Arrays.toString(countSubTrees(4, new int[][]{{0, 2}, {0, 3}, {1, 2}}, "aeed")));
+    }
 
+    public static String get(int n, int[][] edges, String labels) {
+        return Arrays.toString(countSubTrees(n, edges, labels));
     }
 }

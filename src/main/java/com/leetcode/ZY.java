@@ -1,31 +1,30 @@
 package com.leetcode;
 
-import java.util.List;
+import java.util.Arrays;
 
 /**
- * @Author: wcl
- * @Description:
- * @Date: Create in 16:47 2019-03-20
- * @Modified By:
+ * @author wcl
+ * @date Create in 16:47 2019-03-20
  */
 public class ZY {
 
 
     public static void main(String[] args) {
 
-    int[] a={2,4,3,1,5,6};
+        int[] a = {2, 4, 3, 1, 5, 6};
 
-      System.out.println(count(a,  6));
-      System.out.println(a. toString());
+        System.out.println(count(a, 6));
+        System.out.println(Arrays.toString(a));
     }
+
     private static int num = 0;
 
     public static int count(int[] a, int n) {
 
-    num = 0;
+        num = 0;
 
-    mergeSortCounting(a,  0,  n-1);
-    return num;
+        mergeSortCounting(a, 0, n - 1);
+        return num;
     }
 
     private static void mergeSortCounting(int[] a, int p, int r) {
@@ -41,6 +40,7 @@ public class ZY {
         merge(a, p, q, r);
 
     }
+
     private static void merge(int[] a, int p, int q, int r) {
 
         int i = p, j = q + 1, k = 0;
@@ -49,23 +49,23 @@ public class ZY {
 
             if (a[i] <= a[j]) {
                 tmp[k++] = a[i++];
-            }else {
+            } else {
                 num += (q - i + 1);
                 tmp[k++] = a[j++];
             }
 
-         }
+        }
 
-          while (i <= q) {
-              tmp[k++] = a[i++];
-          }
+        while (i <= q) {
+            tmp[k++] = a[i++];
+        }
 
-          while (j <= r) {
-              tmp[k++] = a[j++];
-          }
-          for(i=0;i<=r-p;++i) {
-              a[p + i] = tmp[i];
-          }
+        while (j <= r) {
+            tmp[k++] = a[j++];
+        }
+        for (i = 0; i <= r - p; ++i) {
+            a[p + i] = tmp[i];
+        }
     }
 
 }

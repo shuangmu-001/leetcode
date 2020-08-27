@@ -3,16 +3,13 @@ package com.leetcode;
 import com.leetcode.graph.tree.bt.TreeNode;
 import com.leetcode.graph.tree.linkedList.FlattenAMultilevelDoublyLinkedList;
 import com.leetcode.graph.tree.linkedList.ListNode;
-import edu.princeton.cs.algs4.In;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -25,20 +22,22 @@ public class Utils {
         System.out.println("------二维数组的打印----------");
         for (int[] ints : arr) {
             for (int j = 0; j < arr[0].length; j++) {
-                System.out.print(String.format("%11d,", ints[j]));
+                System.out.printf("%11d,", ints[j]);
             }
             System.out.println();
         }
     }
+
     public static void printTwoArrays(boolean[][] arr) {
         System.out.println("------二维数组的打印----------");
         for (boolean[] ints : arr) {
             for (int j = 0; j < arr[0].length; j++) {
-                System.out.print(String.format("%5s, ", ints[j]));
+                System.out.printf("%5s, ", ints[j]);
             }
             System.out.println();
         }
     }
+
     public static void printTwoArrays(Object[][] arr) {
         System.out.println("------二维数组的打印----------");
         for (Object[] ints : arr) {
@@ -55,7 +54,7 @@ public class Utils {
             System.out.println("----------------");
             for (int[] i : ints) {
                 for (int j : i) {
-                    System.out.print(String.format("%11d,", j));
+                    System.out.printf("%11d,", j);
                 }
                 System.out.println();
             }
@@ -110,10 +109,10 @@ public class Utils {
     public static void printArrays(Object[] arr) {
         System.out.println("------一维数组的打印----------");
         for (Object ints : arr) {
-            if(ints != null) {
+            if (ints != null) {
                 System.out.print(ints + "---" + ints.hashCode());
             } else {
-                System.out.print(ints);
+                System.out.print("null");
             }
 
             System.out.print(";");
@@ -123,14 +122,15 @@ public class Utils {
 
     public static void heapSort(int[][] pairs) {
         int len = pairs.length;
-        for(int i = pairs.length - 1; i >= 0; i--) {
+        for (int i = pairs.length - 1; i >= 0; i--) {
             heapify(pairs, i, len);
         }
-        for(int i = pairs.length - 1; i > 0; i--) {
+        for (int i = pairs.length - 1; i > 0; i--) {
             swap(pairs, 0, i);
             heapify(pairs, 0, i);
         }
     }
+
     public static void swap(int[][] pairs, int i, int j) {
         int[] temp = pairs[i];
         pairs[i] = pairs[j];
@@ -145,7 +145,7 @@ public class Utils {
             }
             if (pairs[k][1] > temp) {
                 swap(pairs, i, k);
-                i  =  k;
+                i = k;
             } else {
                 break;
             }
@@ -154,14 +154,15 @@ public class Utils {
 
     public static void heapSort(int[] pairs) {
         int len = pairs.length;
-        for(int i = pairs.length - 1; i >= 0; i--) {
+        for (int i = pairs.length - 1; i >= 0; i--) {
             heapify(pairs, i, len);
         }
-        for(int i = pairs.length - 1; i > 0; i--) {
+        for (int i = pairs.length - 1; i > 0; i--) {
             swap(pairs, 0, i);
             heapify(pairs, 0, i);
         }
     }
+
     public static void swap(int[] pairs, int i, int j) {
         int temp = pairs[i];
         pairs[i] = pairs[j];
@@ -176,7 +177,7 @@ public class Utils {
             }
             if (pairs[k] > temp) {
                 swap(pairs, i, k);
-                i  =  k;
+                i = k;
             } else {
                 break;
             }
@@ -185,7 +186,7 @@ public class Utils {
 
     public static String mystery(String s) {
         int n = s.length();
-        if(n <= 1) {
+        if (n <= 1) {
             return s;
         }
 
@@ -195,7 +196,7 @@ public class Utils {
     }
 
     public static ListNode arrayToListNode(int[] num) {
-        if(num == null || num.length == 0) {
+        if (num == null || num.length == 0) {
             return null;
         }
         ListNode res = new ListNode(0);
@@ -208,7 +209,7 @@ public class Utils {
     }
 
     public static TreeNode arrayToTreeNode(Integer[] num) {
-        if(num == null || num.length == 0) {
+        if (num == null || num.length == 0) {
             return null;
         }
         TreeNode res = new TreeNode(num[0]);
@@ -216,17 +217,17 @@ public class Utils {
         queue.add(res);
         for (int i = 1; i < num.length; i++) {
             TreeNode poll = queue.poll();
-            if(poll == null) {
+            if (poll == null) {
                 return null;
             }
-            if(num[i] != null) {
+            if (num[i] != null) {
                 TreeNode node = new TreeNode(num[i]);
                 poll.left = node;
                 queue.add(node);
             }
             i++;
 
-            if(i < num.length && num[i] != null) {
+            if (i < num.length && num[i] != null) {
                 TreeNode node = new TreeNode(num[i]);
                 poll.right = node;
                 queue.add(node);
@@ -236,18 +237,18 @@ public class Utils {
     }
 
 
-    public static FlattenAMultilevelDoublyLinkedList.Node arrayToMultilevleDoublyNode(Integer[]...num) {
+    public static FlattenAMultilevelDoublyLinkedList.Node arrayToMultilevleDoublyNode(Integer[]... num) {
         FlattenAMultilevelDoublyLinkedList.Node head = null;
-        int preIndex = 0;
+        int preIndex;
         int childIndex = Integer.MAX_VALUE;
         FlattenAMultilevelDoublyLinkedList.Node child = null;
         for (int i = num.length - 1; i >= 0; i--) {
             Integer[] n = num[i];
             int index = 0;
-            while(n[index] == null) {
+            while (n[index] == null) {
                 index++;
             }
-            if(index > childIndex) {
+            if (index > childIndex) {
                 throw new IllegalArgumentException("请检验参数");
             }
             preIndex = index;
@@ -255,16 +256,16 @@ public class Utils {
             FlattenAMultilevelDoublyLinkedList.Node pre = null;
 
             for (int j = index; j < n.length; j++) {
-                if(n[j] == null) {
+                if (n[j] == null) {
                     throw new IllegalArgumentException("请检验参数");
                 }
                 FlattenAMultilevelDoublyLinkedList.Node node = new FlattenAMultilevelDoublyLinkedList.Node(n[j]);
-                if(index == j) {
+                if (index == j) {
                     start = node;
                 } else {
                     pre.next = node;
                 }
-                if(j == childIndex) {
+                if (j == childIndex) {
                     node.child = child;
                     child = start;
                 }
@@ -280,21 +281,21 @@ public class Utils {
     }
 
     public static void printBT(TreeNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(node);
         System.out.print(node.val + ", ");
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             TreeNode pop = queue.poll();
-            if(pop.left == null) {
+            if (pop.left == null) {
                 System.out.print(null + ", ");
             } else {
                 System.out.print(pop.left.val + ", ");
                 queue.add(pop.left);
             }
-            if(pop.right == null) {
+            if (pop.right == null) {
                 System.out.print(null + ", ");
             } else {
                 System.out.print(pop.right.val + ", ");
@@ -305,10 +306,10 @@ public class Utils {
     }
 
     public static void printLinkedList(ListNode node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
-        while(node != null) {
+        while (node != null) {
             System.out.print(node.val + ", ");
             node = node.next;
         }
@@ -326,7 +327,7 @@ public class Utils {
     // TODO 1、读取文件数据作为输出 (Time Limit Exceeded)
     public static List<int[]> read(String file, final int len) {
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))){
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             return br.lines()
                     .map(s -> s.split(","))
                     .map(strs -> strArrayToIntArray(strs, len))
@@ -348,7 +349,7 @@ public class Utils {
 
     public static List<int[]> read(String file, final int len, boolean random) {
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))){
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             return br.lines()
                     .map(s -> s.split(","))
                     .map(strs -> strArrayToIntArray(strs, len, random))
@@ -358,15 +359,16 @@ public class Utils {
         }
         return null;
     }
+
     public static int[] strArrayToIntArray(String[] strs, int len, boolean random) {
-        if(strs.length < len && random) {
+        if (strs.length < len && random) {
             throw new IllegalArgumentException("数据太少不能随机");
         }
         int[] nums = new int[len];
         ThreadLocalRandom current = ThreadLocalRandom.current();
 
         for (int i = 0; i < len; i++) {
-            if(random) {
+            if (random) {
                 nums[i] = Integer.parseInt(strs[current.nextInt(0, strs.length - 1)]);
             } else {
                 nums[i] = Integer.parseInt(strs[i]);

@@ -18,6 +18,7 @@
             <systemPath>${pom.basedir}/lib/algs4.jar</systemPath>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
