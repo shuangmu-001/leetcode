@@ -44,7 +44,7 @@ public class FirstBadVersion {
     /* The isBadVersion API is defined in the parent class VersionControl.
       boolean isBadVersion(int version);
      */
-    private static int target = 1702766719;
+    private final static int target = 1702766719;
     static boolean isBadVersion(int version) {
         return version >= target;
     }

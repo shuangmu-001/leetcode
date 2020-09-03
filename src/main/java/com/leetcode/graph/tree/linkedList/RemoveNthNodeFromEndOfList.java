@@ -9,6 +9,11 @@ import java.util.List;
  * @author wcl
  * @date 7:01 PM 2020/2/17
  * {@link "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"}
+ *
+ * 第n个节点，
+ * 从一个节点到另一个节点相差n个节点，
+ * 保持两个指针一直相差n节点
+ * 当一个指针移动到末尾时，另一个指针就是所要删除的节点
  */
 public class RemoveNthNodeFromEndOfList {
     /**

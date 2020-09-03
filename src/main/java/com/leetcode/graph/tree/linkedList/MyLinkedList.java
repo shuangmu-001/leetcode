@@ -4,7 +4,7 @@ package com.leetcode.graph.tree.linkedList;
  * @author wcl
  * @date 4:58 PM 2020/4/20
  * <a href="https://leetcode.com/problems/design-linked-list/">
- *     Design Linked List</a>
+ * Design Linked List</a>
  */
 public class MyLinkedList {
 
@@ -12,19 +12,23 @@ public class MyLinkedList {
     private ListNode end;
     private int size = 0;
 
-    /** Initialize your data structure here. */
+    /**
+     * Initialize your data structure here.
+     */
     public MyLinkedList() {
 
     }
 
-    /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
+    /**
+     * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+     */
     public int get(int index) {
-        if(index >= size) {
+        if (index >= size) {
             return -1;
         }
         int mid = size >> 1;
         ListNode node;
-        if(mid > index) {
+        if (mid > index) {
             node = head;
             for (int i = 0; i < index; i++) {
                 node = node.next;
@@ -39,10 +43,12 @@ public class MyLinkedList {
         return node.val;
     }
 
-    /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
+    /**
+     * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+     */
     public void addAtHead(int val) {
         ListNode head = new ListNode(val);
-        if(this.head == null) {
+        if (this.head == null) {
             this.head = head;
             this.end = head;
         } else {
@@ -53,10 +59,12 @@ public class MyLinkedList {
         size++;
     }
 
-    /** Append a node of value val to the last element of the linked list. */
+    /**
+     * Append a node of value val to the last element of the linked list.
+     */
     public void addAtTail(int val) {
         ListNode end = new ListNode(val);
-        if(this.end == null) {
+        if (this.end == null) {
             this.head = end;
             this.end = head;
         } else {
@@ -67,17 +75,18 @@ public class MyLinkedList {
         size++;
     }
 
-    /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
+    /**
+     * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+     */
     public void addAtIndex(int index, int val) {
-        if(index > size || index < 0) {
-        } else if(index == size) {
+        if (index == size) {
             addAtTail(val);
-        } else if(index == 0) {
+        } else if (index == 0) {
             addAtHead(val);
-        } else {
+        } else if (index > 0 && index < size) {
             int mid = size >> 1;
             ListNode node;
-            if(mid > index) {
+            if (mid > index) {
                 node = head;
                 for (int i = 0; i < index; i++) {
                     node = node.next;
@@ -100,17 +109,19 @@ public class MyLinkedList {
 
     }
 
-    /** Delete the index-th node in the linked list, if the index is valid. */
+    /**
+     * Delete the index-th node in the linked list, if the index is valid.
+     */
     public void deleteAtIndex(int index) {
-        if(head == null && end == null) {
+        if (head == null && end == null) {
             return;
         }
-        if(index >= size) {
+        if (index >= size) {
             return;
         }
         int mid = size >> 1;
         ListNode node;
-        if(mid > index) {
+        if (mid > index) {
             node = head;
             for (int i = 0; i < index; i++) {
                 node = node.next;
@@ -124,13 +135,13 @@ public class MyLinkedList {
         }
         ListNode prev = node.prev;
         ListNode next = node.next;
-        if(prev == null && next == null) {
+        if (prev == null && next == null) {
             head = null;
             end = null;
-        } else if(prev == null) {
+        } else if (prev == null) {
             next.prev = null;
             head = next;
-        } else if(next == null) {
+        } else if (next == null) {
             prev.next = null;
             end = prev;
         } else {
@@ -139,6 +150,7 @@ public class MyLinkedList {
         }
         size--;
     }
+
     public static class ListNode {
         int val;
         ListNode prev;
@@ -147,8 +159,6 @@ public class MyLinkedList {
         public ListNode(int val) {
             this.val = val;
         }
-
-
     }
 
     public static void main(String[] args) {
@@ -171,13 +181,27 @@ public class MyLinkedList {
         myLinkedList.addAtHead(37);
         System.out.println(myLinkedList.get(5));
         myLinkedList.addAtTail(93);
-        myLinkedList.addAtIndex(10,23);
+        myLinkedList.addAtIndex(10, 23);
         myLinkedList.addAtTail(21);
         myLinkedList.addAtHead(52);
         myLinkedList.addAtHead(15);
         myLinkedList.addAtHead(47);
         System.out.println(myLinkedList.get(12));
-
+        //["MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex",
+        // "deleteAtIndex","addAtHead","addAtTail","get","addAtHead","addAtIndex","addAtHead"]
+        //[[],[7],[2],[1],[3,0],[2],[6],[4],[4],[4],[5,0],[6]]
+        MyLinkedList myLinkedList1 = new MyLinkedList();
+        myLinkedList1.addAtHead(7);
+        myLinkedList1.addAtHead(2);
+        myLinkedList1.addAtHead(1);
+        myLinkedList1.addAtIndex(3,0);
+        myLinkedList1.deleteAtIndex(2);
+        myLinkedList1.addAtHead(6);
+        myLinkedList1.addAtTail(4);
+        System.out.println(myLinkedList1.get(4));
+        myLinkedList1.addAtHead(4);
+        myLinkedList1.addAtIndex(5,0);
+        myLinkedList1.addAtHead(6);
     }
 }
 
