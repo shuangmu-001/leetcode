@@ -93,7 +93,7 @@ public class ValidParentheses {
         }
     }
 
-    public static boolean isValid(String s) {
+    public static boolean isValid2(String s) {
         if (s.isEmpty()) {
             return true;
         }
@@ -123,6 +123,38 @@ public class ValidParentheses {
 
         }
         return stack.empty();
+    }
+    static Map<Character, Character> maps = new HashMap<>();
+    static {
+        maps.put('}', '{');
+        maps.put(')', '(');
+        maps.put(']', '[');
+    }
+    public static boolean isValid(String s) {
+        if(s == null || s.isEmpty()) {
+            return true;
+        }
+        int length = s.length();
+        if((length & 1 ) != 0) {
+            return false;
+        }
+        Stack<Character> stack = new Stack<>();
+        for(int i = 0; i < length; i++) {
+            char c = s.charAt(i);
+            if(maps.containsKey(c)) {
+                if(stack.isEmpty()) {
+                    return false;
+                }
+                char target = maps.get(c);
+                char source = stack.pop();
+                if(target != source) {
+                    return false;
+                }
+            } else {
+                stack.push(c);
+            }
+        }
+        return stack.isEmpty();
     }
 
     public static void main(String[] args) {

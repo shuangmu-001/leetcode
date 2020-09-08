@@ -1,5 +1,8 @@
 package com.leetcode.arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author wcl
  * @date 9:19 PM 2020/2/14

@@ -57,4 +57,11 @@ public class ReverseBits {
         res = (res & 0xaaaaaaaa) >>> 1 | (res & 0x55555555) << 1;
         return res;
     }
+
+    public static void main(String[] args) {
+        int n = 0b1000000000010000_0000000000000001;
+        System.out.println(Integer.toBinaryString(n >>> 16));
+        System.out.println(Integer.toBinaryString(n << 16));
+        System.out.println(Integer.toBinaryString((n >>> 16) | (n << 16)));
+    }
 }

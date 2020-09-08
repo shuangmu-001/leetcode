@@ -58,7 +58,7 @@ public class StringToInteger {
         boolean flag = true;
         boolean startFlag = true;
         int length = str.length();
-        long newNum = 0;
+        int res = 0;
         for (int i = 0; i < length; i++) {
             char c = str.charAt(i);
             if(startFlag && c == ' ') {
@@ -74,23 +74,24 @@ public class StringToInteger {
                 continue;
             }
             if(c >= '0' && c <= '9') {
-                newNum = newNum * 10 + ( c - 48 );
-                if(flag && newNum >= Integer.MAX_VALUE) {
+                startFlag = false;
+                if(flag && (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && c > '7'))){
                     return Integer.MAX_VALUE;
                 }
-                if(!flag && -newNum <= Integer.MIN_VALUE) {
+                if(!flag && (-res < Integer.MIN_VALUE / 10 || (-res == Integer.MIN_VALUE / 10 &&  c > '8'))) {
                     return Integer.MIN_VALUE;
                 }
+                res = res * 10 + ( c - 48 );
             } else {
                 break;
             }
 
         }
-        int result = (int) newNum;
-        return flag ? result : -result;
+        return flag ? res : -res;
     }
 
     public static void main(String[] args) {
+        System.out.println(Integer.MIN_VALUE/ 10);
         System.out.println(myAtoi("-91283472332"));
         System.out.println(myAtoi("-words and 987"));
         System.out.println(myAtoi("4193 with words"));

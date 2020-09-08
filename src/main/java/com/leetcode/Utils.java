@@ -340,7 +340,7 @@ public class Utils {
 
     public static int[] strArrayToIntArray(String[] strs, int len) {
         int length = len == 0 ? strs.length : len;
-        int[] nums = new int[len];
+        int[] nums = new int[length];
         for (int i = 0; i < length; i++) {
             nums[i] = Integer.parseInt(strs[i]);
         }

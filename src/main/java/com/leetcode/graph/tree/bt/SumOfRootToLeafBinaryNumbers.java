@@ -12,33 +12,52 @@ public class SumOfRootToLeafBinaryNumbers {
      * For example, if the path is 0 -> 1 -> 1 -> 0 -> 1, then this could represent 01101 in binary, which is 13.
      * For all leaves in the tree, consider the numbers represented by the path from the root to that leaf.
      * Return the sum of these numbers.
-     *
+     * <p>
      * Example 1:
-     *      Input: [1,0,1,0,1,0,1]
-     *      Output: 22
-     *      Explanation: (100) + (101) + (110) + (111) = 4 + 5 + 6 + 7 = 22
-     *
+     * Input: [1,0,1,0,1,0,1]
+     * Output: 22
+     * Explanation: (100) + (101) + (110) + (111) = 4 + 5 + 6 + 7 = 22
+     * <p>
      * Note:
-     *      The number of nodes in the tree is between 1 and 1000.
-     *      node.val is 0 or 1.
-     *      The answer will not exceed 2^31 - 1.
+     * The number of nodes in the tree is between 1 and 1000.
+     * node.val is 0 or 1.
+     * The answer will not exceed 2^31 - 1.
      */
     private int sum;
-    public int sumRootToLeaf(TreeNode root) {
+
+    public int sumRootToLeaf1(TreeNode root) {
         sum = 0;
         postOrder(root, root.val);
+
         return sum;
     }
 
     public void postOrder(TreeNode root, int before) {
-        if(root.left != null) {
+        if (root.left != null) {
             postOrder(root.left, (before << 1) + root.left.val);
         }
 
-        if(root.right != null) {
+        if (root.right != null) {
             postOrder(root.right, (before << 1) + root.right.val);
-        } else if(root.left == null) {
-            sum += (before << 1) + root.val;
+        } else if (root.left == null) {
+            sum += before;
+        }
+    }
+
+    public int sumRootToLeaf(TreeNode root) {
+        sum = 0;
+        dfs(root, 0);
+        return sum;
+    }
+
+    public void dfs(TreeNode root, int num) {
+        if (root == null) {
+            return;
+        }
+        dfs(root.left, (num << 1) + root.val);
+        dfs(root.right, (num << 1) + root.val);
+        if (root.left == null && root.right == null) {
+            sum += (num << 1) + root.val;
         }
     }
 }

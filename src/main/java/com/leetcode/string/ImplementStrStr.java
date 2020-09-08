@@ -1,5 +1,9 @@
 package com.leetcode.string;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
+
 /**
  * @author wcl
  * @date 2:14 PM 2020/2/20
@@ -102,5 +106,15 @@ public class ImplementStrStr {
         System.out.println(strStr("mississippi","issip"));
         System.out.println(strStr("mississippi","issipi"));
         System.out.println(strStr("mississippi","sippia"));
+        for (int i = 1; i < 30; i++) {
+            int pow = (int) Math.pow(3, i);
+            System.out.println(pow);
+            if(pow == 2147483647) {
+                System.out.println(i);
+            }
+            System.out.println(Integer.toBinaryString(pow));
+            System.out.println(Integer.toBinaryString(pow >> 4));
+        }
+        System.out.println(Math.pow(2, 4) + Math.pow(2, 3) + Math.pow(2,1) + Math.pow(2, 0));
     }
 }
