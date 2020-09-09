@@ -1,6 +1,6 @@
 package com.leetcode.dp;
 
-import com.leetcode.Utils;
+import com.leetcode.dp.linear.LongestCommonSubsequence;
 
 /**
  * @author wcl

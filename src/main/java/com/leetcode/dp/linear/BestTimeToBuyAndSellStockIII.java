@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package com.leetcode.dp.linear;
 
 import com.leetcode.Utils;
 import edu.princeton.cs.algs4.In;

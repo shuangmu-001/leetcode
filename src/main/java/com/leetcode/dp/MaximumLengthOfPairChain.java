@@ -2,6 +2,7 @@ package com.leetcode.dp;
 
 
 import com.leetcode.Utils;
+import com.leetcode.dp.linear.LongestIncreasingSubsequence;
 
 import java.util.Arrays;
 import java.util.Comparator;

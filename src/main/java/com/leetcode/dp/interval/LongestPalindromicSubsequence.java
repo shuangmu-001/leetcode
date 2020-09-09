@@ -1,6 +1,8 @@
-package com.leetcode.dp;
+package com.leetcode.dp.interval;
 
 import com.leetcode.Utils;
+import com.leetcode.dp.LongestPalindromicSubstring;
+import com.leetcode.dp.linear.LongestCommonSubsequence;
 
 /**
  * @author wcl

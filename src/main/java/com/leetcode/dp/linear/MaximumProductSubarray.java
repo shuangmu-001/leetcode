@@ -1,6 +1,4 @@
-package com.leetcode.dp;
-
-import com.leetcode.Utils;
+package com.leetcode.dp.linear;
 
 
 /**

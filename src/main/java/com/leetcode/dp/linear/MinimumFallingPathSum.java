@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package com.leetcode.dp.linear;
 
 
 /**
@@ -39,9 +39,7 @@ public class MinimumFallingPathSum {
         int min = Integer.MAX_VALUE;
         int[] dp = new int[A[0].length];
         int cache = 0;
-        for (int i = 0; i < A[0].length; i++) {
-            dp[i] = A[0][i];
-        }
+        System.arraycopy(A[0], 0, dp, 0, A[0].length);
         for (int i = 1; i < A.length ; i++) {
             for (int j = 0; j < A[i].length; j++) {
 

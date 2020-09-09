@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package com.leetcode.dp.count;
 
 import com.leetcode.Utils;
 
