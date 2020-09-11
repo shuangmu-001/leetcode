@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package com.leetcode.dp.linear;
 
 import java.util.HashMap;
 import java.util.Map;

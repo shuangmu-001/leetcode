@@ -136,8 +136,8 @@ public class LongestIncreasingSubsequence {
         }
         int result = 1;
         int[] dp = new int[length];
-        Arrays.fill(dp, 1);
-        for (int i = 1; i < length; i++) {
+        for (int i = 0; i < length; i++) {
+            dp[i] = 1;
             for (int j = 0; j < i; j++) {
                 if(nums[j] < nums[i]) {
                     dp[i] = Math.max(dp[j] + 1, dp[i]);

@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package com.leetcode.dp.linear;
 
 import com.leetcode.dp.linear.MinimumPathSum;
 

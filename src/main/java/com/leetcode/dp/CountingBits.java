@@ -53,7 +53,7 @@ public class CountingBits {
 
     public static void main(String[] args) {
         for (int i = 0; i < 28; i++) {
-            new CountingBits().countBits(i);
+            Utils.printArrays(new CountingBits().countBits(i));
         }
     }
 }

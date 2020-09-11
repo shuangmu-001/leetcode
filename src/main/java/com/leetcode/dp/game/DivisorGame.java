@@ -1,4 +1,4 @@
-package com.leetcode.dp;
+package com.leetcode.dp.game;
 
 import com.leetcode.Utils;
 

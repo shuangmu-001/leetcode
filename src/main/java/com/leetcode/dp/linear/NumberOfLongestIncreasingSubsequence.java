@@ -2,15 +2,20 @@ package com.leetcode.dp.linear;
 
 import com.leetcode.Utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import static com.leetcode.Utils.printTwoArrays;
 
 /**
  * @author wcl
  * @date 10:40 AM 2020/1/3
- * TODO {@link "https://leetcode.com/problems/number-of-longest-increasing-subsequence/"}
+ * {@link "https://leetcode.com/problems/number-of-longest-increasing-subsequence/"}
  * @see LongestIncreasingSubsequence
+ * @see ArithmeticSlicesII
+ * TODO 线段树(segment tree)
  */
 public class NumberOfLongestIncreasingSubsequence {
     /**
@@ -32,38 +37,6 @@ public class NumberOfLongestIncreasingSubsequence {
      * @param nums an unsorted array of integers
      * @return num
      */
-    public static int findNumberOfLIS1(int[] nums) {
-        int length = nums.length;
-        if (length == 0 || length == 1) {
-            return length;
-        }
-        int result = 0;
-        int[][] results = new int[length][length];
-        for (int i = 0; i < length; i++) {
-            if (i != 0) {
-                results[i][i] = results[i - 1][i];
-            }
-            for (int j = i + 1; j < length; j++) {
-                if (nums[j] > nums[i]) {
-                    if(i != 0) {
-                        results[i][j] = Math.max(results[i][i] + 1, results[i - 1][j]);
-                    } else {
-                        results[i][j] = results[i][i] + 1;
-                    }
-
-                    result = Math.max(result, results[i][j]);
-                } else {
-                    if(i!=0) {
-                        results[i][j] = results[i - 1][j];
-                    }
-
-                }
-            }
-        }
-        printTwoArrays(results);
-        return result + 1;
-    }
-
     public static int findNumberOfLIS(int[] nums) {
         int length = nums.length;
         if (length == 0 || length == 1) {
@@ -73,29 +46,26 @@ public class NumberOfLongestIncreasingSubsequence {
         int[] dp = new int[length];
         int[] count = new int[length];
         int num = 0;
-        Arrays.fill(dp, 1);
-        Arrays.fill(count, 1);
-        for (int i = 1; i < length; i++) {
+
+        for (int i = 0; i < length; i++) {
+            dp[i] = 1;
+            count[i] = 1;
             for (int j = 0; j < i; j++) {
-                if(nums[j] < nums[i]) {
-                    if(dp[j] + 1 > dp[i]) {
-                       dp[i] = dp[j] + 1;
-                    } else if(dp[j] + 1 == dp[i]) {
+                if (nums[j] < nums[i]) {
+                    if (dp[j] + 1 > dp[i]) {
+                        dp[i] = dp[j] + 1;
+                        count[i] = count[j];
+                    } else if (dp[j] + 1 == dp[i]) {
                         count[i] += count[j];
-                    } else {
-                        count[i] = 1;
                     }
                 }
             }
-            if(result < dp[i]) {
+            if (result < dp[i]) {
                 result = dp[i];
                 num = count[i];
-            } else if(result == dp[i]) {
-                num++;
+            } else if (result == dp[i]) {
+                num += count[i];
             }
-        }
-        if(result == 1) {
-            return length;
         }
         Utils.printArrays(count);
         return num;
