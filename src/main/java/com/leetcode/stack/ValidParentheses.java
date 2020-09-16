@@ -170,4 +170,5 @@ public class ValidParentheses {
         System.out.println(')' - '(');
         System.out.println(']' - '[');
     }
+
 }

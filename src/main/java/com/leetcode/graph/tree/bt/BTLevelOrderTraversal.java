@@ -1,13 +1,14 @@
 package com.leetcode.graph.tree.bt;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author wcl
  * @date 9:11 PM 2020/3/17
  * <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">
  *     Binary Tree Level Order Traversal</a>
+ * TODO 只使用一个队列去实现它
+ * TODO 用BFS算法来做
  */
 public class BTLevelOrderTraversal {
     /**
@@ -43,5 +44,34 @@ public class BTLevelOrderTraversal {
             traversal(root.left, results, level+ 1);
             traversal(root.right, results, level+ 1);
         }
+    }
+
+    public List<List<Integer>> queue(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if(root == null) {
+            return res;
+        }
+        res.add(Collections.singletonList(root.val));
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            List<Integer> nums = new ArrayList<>();
+            while(size > 0) {
+                TreeNode node = queue.poll();
+                assert node != null;
+                nums.add(node.val);
+                if(node.left != null) {
+                    queue.add(node.left);
+                }
+                if(node.right != null) {
+                    queue.add(node.right);
+                }
+                size--;
+            }
+
+            res.add(nums);
+        }
+        return res;
     }
 }

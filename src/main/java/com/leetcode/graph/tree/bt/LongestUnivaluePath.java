@@ -1,9 +1,11 @@
 package com.leetcode.graph.tree.bt;
 
+import com.leetcode.Utils;
+
 /**
  * @author wcl
  * @date 10:27 PM 2020/3/15
- * <a href="https://leetcode.com/problems/longest-univalue-path/">
+ * TODO <a href="https://leetcode.com/problems/longest-univalue-path/">
  *      Longest Univalue Path</a>
  */
 public class LongestUnivaluePath {
@@ -33,7 +35,62 @@ public class LongestUnivaluePath {
      *
      * Note: The given binary tree has not more than 10000 nodes. The height of the tree is not more than 1000.
      */
-//    public int longestUnivaluePath(TreeNode root) {
-//
-//    }
+    static int max = 0;
+    public static int longestUnivaluePath(TreeNode root) {
+        max = 0;
+        dfs(root);
+        return max;
+    }
+
+    public static int dfs(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+
+        int left = dfs(root.left);
+        int right = dfs(root.right);
+        max = Math.max(left, max);
+        max = Math.max(right, max);
+
+        if(root.right != null && root.left != null
+                && root.val == root.left.val && root.val == root.right.val) {
+            max = Math.max(max, left + right + 1);
+            return Math.max(left, right)+ 1;
+        }
+
+        if(root.right != null && root.val == root.right.val) {
+            max = Math.max(max, right + 1);
+            return right + 1;
+        }
+        if(root.left != null && root.val == root.left.val) {
+            max = Math.max(max, left + 1);
+            return left + 1;
+        }
+
+        return 0;
+    }
+    public int arrowLength(TreeNode node) {
+        if (node == null) {
+            return 0;
+        }
+        int left = arrowLength(node.left);
+        int right = arrowLength(node.right);
+        int arrowLeft = 0, arrowRight = 0;
+        if (node.left != null && node.left.val == node.val) {
+            arrowLeft += left + 1;
+        }
+        if (node.right != null && node.right.val == node.val) {
+            arrowRight += right + 1;
+        }
+        max = Math.max(max, arrowLeft + arrowRight);
+        return Math.max(arrowLeft, arrowRight);
+    }
+
+    public static void main(String[] args) {
+        TreeNode treeNode = Utils.arrayToTreeNode(new Integer[]{5,5,5});
+        System.out.println(longestUnivaluePath(treeNode));
+
+//        treeNode = Utils.arrayToTreeNode(new Integer[]{5,5,5,5,5,3,5,5});
+//        System.out.println(longestUnivaluePath(treeNode));
+    }
 }

@@ -1,5 +1,7 @@
 package com.leetcode.string;
 
+import java.util.*;
+
 /**
  * @author wcl
  * @date 7:54 PM 2020/5/5
@@ -35,6 +37,20 @@ public class FirstUniqueCharacter {
                 return i;
             }
         }
+        Map<Character, Integer> maps = new HashMap<>();
+
         return -1;
+
+    }
+
+    public static void main(String[] args) {
+
+        String[] s = " abc       cd        ".split(" ");
+        for(String str : s) {
+
+            System.out.println(str.isEmpty());
+            System.out.println(str);
+        }
+        System.out.println(Arrays.toString(s));
     }
 }

@@ -57,5 +57,41 @@ public class SortColors {
         int[] nums = new int[]{2, 0, 2, 1, 1, 0};
         sortColors(nums);
         Utils.printArrays(nums);
+        sortColors2(new int[]{3,2,2,1,4}, 4);
+
     }
+
+    public static void sortColors2(int[] colors, int k) {
+        // write your code here
+
+        int left = 0;
+        int right = colors.length - 1;
+        for(int i = 0; i < k / 2; i++) {
+            int index = left;
+            while(index >= left && index <= right) {
+                if(colors[index] == i + 1) {
+                    if(index != left) {
+                        swap(colors, left, index);
+                    } else {
+                        index++;
+                    }
+                    left++;
+                } else if(colors[index] == k - i) {
+                    if(index != right) {
+                        swap(colors, right, index);
+                    } else {
+                        index++;
+                    }
+                    right--;
+                } else {
+                    index++;
+                }
+            }
+            Utils.printArrays(colors);
+            System.out.println(left + " ------- " + right);
+        }
+
+    }
+
+
 }

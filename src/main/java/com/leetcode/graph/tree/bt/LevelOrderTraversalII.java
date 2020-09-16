@@ -33,6 +33,7 @@ public class LevelOrderTraversalII {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> nodes = new ArrayList<>();
         traversal(root, 0, nodes);
+        // 用LinkedList可以从头和尾两头添加
         Collections.reverse(nodes);
         return nodes;
     }

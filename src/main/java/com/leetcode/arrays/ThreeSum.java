@@ -1,6 +1,7 @@
 package com.leetcode.arrays;
 
 import com.leetcode.Utils;
+import sun.jvm.hotspot.utilities.Interval;
 
 import java.util.*;
 
@@ -264,12 +265,76 @@ public class ThreeSum {
 
 
     public static void main(String[] args) {
-        int[] nums1 = {-1, 0, 1, 2, -1, -4};
-        System.out.println(threeSum(nums1));
-        // [[-5,1,4],[-4,0,4],[-4,1,3],[-2,-2,4],[-2,1,1],[0,0,0]]
-        int[] nums2 = {-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0};
-        System.out.println(threeSum(nums2));
-        System.out.println(~Arrays.binarySearch(new int[]{-1,1,3}, 0));
+//        int[] nums1 = {-1, 0, 1, 2, -1, -4};
+//        System.out.println(threeSum(nums1));
+//        // [[-5,1,4],[-4,0,4],[-4,1,3],[-2,-2,4],[-2,1,1],[0,0,0]]
+//        int[] nums2 = {-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0};
+//        System.out.println(threeSum(nums2));
+//        System.out.println(~Arrays.binarySearch(new int[]{-1,1,3}, 0));
+        List<Interval> a = new ArrayList<>();
+        a.add(new Interval(1,5));
+        a.add(new Interval(3,8));
+        a.add(new Interval(0,4));
+        a.add(new Interval(5,12));
+        a.add(new Interval(5,10));
+        a.add(new Interval(6,10));
+        a.add(new Interval(7,10));
+        System.out.println(getAns(a));
     }
+
+    static class Interval {
+        int start, end;
+
+        Interval(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
+
+        @Override
+        public String toString() {
+            return "Interval{" +
+                    "start=" + start +
+                    ", end=" + end +
+                    '}';
+        }
+    }
+    public static int getAns(List<Interval> a) {
+        // write your code here
+        if( a == null || a.size() == 0) {
+            return 0;
+        }
+        List<Interval> res = new ArrayList<>();
+        a.sort(Comparator.comparingInt(a2 -> a2.start));
+        System.out.println(a);
+        res.add(a.get(0));
+        for(Interval source : a) {
+            boolean flag = true;
+            for(Interval target : res) {
+                if(source.start == target.end || (source.start > target.start && source.start <= target.end)) {
+                    target.start = source.start;
+                    flag = false;
+                    break;
+                }
+                if(source.start >= target.start && source.end <= target.end) {
+                    target.start = source.start;
+                    target.end = source.end;
+                    flag = false;
+                    break;
+                }
+                if(source.start <= target.start && source.end >= target.end) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if(flag) {
+                res.add(source);
+            }
+            System.out.println(res);
+        }
+
+        return res.size();
+    }
+
 
 }

@@ -159,6 +159,7 @@ public class Sort {
             swap(nums, 0, i);
             makeHeap(nums, 0, i);
         }
+
     }
 
     /**
@@ -258,5 +259,7 @@ public class Sort {
         nums = new int[]{3, 2, 2, 4, 1, 4};
         countingSort(nums);
         System.out.println("计数排序的结果 : " + Arrays.toString(nums));
+
+        Arrays.binarySearch(nums, 19);
     }
 }

@@ -28,7 +28,7 @@ public class InorderTraversal {
      * Output: [1,3,2]
      * Follow up: Recursive solution is trivial, could you do it iteratively?
      */
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal1(TreeNode root) {
         List<Integer> results = new ArrayList<>();
         if(root == null) {
             return results;

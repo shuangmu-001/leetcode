@@ -2,13 +2,6 @@ package com.leetcode.dp.linear;
 
 import com.leetcode.Utils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import static com.leetcode.Utils.printTwoArrays;
-
 /**
  * @author wcl
  * @date 10:40 AM 2020/1/3

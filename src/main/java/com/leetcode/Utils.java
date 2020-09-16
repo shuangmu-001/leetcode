@@ -5,6 +5,8 @@ import com.leetcode.graph.tree.linkedList.FlattenAMultilevelDoublyLinkedList;
 import com.leetcode.graph.tree.linkedList.ListNode;
 
 import java.io.*;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -382,6 +384,33 @@ public class Utils {
         consumer.accept(t);
         long end = System.currentTimeMillis();
         return end - before;
+    }
+
+    public static void addLog(String str) {
+        RandomAccessFile rw = null;
+        try {
+            rw = new RandomAccessFile("out.log", "rw");
+            FileChannel channel = rw.getChannel();
+
+            MappedByteBuffer map = channel.map(FileChannel.MapMode.READ_WRITE, rw.length(), str.length());
+            int capacity = map.capacity();
+            System.out.println("MappedByteBuffer : " + capacity);
+            byte[] bytes = str.getBytes();
+            for (byte b : bytes) {
+                map.put(b);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if(rw != null ) {
+                try {
+                    rw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
     }
 
 }

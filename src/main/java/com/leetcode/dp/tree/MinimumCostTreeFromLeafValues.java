@@ -33,10 +33,30 @@ public class MinimumCostTreeFromLeafValues {
      *      It is guaranteed that the answer fits into a 32-bit signed integer (ie. it is less than 2^31).
      */
     public static int mctFromLeafValues(int[] arr) {
-        return 0;
-    }
-
-    public static void main(String[] args) {
-
+        int len = arr.length;
+        int max = Math.max(arr[0], arr[1]);
+        int sum = arr[0] * arr[1];
+        for (int i = 2; i < len; i++) {
+            if(arr[i] > max) {
+                sum += max * arr[i];
+                max = arr[i];
+            } else if(arr[i] < arr[i - 1]) {
+                sum += arr[i - 1] * arr[i];
+            } else {
+                int first = arr[i];
+                int second = arr[i - 1];
+                for (int j = i - 1; j >= 0; j--) {
+                    if(arr[j] < arr[i]) {
+                        second = Math.max(second, arr[j]);
+                    } else {
+                        first = arr[j];
+                        break;
+                    }
+                }
+                sum -= first * second;
+                sum += first * arr[i] + second * arr[i];
+            }
+        }
+        return sum;
     }
 }
