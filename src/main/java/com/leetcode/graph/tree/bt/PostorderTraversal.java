@@ -40,6 +40,7 @@ public class PostorderTraversal {
                 root = root.left;
             }
             TreeNode pop = stack.pop();
+            // 改变了树的结构
             if(pop.right != null) {
                 stack.push(pop);
                 root = pop.right;

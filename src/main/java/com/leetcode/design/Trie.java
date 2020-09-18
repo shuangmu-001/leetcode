@@ -28,67 +28,64 @@ import java.util.*;
  */
 public class Trie {
 
-    Set<String> set = new HashSet<>();
-    Map<Character, Node> nodes = new HashMap<>();
+    TrieNode root;
+
     /** Initialize your data structure here. */
     public Trie() {
-
+        root = new TrieNode(' ');
     }
 
     /** Inserts a word into the trie. */
     public void insert(String word) {
-        char[] chars = word.toCharArray();
-        Set<Character> childs = nodes.keySet();
-        Map<Character, Node> prefixNodes = nodes;
-        int index = 0;
-        while(index < word.length() && childs.contains(chars[index])) {
-            Node node = prefixNodes.get(chars[index]);
-            prefixNodes = node.nodes;
-            childs = prefixNodes.keySet();
-            index++;
+        TrieNode dummy = root;
+        for(char c : word.toCharArray()) {
+            TrieNode[] trieNodes = dummy.trieNodes;
+            if(trieNodes[c - 'a'] == null) {
+                trieNodes[c - 'a'] = new TrieNode(c);
+            }
+            dummy = trieNodes[c - 'a'];
         }
-        for (int i = index; i < chars.length; i++) {
-            Node node = new Node(chars[i]);
-            prefixNodes.put(chars[i], node);
-            prefixNodes = node.nodes;
-        }
-
-        set.add(word);
+        dummy.world = true;
     }
 
     /** Returns if the word is in the trie. */
     public boolean search(String word) {
-        return set.contains(word);
+        TrieNode dummy = root;
+        for(char c : word.toCharArray()) {
+            TrieNode[] trieNodes = dummy.trieNodes;
+            if(trieNodes[c - 'a'] == null) {
+                return false;
+            }
+            dummy = trieNodes[c - 'a'];
+        }
+        return dummy.world;
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public boolean startsWith(String prefix) {
-        if(set.contains(prefix)) {
-            return true;
+        TrieNode dummy = root;
+        for(char c : prefix.toCharArray()) {
+            TrieNode[] trieNodes = dummy.trieNodes;
+            if(trieNodes[c - 'a'] == null) {
+                return false;
+            }
+            dummy = trieNodes[c - 'a'];
         }
-        char[] chars = prefix.toCharArray();
-        Set<Character> childs = nodes.keySet();
-        Map<Character, Node> prefixNodes = nodes;
-        int index = 0;
-        while(index < prefix.length() && childs.contains(chars[index])) {
-            Node node = prefixNodes.get(chars[index]);
-            prefixNodes = node.nodes;
-            childs = prefixNodes.keySet();
-            index++;
-        }
-        return index >= prefix.length();
+        return true;
     }
 
-    static class Node {
+    static class TrieNode {
+
         char c;
-        Map<Character, Node> nodes;
 
-        public Node(char c) {
+        TrieNode[] trieNodes = new TrieNode[26];
+
+        boolean world;
+
+        public TrieNode(char c) {
             this.c = c;
-            nodes = new HashMap<>();
         }
     }
-
 }
 
 /**

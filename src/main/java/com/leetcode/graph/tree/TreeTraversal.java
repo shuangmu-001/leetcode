@@ -22,9 +22,9 @@ public class TreeTraversal {
     public void preOrder(Node root) {
         System.out.println(root.val);
         if(root.children != null) {
-            List<Node> childrens = root.children;
-            for (Node children : childrens) {
-                preOrder(children);
+            List<Node> children = root.children;
+            for (Node child : children) {
+                preOrder(child);
             }
         }
     }
@@ -40,9 +40,9 @@ public class TreeTraversal {
     public void inOrder(Node root) {
 
         if(root.children != null) {
-            List<Node> childrens = root.children;
-            for (Node children : childrens) {
-                inOrder(children);
+            List<Node> children = root.children;
+            for (Node child : children) {
+                inOrder(child);
                 System.out.println(root.val);
             }
         }
@@ -51,9 +51,9 @@ public class TreeTraversal {
     public void postOrder(Node root) {
 
         if(root.children != null) {
-            List<Node> childrens = root.children;
-            for (Node children : childrens) {
-                inOrder(children);
+            List<Node> children = root.children;
+            for (Node child : children) {
+                inOrder(child);
             }
             System.out.println(root.val);
         }
