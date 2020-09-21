@@ -5,8 +5,8 @@ import java.util.*;
 /**
  * @author wcl
  * @date 4:57 PM 2020/1/15
- * TODO {@link "https://leetcode.com/problems/increasing-subsequences/"}
- * @see NumberOfLongestIncreasingSubsequence
+ * {@link "https://leetcode.com/problems/increasing-subsequences/"}
+ * @see com.leetcode.dp.linear.NumberOfLongestIncreasingSubsequence
  */
 public class IncreasingSubsequences {
     /**
@@ -28,7 +28,7 @@ public class IncreasingSubsequences {
      * Runtime: 18 ms, faster than 46.33% of Java online submissions for Increasing Subsequences.
      * Memory Usage: 57.4 MB, less than 14.29% of Java online submissions for Increasing Subsequences.
      */
-    public static List<List<Integer>> findSubsequences(int[] nums) {
+    public static List<List<Integer>> findSubsequences1(int[] nums) {
 
         int length = nums.length;
         List<List<Integer>> results = new ArrayList<>();
@@ -119,6 +119,33 @@ public class IncreasingSubsequences {
         }
         System.out.println(con);
         return results;
+    }
+    // dfs
+    static Set<List<Integer>> res;
+    public static List<List<Integer>> findSubsequences(int[] nums) {
+        res = new HashSet<>();
+        dfs(nums, 0, new ArrayList<>());
+        return new ArrayList<>(res);
+    }
+
+    public static void dfs(int[] nums, int start, List<Integer> target) {
+        if(start >= nums.length) {
+            return;
+        }
+        int size = target.size();
+        for (int i = start; i < nums.length; i++) {
+            if(i != start && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            if(size == 0 || nums[i] >= target.get(size - 1)) {
+                target.add(nums[i]);
+                if(target.size() > 1) {
+                    res.add(new ArrayList<>(target));
+                }
+                dfs(nums, i + 1, target);
+                target.remove(size);
+            }
+        }
     }
 
     public static void main(String[] args) {
