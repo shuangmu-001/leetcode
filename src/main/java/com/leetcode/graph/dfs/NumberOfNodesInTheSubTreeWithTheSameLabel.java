@@ -134,7 +134,6 @@ public class NumberOfNodesInTheSubTreeWithTheSameLabel {
         labels = "aeed";
         System.out.println("目标 : [1, 1, 2, 1]; 实际 : " + get(n, edges, labels));
 
-
     }
 
     public static String get(int n, int[][] edges, String labels) {

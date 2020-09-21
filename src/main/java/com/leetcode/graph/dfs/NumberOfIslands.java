@@ -74,4 +74,7 @@ public class NumberOfIslands {
         }
         return result;
     }
+
+//    dirs为上下左右方向
+//    dirs = [(-1, 0), (1, 0), (0, 1), (0, -1)]
 }
