@@ -260,6 +260,6 @@ public class Sort {
         countingSort(nums);
         System.out.println("计数排序的结果 : " + Arrays.toString(nums));
 
-        Arrays.binarySearch(nums, 19);
+        System.out.println(Arrays.binarySearch(nums, 19));
     }
 }
