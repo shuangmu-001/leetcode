@@ -38,7 +38,7 @@ public class RightSideView {
             results.add(root.val);
             maxDepth = depth;
         }
-        preOrder(root.left, depth + 1, results);
         preOrder(root.right, depth + 1, results);
+        preOrder(root.left, depth + 1, results);
     }
 }
