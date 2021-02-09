@@ -62,4 +62,21 @@ public class RemoveCoveredIntervals {
         }
         return count;
     }
+    // intervals[0] < intervals[1] 和 intervals[0]>=0
+    public boolean check(int[][] intervals) {
+        Arrays.sort(intervals, (o1, o2) -> o1[0] == o2[0] ? o2[1] - o1[1]: o1[0] - o2[0]);
+
+        int cur, prev_end = -1;
+        int length = intervals.length;
+        for (int i = 0; i < length; i++) {
+            cur = intervals[i][0];
+            if(cur <= prev_end) {
+                throw new RuntimeException("区间 " + intervals[i - 1][0] + "-"
+                        + intervals[i - 1][1] + "与区间"
+                        + intervals[i - 1][0] + "-" + intervals[i - 1][1] + "重叠");
+            }
+            prev_end = intervals[i][1];
+        }
+        return true;
+    }
 }
