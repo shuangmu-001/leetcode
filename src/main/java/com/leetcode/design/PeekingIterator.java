@@ -20,7 +20,8 @@ import java.util.Iterator;
  * Follow up: How would you extend your design to be generic and work with all types, not just integer?
  * @author zms
  * @date 7:56 上午 2021/2/9
- * <a href="https://leetcode.com/problems/peeking-iterator/">Peeking Iterator</a>
+ * <a href="https://leetcode.com/problems/peeking-iterator/">
+ *     Peeking Iterator</a>
  */
 public class PeekingIterator implements Iterator<Integer> {
 
