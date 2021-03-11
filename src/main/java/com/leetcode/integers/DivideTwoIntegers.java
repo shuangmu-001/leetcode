@@ -28,9 +28,15 @@ public class DivideTwoIntegers {
      */
     public static int divide(int dividend, int divisor) {
 
-        if (dividend == 0 || divisor == 1) return dividend;
-        if (dividend == divisor) return 1;
-        if (divisor == Integer.MIN_VALUE) return 0;
+        if (dividend == 0 || divisor == 1) {
+            return dividend;
+        }
+        if (dividend == divisor) {
+            return 1;
+        }
+        if (divisor == Integer.MIN_VALUE) {
+            return 0;
+        }
         int flag = dividend == Integer.MIN_VALUE ? 1 : 0;
         int a = dividend < 0 ? (~dividend) + 1 : dividend;
         int b = divisor < 0 ? (~divisor) + 1 : divisor;
@@ -45,7 +51,6 @@ public class DivideTwoIntegers {
             quotient = divideUnSign(a, b, quotient, flag);
         }
 
-        System.out.println(quotient);
         if ((dividend ^ divisor) < 0) {
             quotient = (~quotient) + 1;
         }
