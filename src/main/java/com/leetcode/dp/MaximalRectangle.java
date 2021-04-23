@@ -7,6 +7,7 @@ import com.leetcode.Utils;
  * @date 10:54 AM 2020/4/28
  * <a href="https://leetcode.com/problems/maximal-rectangle/">
  *     Maximal Rectangle</a>
+ *     
  */
 public class MaximalRectangle {
     /**
