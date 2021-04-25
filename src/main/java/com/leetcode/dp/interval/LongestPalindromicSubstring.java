@@ -1,4 +1,6 @@
-package com.leetcode.dp;
+package com.leetcode.dp.interval;
+
+import com.leetcode.Utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -39,14 +41,42 @@ public class LongestPalindromicSubstring {
         return result;
     }
 
+    public static String longestPalindrome01(String s) {
+        int n = s.length();
+        char[] chars = s.toCharArray();
+        int[][] dp = new int[n][n];
+        int start = 0;
+        int maxLen = 1;
+        for (int i = 0; i < n; i++) {
+            dp[i][i] = 1;
+        }
+        for (int len = 2; len <= n; len++) {
+            for (int i = 0; i + len <= n; i++) {
+                int j = i + len - 1;
+                dp[i][j] = Math.max(dp[i + 1][j], dp[i][j - 1]);
+                // TODO 如果i到j不是回文，那么 i - 1 到 j + 1 也不是回文
+                if(chars[i] == chars[j] && dp[i + 1][j - 1] == len - 2) {
+                    dp[i][j] = len;
+                }
+                if(dp[i][j] > maxLen) {
+                    start = i;
+                    maxLen = dp[i][j];
+                }
+            }
+            Utils.printTwoArrays(dp);
+        }
+        return s.substring(start, start + maxLen);
+    }
+
 
     public static void main(String[] args) {
-//        assert "bab".equals(longestPalindrome02("babad")) ? false : true;
-//        assert "aba".equals(longestPalindrome02("babad"));
-//        assert "bb".equals(longestPalindrome02("cbbd"));
-        Map<Character, Integer> map =  new HashMap<>();
-        System.out.println(longestPalindrome02("aacdefcaa"));
-        System.out.println(longestPalindrome("a"));
+//        System.out.println((longestPalindrome01("babad")));
+//        System.out.println(longestPalindrome01("babad"));
+//        System.out.println(longestPalindrome01("cbbd"));
+//        Map<Character, Integer> map =  new HashMap<>();
+//        System.out.println(new String(new char[]{'a'}, 0, 1));
+//        System.out.println(longestPalindrome01("aacdefcaa"));
+        System.out.println(longestPalindrome01("aaaaaaaaaaaaaaabbbbbbbbbdddaeveaeveadbbbbbbbbbbbbbbbbbbbbc"));
     }
 
     /**
