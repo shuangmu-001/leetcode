@@ -7,6 +7,7 @@ import com.leetcode.graph.tree.linkedList.ListNode;
 import java.io.*;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -45,6 +46,16 @@ public class Utils {
         for (Object[] ints : arr) {
             for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(ints[j] + ",          ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printThreeArrays1(int[][][] arr) {
+        System.out.println("------三维数组的打印----------");
+        for (int[][] ints : arr) {
+            for (int[] i : ints) {
+                System.out.printf("%s,", Arrays.toString(i));
             }
             System.out.println();
         }

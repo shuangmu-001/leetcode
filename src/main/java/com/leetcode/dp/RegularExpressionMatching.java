@@ -3,8 +3,7 @@ package com.leetcode.dp;
 /**
  * @author wcl
  * @date Create in 5:12 下午 2019/11/26
- * TODO <a href="https://leetcode-cn.com/problems/regular-expression-matching/">
- * Regular Expression Matching</>
+ * TODO <a href="https://leetcode-cn.com/problems/regular-expression-matching/"> Regular Expression Matching</>
  */
 public class RegularExpressionMatching {
     /**
@@ -60,6 +59,8 @@ public class RegularExpressionMatching {
     // 初始化：
     // 主要是针对空串
     private static boolean isMatch02(String s, String p) {
+        char[] s1 = s.toCharArray();
+        char[] s2 = p.toCharArray();
         int m = s.length();
         int n = p.length();
         boolean[][] dp = new boolean[m + 1][n + 1];
@@ -74,10 +75,9 @@ public class RegularExpressionMatching {
                     continue;
                 }
                 dp[i][j] = false;
-                char c = p.charAt(j - 1);
-                if (c != '*') {
+                if (s2[j - 1] != '*') {
                     //  当p[j] == . || p[j] == s[i](s[i] 不可能是 * ) 则 dp[i][j] = true;
-                    if (i > 0 && (c == '.' || c == s.charAt(i - 1))) {
+                    if (i > 0 && (s2[j - 1] == '.' || s2[j - 1] == s1[i - 1])) {
                         dp[i][j] = dp[i - 1][j - 1];
                     }
                 } else {
@@ -87,8 +87,7 @@ public class RegularExpressionMatching {
                     }
                     // 当p[j] == * 则 dp[i][j] = (s[i] == p[j - 1] && dp[i - 1][j - 2]) || (dp[i][j - 2])
                     if (i >= 1 && j >= 2) {
-                        c = p.charAt(j - 2);
-                        dp[i][j] |= dp[i - 1][j] && (s.charAt(i - 1) == c || c == '.');
+                        dp[i][j] |= dp[i - 1][j] && (s1[i - 1] == s2[j - 2] || s2[j - 2] == '.');
                     }
                 }
             }
