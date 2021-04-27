@@ -35,11 +35,12 @@ public class InterleavingString {
      * 0 <= s1.length, s2.length <= 100
      * 0 <= s3.length <= 200
      * s1、s2、和 s3 都由小写英文字母组成
+     * Follow up: Could you solve it using only O(s2.length) additional memory space?
      */
     // 状态：dp[i][j] s3(i + j) 是由 s1(i) 和 s2(j) 组成
     // 状态转移方程：dp[i][j] (dp[i - 1][j] && s1[i] == s3[i + j]) OR (dp[i][j - 1] && s2[j] == s3[i + j])
     // 初始化：i = 0 的时候 和 j = 0的时候
-    public static boolean isInterleave(String s1, String s2, String s3) {
+    public static boolean isInterleave01(String s1, String s2, String s3) {
         int n = s1.length();
         int m = s2.length();
         int l = s3.length();
@@ -49,7 +50,6 @@ public class InterleavingString {
         char[] c1 = s1.toCharArray();
         char[] c2 = s2.toCharArray();
         char[] t = s3.toCharArray();
-        // TODO 压缩空间
         boolean[][] dp = new boolean[n + 1][m + 1];
         dp[0][0] = true;
         for (int i = 1; i <= n; i++) {
@@ -76,6 +76,35 @@ public class InterleavingString {
         }
         Utils.printTwoArrays(dp);
         return dp[n][m];
+    }
+    // 压缩空间
+    public static boolean isInterleave(String s1, String s2, String s3) {
+        int n = s1.length();
+        int m = s2.length();
+        int l = s3.length();
+        if (n + m != l) {
+            return false;
+        }
+        char[] c1 = s1.toCharArray();
+        char[] c2 = s2.toCharArray();
+        char[] t = s3.toCharArray();
+        boolean[] dp = new boolean[m + 1];
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= m; j++) {
+                if(i == 0 && j == 0) {
+                    dp[j] = true;
+                } else if(i == 0) {
+                    dp[j] = c2[j - 1] == t[j - 1] && dp[j - 1];
+                } else if(j == 0) {
+                    dp[j] &= c1[i - 1] == t[i - 1];
+                } else {
+                    dp[j] &= (c1[i - 1] == t[i + j - 1]);
+                    dp[j] |= (c2[j - 1] == t[i + j - 1] && dp[j - 1]);
+                }
+
+            }
+        }
+        return dp[m];
     }
 
     public static void main(String[] args) {
