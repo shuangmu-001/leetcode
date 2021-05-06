@@ -1,5 +1,7 @@
 package com.leetcode.string;
 
+import java.util.Locale;
+
 /**
  * @author wcl
  * @date 2:23 下午 2020/8/28
@@ -66,6 +68,53 @@ public class ThousandSeparator {
             }
         }
         return result.toString();
+    }
+    // 最长字串 中间有空格
+    public static void main(String[] args) {
+        System.out.println(4 == longStr("a b   123#"));
+        System.out.println(1 == longStr("a"));
+        System.out.println(0 == longStr("     "));
+        System.out.println(1 == longStr("   a  "));
+        System.out.println(5 == longStr("    abaev"));
+        System.out.println(6 == longStr("    abaev  fefe er ew eeeeee"));
+        System.out.println("jsfklejwoij".length() == longStr("a b   123#   jsfklejwoij"));
+        System.out.println("bwjefvwjoijvoew".length() == longStr("a bwjefvwjoijvoew   123# jfei jfeifee  fe          "));
+    }
+
+    public static int longStr(String s) {
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+        int n = s.length();
+        char[] c = s.toCharArray();
+        int max = 0;
+        int i = 0, j = 0;
+        while (j < n) {
+            while (j < n && c[j] == ' ') {
+                j++;
+            }
+            if (j >= n) {
+                return max;
+            }
+            i = j;
+            while (j < n && c[j] != ' ') {
+                j++;
+            }
+            max = Math.max(max, j - i);
+        }
+//        while(j < n) {
+//            if(c[j] == ' ') {
+//                if(i != j) {
+//                    max = Math.max(max, j - i);
+//                }
+//                j++;
+//                i = j;
+//            } else {
+//                j++;
+//            }
+//        }
+//        max = Math.max(max, j - i);
+        return max;
     }
 
 

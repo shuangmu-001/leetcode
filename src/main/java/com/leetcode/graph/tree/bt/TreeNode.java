@@ -1,9 +1,9 @@
 package com.leetcode.graph.tree.bt;
 
 /**
+ * Definition for a binary tree node.
  * @author wcl
  * @date 8:52 PM 2020/2/29
- * Definition for a binary tree node.
  */
 public class TreeNode {
 

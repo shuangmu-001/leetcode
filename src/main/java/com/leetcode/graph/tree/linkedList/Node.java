@@ -3,6 +3,7 @@ package com.leetcode.graph.tree.linkedList;
 import java.util.Objects;
 
 /**
+ * Definition for a linked list node.
  * @author wcl
  * @date 2:18 PM 2020/4/9
  */

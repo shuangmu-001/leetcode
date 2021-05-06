@@ -1,6 +1,7 @@
 package com.leetcode.graph.tree.trie;
 
 /**
+ * Definition for a trie tree node.
  * @author wcl
  * @date 2:59 下午 2020/9/17
  */

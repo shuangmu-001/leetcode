@@ -3,6 +3,7 @@ package com.leetcode.graph.tree;
 import java.util.List;
 
 /**
+ * Definition for a tree node.
  * @author wcl
  * @date 6:00 PM 2020/3/8
  */
