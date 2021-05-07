@@ -11,6 +11,13 @@ import java.util.Queue;
 @SuppressWarnings("unchecked")
 public class BinaryTree<E> implements BinaryTreeInfo {
 
+    public BinaryTree() {
+    }
+
+    public BinaryTree(Node<E> root) {
+        this.root = root;
+    }
+
     protected int size;
 
     protected Node<E> root;
@@ -30,11 +37,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
     /**
      * 内部类，节点类
      */
-    protected static class Node<E> {
-        E element;
-        Node<E> left;
-        Node<E> right;
-        Node<E> parent;
+    public static class Node<E> {
+        public E element;
+        public Node<E> left;
+        public Node<E> right;
+        public Node<E> parent;
 
         public Node(E element, Node<E> parent) {
             this.element = element;
