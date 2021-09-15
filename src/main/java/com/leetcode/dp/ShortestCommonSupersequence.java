@@ -1,5 +1,7 @@
 package com.leetcode.dp;
 
+import com.leetcode.dp.linear.LongestCommonSubsequence;
+
 /**
  * @author wcl
  * @date 10:27 AM 2020/4/27

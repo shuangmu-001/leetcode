@@ -5,7 +5,7 @@ import com.leetcode.Utils;
 /**
  * @author wcl
  * @date 7:48 PM 2020/2/25
- * {@link "https://leetcode.com/problems/divisor-game/"}
+ * TODO {@link "https://leetcode.com/problems/divisor-game/"}
  */
 public class DivisorGame {
     /**

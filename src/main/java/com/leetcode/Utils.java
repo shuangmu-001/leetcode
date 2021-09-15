@@ -249,7 +249,6 @@ public class Utils {
         return res;
     }
 
-
     public static FlattenAMultilevelDoublyLinkedList.Node arrayToMultilevleDoublyNode(Integer[]... num) {
         FlattenAMultilevelDoublyLinkedList.Node head = null;
         int preIndex;

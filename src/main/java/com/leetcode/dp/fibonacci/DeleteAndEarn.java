@@ -1,7 +1,4 @@
-package com.leetcode.dp;
-
-import com.leetcode.dp.fibonacci.HouseRobber;
-import com.leetcode.dp.fibonacci.HouseRobberII;
+package com.leetcode.dp.fibonacci;
 
 /**
  * @author wcl

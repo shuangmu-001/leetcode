@@ -36,7 +36,6 @@ public class Balance {
         int right = depth(root.right, root, false);
         if(left > right && left - right > 1) {
             TreeNode leftNode = root.left;
-
             root.left = null;
             if(flag) {
                 parent.left = leftNode;

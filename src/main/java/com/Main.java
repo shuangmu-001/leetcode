@@ -9,14 +9,16 @@ import java.util.Random;
  */
 public class Main {
 
+    private static final int NUM = 100;
+
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-        if(args.length != 1) {
+        if (args.length != 1) {
             return;
         }
         Class<?> c = Main.class.getClassLoader().loadClass(args[0]);
         Test test = (Test) c.newInstance();
-        for (int i = 0; i < 100; i++) {
-            test.test(new Random().nextInt(100));
+        for (int i = 0; i < NUM; i++) {
+            test.test(new Random().nextInt(NUM));
         }
     }
 }

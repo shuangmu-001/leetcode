@@ -12,6 +12,7 @@ import java.util.Map;
  * @author wcl
  * @date 10:18 AM 2020/2/28
  * TODO {@link "https://leetcode.com/problems/stone-game/"}
+ * 博弈+区间动态规划
  */
 public class StoneGame {
     /**

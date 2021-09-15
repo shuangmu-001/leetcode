@@ -1,6 +1,6 @@
-package com.leetcode.stack;
+package com.leetcode.dp.interval;
 
-import java.util.Stack;
+
 
 /**
  * @author zms
@@ -30,47 +30,27 @@ public class TrappingRainWater {
         if (n <= 2) {
             return 0;
         }
-        int start = 0;
-        while (start < n && height[start] == 0) {
-            start++;
-        }
-        if (start >= n) {
-            return 0;
-        }
-        int end = n - 1;
-        while (end >= 0 && height[end] == 0) {
-            end--;
-        }
-        if (end < 0) {
-            return 0;
-        }
         int res = 0;
-        Stack<Integer> stack = new Stack<>();
-        stack.push(start);
-        int preIndex, min;
-        // 单调栈
-        for (int i = start + 1; i <= end; i++) {
-            min = 0;
-            if(height[i] <= height[stack.peek()]) {
-                if(height[i] == height[stack.peek()]) {
-                    stack.pop();
-                }
-                stack.push(i);
-                continue;
-            }
-            while(!stack.empty() && height[i] >= height[stack.peek()]) {
-                preIndex = stack.pop();
-                res += (height[preIndex] - min) * (i - preIndex - 1);
-                min = height[preIndex];
-            }
-            if(!stack.empty()) {
-                preIndex = stack.peek();
-                res += (height[i] - min) * (i - preIndex - 1);
-            }
-            stack.push(i);
+        // 每个位置的储水量和他左边最高的位置和右边的最高位置有关
+        // dp[i] 表示当前到位置的储水量
+        // leftMax = height[0, i] 最大值；rightMax = height[i, n - 1] 最大值
+        // dp[i] = min{leftMax, rightMax} - height[i];
+        int[] leftMax = new int[n];
+        leftMax[0] = height[0];
+        for (int i = 1; i <  n; i++) {
+            leftMax[i] = Math.max(leftMax[i - 1], height[i]);
+        }
+        int[] rightMax = new int[n];
+        rightMax[n - 1] = height[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            rightMax[i] = Math.max(rightMax[i + 1], height[i]);
+        }
+        for (int i = 0; i < n; i++) {
+            res += Math.min(leftMax[i], rightMax[i]) - height[i];
         }
         return res;
     }
+    // TODO 能否用双指针解决，空间压缩
 
     public static void main(String[] args) {
         System.out.println(6 == trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));

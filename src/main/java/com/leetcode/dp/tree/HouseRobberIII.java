@@ -1,6 +1,7 @@
-package com.leetcode.graph.tree.bt;
+package com.leetcode.dp.tree;
 
 import com.leetcode.dp.fibonacci.HouseRobber;
+import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
  * @author wcl
@@ -60,7 +61,7 @@ public class HouseRobberIII {
         return new RobInfo(first, second);
     }
 
-    class RobInfo {
+    static class RobInfo {
         int first;
         int second;
 

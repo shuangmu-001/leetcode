@@ -27,7 +27,7 @@ public class RemoveDuplicatesFromSortedListII {
         }
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode parent = dummy, cur = head;
+        ListNode parent = dummy, nextPar = head;
         int count = 0;
         int pre = head.val;
         while(head != null) {
@@ -36,15 +36,34 @@ public class RemoveDuplicatesFromSortedListII {
             } else {
                 count = 1;
                 pre = head.val;
-                parent = cur;
-                cur = head;
+                parent = nextPar;
+                nextPar = head;
             }
 
             if(count > 1) {
                 parent.next = head.next;
-                cur = parent;
+                nextPar = parent;
             }
             head = head.next;
+        }
+        return dummy.next;
+    }
+
+    public static ListNode deleteDuplicates1(ListNode head) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode parent = dummy;
+        while(head != null) {
+            int count = 0, pre = head.val;
+            while(head != null && head.val == pre) {
+                count++;
+                head = head.next;
+            }
+            if(count > 1) {
+                parent.next = head;
+            } else {
+                parent = parent.next;
+            }
         }
         return dummy.next;
     }
@@ -62,6 +81,6 @@ public class RemoveDuplicatesFromSortedListII {
         ListNode listNode1 = new ListNode(1);
         listNode1.next = listNode2;
 
-        System.out.println(deleteDuplicates(listNode3));
+        System.out.println(deleteDuplicates(listNode1));
     }
 }
