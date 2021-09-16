@@ -1,6 +1,6 @@
 package com;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 /**
@@ -18,7 +18,8 @@ public class Main {
         Class<?> c = Main.class.getClassLoader().loadClass(args[0]);
         Test test = (Test) c.newInstance();
         for (int i = 0; i < NUM; i++) {
-            test.test(new Random().nextInt(NUM));
+//            test.test(ThreadLocalRandom.current().nextInt(2, NUM));
+            test.test(ThreadLocalRandom.current().nextInt(2, 20));
         }
     }
 }

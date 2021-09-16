@@ -3,6 +3,7 @@ package com;
 import com.leetcode.graph.tree.linkedList.ListNode;
 
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author wcl
@@ -12,6 +13,16 @@ public interface Test {
 
     default void test(int n) {
 
+    }
+
+    /**
+     * 随机从0到n之间拿一个数
+     *
+     * @param n 数的最大值
+     * @return 随意生成一个数
+     */
+    default int genRandomNum(int n) {
+        return new Random().nextInt(n);
     }
 
     /**
@@ -27,6 +38,24 @@ public interface Test {
             arr1[i] = num;
         }
         return arr1;
+    }
+
+    /**
+     * TODO 随意生成一个二维数组
+     *
+     * @param n 数组的长度
+     * @return 数组
+     */
+    default int[][] genRandomTwoArr(int n) {
+        int N = ThreadLocalRandom.current().nextInt(1, n);
+        int M = ThreadLocalRandom.current().nextInt(1, n);
+        int[][] ints = new int[N][M];
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                ints[i][j] = new Random().nextInt(n);
+            }
+        }
+        return ints;
     }
 
     /**
