@@ -28,7 +28,7 @@ public class ImplementStrStr {
      *
      * Clarification:
      *      What should we return when needle is an empty string?
-     *      This is a great question to ask during an interview.
+     *      This is a great question.txt to ask during an interview.
      *      For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
      *
      * Runtime: 3 ms, faster than 31.08% of Java online submissions for Implement strStr().

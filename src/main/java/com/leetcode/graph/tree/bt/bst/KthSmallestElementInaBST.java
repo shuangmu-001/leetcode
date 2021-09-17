@@ -37,7 +37,7 @@ public class KthSmallestElementInaBST {
      *          What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently?
      *          How would you optimize the kthSmallest routine?
      *
-     * That's a design question, basically we're asked to implement a structure which contains a BST inside and optimises the following operations :
+     * That's a design question.txt, basically we're asked to implement a structure which contains a BST inside and optimises the following operations :
      *      Insert
      *      Delete
      *      Find kth smallest

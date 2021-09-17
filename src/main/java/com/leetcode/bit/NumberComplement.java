@@ -29,7 +29,7 @@ public class NumberComplement {
      *
      * The given integer is guaranteed to fit within the range of a 32-bit signed integer.
      * You could assume no leading zero bit in the integer’s binary representation.
-     * This question is the same as 1009: https://leetcode.com/problems/complement-of-base-10-integer/
+     * This question.txt is the same as 1009: https://leetcode.com/problems/complement-of-base-10-integer/
      */
     public int findComplement(int num) {
         int dummy = num;

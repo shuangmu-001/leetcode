@@ -32,7 +32,7 @@ public class BSTtoGreaterSumTree {
      * The number of nodes in the tree is between 1 and 100.
      * Each node will have value between 0 and 100.
      * The given tree is a binary search tree.
-     * Note: This question is the same as 538: https://leetcode.com/problems/convert-bst-to-greater-tree/
+     * Note: This question.txt is the same as 538: https://leetcode.com/problems/convert-bst-to-greater-tree/
      */
     private int sum = 0;
     public TreeNode bstToGst(TreeNode root) {

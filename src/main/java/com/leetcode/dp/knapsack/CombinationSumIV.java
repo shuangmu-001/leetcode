@@ -40,7 +40,7 @@ public class CombinationSumIV {
      * Follow up:
      * What if negative numbers are allowed in the given array?
      * How does it change the problem?
-     * What limitation we need to add to the question to allow negative numbers?
+     * What limitation we need to add to the question.txt to allow negative numbers?
      */
     // TLE
     static int count = 0;

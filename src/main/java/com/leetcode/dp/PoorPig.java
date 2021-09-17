@@ -13,7 +13,7 @@ public class PoorPig {
      * If a pig drinks the poison it will die within 15 minutes.
      * What is the minimum amount of pigs you need to figure out which bucket is poisonous within one hour?
      *
-     * Answer this question, and write an algorithm for the general case.
+     * Answer this question.txt, and write an algorithm for the general case.
      *
      * General case:
      *
