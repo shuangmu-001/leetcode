@@ -41,7 +41,7 @@ public interface Test {
     }
 
     /**
-     * TODO 随意生成一个二维数组
+     * 随意生成一个二维数组
      *
      * @param n 数组的长度
      * @return 数组
