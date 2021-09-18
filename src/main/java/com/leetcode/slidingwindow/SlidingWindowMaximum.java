@@ -1,6 +1,6 @@
 package com.leetcode.slidingwindow;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.Deque;
 import java.util.LinkedList;

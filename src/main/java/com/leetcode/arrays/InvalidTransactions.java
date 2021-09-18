@@ -1,7 +1,5 @@
 package com.leetcode.arrays;
 
-import com.leetcode.Utils;
-
 import java.util.*;
 
 /**

@@ -1,6 +1,6 @@
 package com.leetcode.graph.tree.bt;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 /**
  * @author wcl

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

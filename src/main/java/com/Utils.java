@@ -1,4 +1,4 @@
-package com.leetcode;
+package com;
 
 import com.leetcode.graph.tree.bt.TreeNode;
 import com.leetcode.graph.tree.linkedList.FlattenAMultilevelDoublyLinkedList;
@@ -329,7 +329,6 @@ public class Utils {
     }
 
     public static void main(String[] args) {
-
         System.out.println(mystery("12345"));
         System.out.println(new File("./src/main/resources/non-negative.txt").exists());
         System.out.println(read("./src/main/resources/array.txt", 30000));
@@ -419,7 +418,6 @@ public class Utils {
                     e.printStackTrace();
                 }
             }
-
         }
     }
 

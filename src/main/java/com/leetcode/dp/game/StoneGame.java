@@ -1,7 +1,7 @@
 package com.leetcode.dp.game;
 
 
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

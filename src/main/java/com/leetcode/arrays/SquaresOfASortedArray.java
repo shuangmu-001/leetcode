@@ -1,6 +1,6 @@
 package com.leetcode.arrays;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.Arrays;
 

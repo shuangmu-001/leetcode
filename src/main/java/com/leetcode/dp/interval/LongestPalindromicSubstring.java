@@ -1,9 +1,6 @@
 package com.leetcode.dp.interval;
 
-import com.leetcode.Utils;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.Utils;
 
 /**
  * @author wcl

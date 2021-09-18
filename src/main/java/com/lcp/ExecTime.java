@@ -1,6 +1,6 @@
 package com.lcp;
 
-import com.leetcode.Utils;
+import com.Utils;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 import java.util.*;

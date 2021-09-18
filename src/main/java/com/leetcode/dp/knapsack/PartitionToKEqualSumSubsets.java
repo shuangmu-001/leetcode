@@ -1,10 +1,6 @@
 package com.leetcode.dp.knapsack;
 
-import com.leetcode.Utils;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import com.Utils;
 
 /**
  * @author wcl

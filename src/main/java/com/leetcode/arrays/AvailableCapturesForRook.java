@@ -1,7 +1,5 @@
 package com.leetcode.arrays;
 
-import com.leetcode.Utils;
-
 /**
  * @author wcl
  * @date 1:04 PM 2020/3/26

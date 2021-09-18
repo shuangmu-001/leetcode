@@ -1,7 +1,7 @@
 package com.question.day02;
 
 import com.Test;
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.Arrays;
 

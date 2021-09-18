@@ -1,6 +1,6 @@
 package com.leetcode.dp.linear;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.Arrays;
 

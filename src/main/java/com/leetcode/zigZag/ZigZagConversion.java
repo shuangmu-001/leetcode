@@ -1,6 +1,6 @@
 package com.leetcode.zigZag;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 /**
  * @author wcl

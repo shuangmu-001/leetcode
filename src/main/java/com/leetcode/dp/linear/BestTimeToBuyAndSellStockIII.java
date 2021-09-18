@@ -1,9 +1,6 @@
 package com.leetcode.dp.linear;
 
-import com.leetcode.Utils;
-import edu.princeton.cs.algs4.In;
-
-import java.util.Arrays;
+import com.Utils;
 
 /**
  * @author wcl

@@ -1,7 +1,5 @@
 package com.data.structure.heap;
 
-import com.leetcode.Utils;
-
 import java.util.PriorityQueue;
 import java.util.Random;
 

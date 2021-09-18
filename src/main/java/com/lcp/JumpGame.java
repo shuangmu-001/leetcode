@@ -1,7 +1,5 @@
 package com.lcp;
 
-import com.leetcode.Utils;
-
 import java.util.ArrayList;
 import java.util.List;
 

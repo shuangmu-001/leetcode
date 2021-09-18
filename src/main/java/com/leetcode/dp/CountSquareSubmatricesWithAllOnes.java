@@ -1,6 +1,6 @@
 package com.leetcode.dp;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 /**
  * @author wcl

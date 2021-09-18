@@ -1,9 +1,5 @@
 package com.leetcode.dp.knapsack;
 
-import com.leetcode.Utils;
-
-import java.util.Arrays;
-
 /**
  * @author wcl
  * @date 5:32 PM 2020/5/12

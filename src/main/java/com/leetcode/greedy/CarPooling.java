@@ -1,6 +1,6 @@
 package com.leetcode.greedy;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.*;
 

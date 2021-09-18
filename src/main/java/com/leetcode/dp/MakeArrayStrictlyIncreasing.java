@@ -3,7 +3,7 @@ package com.leetcode.dp;
 import java.util.Arrays;
 import java.util.TreeSet;
 
-import static com.leetcode.Utils.printTwoArrays;
+import static com.Utils.printTwoArrays;
 
 /**
  * @author wcl

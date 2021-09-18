@@ -1,6 +1,6 @@
 package com.leetcode.twopoints;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

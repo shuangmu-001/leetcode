@@ -1,9 +1,6 @@
 package com.leetcode.arrays;
 
-import com.leetcode.Utils;
-
-import java.util.Arrays;
-import java.util.List;
+import com.Utils;
 
 /**
  * @author wcl

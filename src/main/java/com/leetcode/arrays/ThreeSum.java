@@ -1,7 +1,6 @@
 package com.leetcode.arrays;
 
-import com.leetcode.Utils;
-import sun.jvm.hotspot.utilities.Interval;
+import com.Utils;
 
 import java.util.*;
 

@@ -2,7 +2,7 @@ package com.question.day01;
 
 
 import com.Test;
-import com.leetcode.Utils;
+import com.Utils;
 
 import java.util.HashMap;
 import java.util.Map;

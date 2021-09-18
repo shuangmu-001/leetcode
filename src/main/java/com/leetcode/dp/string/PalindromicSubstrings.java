@@ -1,6 +1,6 @@
 package com.leetcode.dp.string;
 
-import com.leetcode.Utils;
+import com.Utils;
 
 /**
  * {@link "https://leetcode.com/problems/palindromic-substrings/"}

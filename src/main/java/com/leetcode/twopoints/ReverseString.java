@@ -1,8 +1,6 @@
 package com.leetcode.twopoints;
 
-import com.leetcode.Utils;
-
-import java.util.Arrays;
+import com.Utils;
 
 /**
  * @author wcl

@@ -1,7 +1,6 @@
 package com.leetcode.graph.tree.linkedList;
 
-import com.leetcode.Utils;
-import com.leetcode.graph.tree.bt.TreeNode;
+import com.Utils;
 
 import java.util.Stack;
 

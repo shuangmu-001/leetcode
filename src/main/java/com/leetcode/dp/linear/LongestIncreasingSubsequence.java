@@ -2,7 +2,7 @@ package com.leetcode.dp.linear;
 
 import java.util.*;
 
-import static com.leetcode.Utils.printTwoArrays;
+import static com.Utils.printTwoArrays;
 
 /**
  * @author wcl
