@@ -84,6 +84,10 @@ public interface Test {
 
     String DEFAULT_STR = "abcdefghijklmnopqrstwvuxyzABCDEFGHIJKLMNOPQRSTWUVXYZ";
 
+    default String getSourceStr() {
+        return DEFAULT_STR;
+    }
+
     /**
      * 随机生成长度为len的字符串
      *
@@ -93,8 +97,22 @@ public interface Test {
     default String genTargetStr(int len) {
         char[] chars = new char[len];
         for (int i = 0; i < len; i++) {
-            chars[i] = DEFAULT_STR.charAt(new Random().nextInt(DEFAULT_STR.length()));
+            chars[i] = getSourceStr().charAt(new Random().nextInt(getSourceStr().length()));
         }
         return new String(chars);
+    }
+
+    /**
+     * 随机生成长度为len的字符串数组
+     *
+     * @param n 字符串数组长度
+     * @return 目标字符串数组
+     */
+    default String[] genTargetStrArr(int n) {
+        String[] arr = new String[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = genTargetStr(n);
+        }
+        return arr;
     }
 }

@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Main {
 
-    private static final int NUM = 10_000;
+    private static final int NUM = 1000;
 
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         if (args.length != 1) {
@@ -17,9 +17,11 @@ public class Main {
         }
         Class<?> c = Main.class.getClassLoader().loadClass(args[0]);
         Test test = (Test) c.newInstance();
+        System.out.printf("开始测试:%s\n", c.getName());
         for (int i = 0; i < NUM; i++) {
 //            test.test(ThreadLocalRandom.current().nextInt(2, NUM));
-            test.test(ThreadLocalRandom.current().nextInt(2, 1000));
+            test.test(ThreadLocalRandom.current().nextInt(2, 100));
         }
+        System.out.println("结束测试");
     }
 }
