@@ -1,56 +1,58 @@
 package com.leetcode.search;
 
 
+import sun.text.normalizer.CharTrie;
+
 import java.util.Arrays;
 
 /**
  * @author wcl
  * @date 2:39 PM 2020/4/23
  * <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">
- *     Find First and Last Position of Element in Sorted Array</a>
+ * Find First and Last Position of Element in Sorted Array</a>
  * 二分法 有相同的数，最左边和最右边
  */
 public class FindFirstAndLastPositionOfElementInSortedArray {
     /**
      * Given an array of integers nums sorted in ascending order,
      * find the starting and ending position of a given target value.
-     *
+     * <p>
      * Your algorithm's runtime complexity must be in the order of O(log n).
-     *
+     * <p>
      * If the target is not found in the array, return [-1, -1].
-     *
+     * <p>
      * Example 1:
-     *
+     * <p>
      * Input: nums = [5,7,7,8,8,10], target = 8
      * Output: [3,4]
      * Example 2:
-     *
+     * <p>
      * Input: nums = [5,7,7,8,8,10], target = 6
      * Output: [-1,-1]
      */
-    public static int[] searchRange(int[] nums, int target) {
-        if(nums == null || nums.length == 0) {
+    public static int[] searchRange1(int[] nums, int target) {
+        if (nums == null || nums.length == 0) {
             return new int[]{-1, -1};
         }
         int left = 0;
         int right = nums.length - 1;
         int[] res = new int[2];
         int mid = left;
-        while(left <= right) {
+        while (left <= right) {
             mid = left + (right - left) / 2;
-            if(nums[mid] == target) {
+            if (nums[mid] == target) {
                 break;
-            } else if(nums[mid] < target) {
+            } else if (nums[mid] < target) {
                 left = mid + 1;
             } else {
                 right = mid - 1;
             }
         }
-        if(left > right) {
+        if (left > right) {
             return new int[]{-1, -1};
         }
         int before = mid;
-        while(left <= before) {
+        while (left <= before) {
             int newMid = left + (before - left) / 2;
             if (nums[newMid] == target) {
                 before = newMid - 1;
@@ -60,7 +62,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         }
         res[0] = left;
         before = mid;
-        while(before <= right) {
+        while (before <= right) {
             int newMid = before + (right - before) / 2;
             if (nums[newMid] == target) {
                 before = newMid + 1;
@@ -70,6 +72,35 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         }
         res[1] = right;
         return res;
+    }
+
+    public static int[] searchRange(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return new int[]{-1, -1};
+        }
+        int first = findFirstLast(arr, target, 0, true);
+        if (first == -1) {
+            return new int[]{-1, -1};
+        }
+        int last = findFirstLast(arr, target, first, false);
+        return new int[]{first, last};
+    }
+
+    public static int findFirstLast(int[] arr, int target, int start, boolean first) {
+        int index = -1;
+        int end = arr.length - 1;
+        while (start <= end) {
+            int mid = start + ((end - start) >> 1);
+            if (arr[mid] > target || (first && arr[mid] == target)) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+            if (arr[mid] == target) {
+                index = mid;
+            }
+        }
+        return index;
     }
 
     public static void main(String[] args) {

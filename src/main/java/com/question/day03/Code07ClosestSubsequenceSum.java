@@ -1,5 +1,7 @@
 package com.question.day03;
 
+import com.Test;
+
 /**
  * <a href="https://leetcode.com/problems/closest-subsequence-sum/">
  * Closest Subsequence Sum</a>
@@ -7,17 +9,14 @@ package com.question.day03;
  * @author wcl
  * @date 8:31 下午 2021/9/19
  */
-public class Code07ClosestSubsequenceSum {
+public class Code07ClosestSubsequenceSum implements Test {
     /**
      * You are given an integer array nums and an integer goal.
-     *
-     * You want to choose a subsequence of nums such that the sum of its elements is the closest possible to goal. That is, if the sum of the subsequence's elements is sum, then you want to minimize the absolute difference abs(sum - goal).
-     *
+     * You want to choose a subsequence of nums such that the sum of its elements is the closest possible to goal.
+     * That is, if the sum of the subsequence's elements is sum, then you want to minimize the absolute difference abs(sum - goal).
      * Return the minimum possible value of abs(sum - goal).
      *
      * Note that a subsequence of an array is an array formed by removing some elements (possibly all or none) of the original array.
-     *
-     *
      *
      * Example 1:
      *
@@ -40,10 +39,11 @@ public class Code07ClosestSubsequenceSum {
      * Constraints:
      *
      * 1 <= nums.length <= 40
-     * -107 <= nums[i] <= 107
-     * -109 <= goal <= 109
+     * -10^7 <= nums[i] <= 10^7
+     * -10^9 <= goal <= 10^9
      */
     public int minAbsDifference(int[] nums, int goal) {
         return 0;
     }
+
 }
