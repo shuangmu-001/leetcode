@@ -20,7 +20,7 @@ public class Main {
         System.out.printf("开始测试:%s\n", c.getName());
         for (int i = 0; i < NUM; i++) {
 //            test.test(ThreadLocalRandom.current().nextInt(2, NUM));
-            test.test(ThreadLocalRandom.current().nextInt(2, 100));
+            test.test(ThreadLocalRandom.current().nextInt(2, 40));
         }
         System.out.println("结束测试");
     }
