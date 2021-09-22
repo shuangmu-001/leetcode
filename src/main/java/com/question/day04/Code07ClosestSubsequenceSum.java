@@ -1,4 +1,4 @@
-package com.question.day03;
+package com.question.day04;
 
 import com.Test;
 
