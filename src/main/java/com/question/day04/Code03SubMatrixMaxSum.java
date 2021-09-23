@@ -1,9 +1,6 @@
 package com.question.day04;
 
 import com.Test;
-import com.Utils;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author wcl

@@ -1,6 +1,5 @@
 package com.question.day04;
 
-import java.util.Arrays;
 
 /**
  * @author wcl
