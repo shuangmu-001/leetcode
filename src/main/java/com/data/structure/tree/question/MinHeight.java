@@ -13,12 +13,12 @@ import java.util.Random;
  */
 public class MinHeight {
 
-    public static <E>int minHeight(BinaryTree.Node<E> root) {
+    public static <E>int minHeight(BinaryTree.TreeNode<E> root) {
         if (root == null) {
             return 0;
         }
-        BinaryTree.Node<E> node = root;
-        BinaryTree.Node<E> right;
+        BinaryTree.TreeNode<E> node = root;
+        BinaryTree.TreeNode<E> right;
         int level = 1;
         int res = Integer.MAX_VALUE;
         while (node != null) {
@@ -50,14 +50,14 @@ public class MinHeight {
         return res;
     }
 
-    public static <E>int minHeight01(BinaryTree.Node<E> root) {
+    public static <E>int minHeight01(BinaryTree.TreeNode<E> root) {
         if (root == null) {
             return 0;
         }
         return minHeightHelper(root);
     }
 
-    private static <E>int minHeightHelper(BinaryTree.Node<E> root) {
+    private static <E>int minHeightHelper(BinaryTree.TreeNode<E> root) {
         if (root.left == null && root.right == null) {
             return 1;
         }
@@ -85,7 +85,7 @@ public class MinHeight {
         for (int i = 0; i < n; i++) {
             redBlackTree.add(new Random().nextInt(50));
         }
-        BinaryTree.Node<Integer> root = redBlackTree.getRoot();
+        BinaryTree.TreeNode<Integer> root = redBlackTree.getRoot();
         if(minHeight(root) != minHeight01(root)) {
             BinaryTrees.print(redBlackTree);
             minHeight(root);

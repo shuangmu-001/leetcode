@@ -14,13 +14,13 @@ public class BinaryTree<E> implements BinaryTreeInfo {
     public BinaryTree() {
     }
 
-    public BinaryTree(Node<E> root) {
+    public BinaryTree(TreeNode<E> root) {
         this.root = root;
     }
 
     protected int size;
 
-    protected Node<E> root;
+    protected TreeNode<E> root;
 
     public static abstract class Visitor<E> {
 
@@ -30,33 +30,36 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         public abstract boolean visit(E element);
     }
 
-    public Node<E> getRoot() {
+    public TreeNode<E> getRoot() {
         return root;
     }
 
     /**
      * 内部类，节点类
      */
-    public static class Node<E> {
+    public static class TreeNode<E> {
         public E element;
-        public Node<E> left;
-        public Node<E> right;
-        public Node<E> parent;
+        public TreeNode<E> left;
+        public TreeNode<E> right;
+        public TreeNode<E> parent;
 
-        public Node(E element, Node<E> parent) {
+        public TreeNode(E element, TreeNode<E> parent) {
             this.element = element;
             this.parent = parent;
         }
 
-        public boolean isLeaf() { // 是否叶子节点
+        // 是否叶子节点
+        public boolean isLeaf() {
             return left == null && right == null;
         }
 
-        public boolean hasTwoChildren() { // 是否有两个子节点
+        // 是否有两个子节点
+        public boolean hasTwoChildren() {
             return left != null && right != null;
         }
 
-        public boolean isLeftChild() { // 判断自己是不是左子树
+        // 判断自己是不是左子树
+        public boolean isLeftChild() {
             return parent != null && this == parent.left;
         }
 
@@ -68,7 +71,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         /*
          * 返回兄弟节点
          */
-        public Node<E> sibling() {
+        public TreeNode<E> sibling() {
             if (isLeftChild()) {
                 return parent.right;
             }
@@ -79,15 +82,15 @@ public class BinaryTree<E> implements BinaryTreeInfo {
             return null;
         }
 
-        public Node<E> getLeft() {
+        public TreeNode<E> getLeft() {
             return left;
         }
 
-        public Node<E> getRight() {
+        public TreeNode<E> getRight() {
             return right;
         }
 
-        public Node<E> getParent() {
+        public TreeNode<E> getParent() {
             return parent;
         }
 
@@ -133,7 +136,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         preorder(root, visitor);
     }
 
-    public static <E> void preorder(Node<E> node, Visitor<E> visitor) {
+    public static <E> void preorder(TreeNode<E> node, Visitor<E> visitor) {
         if (node == null || visitor.stop) {
             return;
         }
@@ -152,7 +155,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         inorder(root, visitor);
     }
 
-    public static <E> void inorder(Node<E> node, Visitor<E> visitor) {
+    public static <E> void inorder(TreeNode<E> node, Visitor<E> visitor) {
         if (node == null || visitor.stop) {
             return;
         }
@@ -174,7 +177,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         postorder(root, visitor);
     }
 
-    public static <E> void postorder(Node<E> node, Visitor<E> visitor) {
+    public static <E> void postorder(TreeNode<E> node, Visitor<E> visitor) {
         if (node == null || visitor.stop) {
             return;
         }
@@ -193,11 +196,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         if (root == null || visitor.stop) {
             return;
         }
-        Queue<Node<E>> queue = new LinkedList<>();
+        Queue<TreeNode<E>> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            Node<E> node = queue.poll();
+            TreeNode<E> node = queue.poll();
             if (visitor.visit(node.element)) {
                 return;
             }
@@ -217,7 +220,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         return height1(root);
     }
 
-    public static <E> int height1(Node<E> node) {
+    public static <E> int height1(TreeNode<E> node) {
         if (node == null) {
             return 0;
         }
@@ -235,11 +238,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
         int levelSize = 1;
         // 树的高度
         int height = 0;
-        Queue<Node<E>> queue = new LinkedList<>();
+        Queue<TreeNode<E>> queue = new LinkedList<>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            Node<E> node = queue.poll();
+            TreeNode<E> node = queue.poll();
             levelSize--;
             if (node.left != null) {
                 queue.offer(node.left);
@@ -267,12 +270,12 @@ public class BinaryTree<E> implements BinaryTreeInfo {
             return false;
         }
 
-        Queue<Node<E>> queue = new LinkedList<>();
+        Queue<TreeNode<E>> queue = new LinkedList<>();
         queue.offer(root);
         // leaf代表是否要求后面都是叶子节点
         boolean leaf = false;
         while (!queue.isEmpty()) {
-            Node<E> node = queue.poll();
+            TreeNode<E> node = queue.poll();
             // 要求是叶子结点，但是当前节点不是叶子结点
             if (leaf && !node.isLeaf()) {
                 return false;
@@ -297,12 +300,12 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 1、左子树中最右的节点 => node.left.right.right...（子节点）
      * 2、当前节点是某节点右子树的最左边（祖先节点）
      */
-    public static <E> Node<E> predecessor(Node<E> node) {
+    public static <E> TreeNode<E> predecessor(TreeNode<E> node) {
         if (node == null) {
             return null;
         }
 
-        Node<E> preNode = node.left;
+        TreeNode<E> preNode = node.left;
         if (preNode != null) {
             while (preNode.right != null) {
                 preNode = preNode.right;
@@ -322,13 +325,13 @@ public class BinaryTree<E> implements BinaryTreeInfo {
      * 1、右子树中最左的节点 => node.right.left.left...（子节点）
      * 2、当前节点是某节点的左子树的最右边（祖先节点）
      */
-    public static <E> Node<E> successor(Node<E> node) {
+    public static <E> TreeNode<E> successor(TreeNode<E> node) {
         if (node == null) {
             return null;
         }
 
         if (node.right != null) {
-            Node<E> p = node.right;
+            TreeNode<E> p = node.right;
             while (p.left != null) {
                 p = p.left;
             }
@@ -342,8 +345,8 @@ public class BinaryTree<E> implements BinaryTreeInfo {
     }
 
     // 默认返回一个通用节点
-    protected Node<E> createNode(E element, Node<E> parent) {
-        return new Node<>(element, parent);
+    protected TreeNode<E> createNode(E element, TreeNode<E> parent) {
+        return new TreeNode<>(element, parent);
     }
 
     /**
@@ -356,12 +359,12 @@ public class BinaryTree<E> implements BinaryTreeInfo {
 
     @Override
     public Object left(Object node) {
-        return ((Node<E>) node).left;
+        return ((TreeNode<E>) node).left;
     }
 
     @Override
     public Object right(Object node) {
-        return ((Node<E>) node).right;
+        return ((TreeNode<E>) node).right;
     }
 
     @Override

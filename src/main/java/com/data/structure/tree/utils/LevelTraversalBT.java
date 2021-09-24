@@ -13,18 +13,18 @@ import java.util.Queue;
  */
 public class LevelTraversalBT {
 
-    public static <E> List<List<E>> level(BinaryTree.Node<E> node) {
+    public static <E> List<List<E>> level(BinaryTree.TreeNode<E> node) {
         if (node == null) {
             return new ArrayList<>();
         }
         List<List<E>> res = new ArrayList<>();
-        Queue<BinaryTree.Node<E>> queue = new LinkedList<>();
+        Queue<BinaryTree.TreeNode<E>> queue = new LinkedList<>();
         queue.add(node);
         while (!queue.isEmpty()) {
             List<E> list = new ArrayList<>();
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                BinaryTree.Node<E> poll = queue.remove();
+                BinaryTree.TreeNode<E> poll = queue.remove();
                 list.add(poll.element);
                 if (poll.left != null) {
                     queue.add(poll.left);

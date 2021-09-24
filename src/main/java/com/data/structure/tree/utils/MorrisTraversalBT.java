@@ -13,12 +13,12 @@ import java.util.Random;
  */
 public class MorrisTraversalBT {
     // 中序遍历
-    public static <E> void morrisTraversalIn(BinaryTree.Node<E> head) {
+    public static <E> void morrisTraversalIn(BinaryTree.TreeNode<E> head) {
         if (head == null) {
             return;
         }
-        BinaryTree.Node<E> node = head;
-        BinaryTree.Node<E> rightNode;
+        BinaryTree.TreeNode<E> node = head;
+        BinaryTree.TreeNode<E> rightNode;
         while (node != null) {
             rightNode = node.left;
             if (rightNode != null) {
@@ -42,12 +42,12 @@ public class MorrisTraversalBT {
     }
 
     // 前序遍历
-    public static <E> void morrisTraversalPre(BinaryTree.Node<E> head) {
+    public static <E> void morrisTraversalPre(BinaryTree.TreeNode<E> head) {
         if (head == null) {
             return;
         }
-        BinaryTree.Node<E> node = head;
-        BinaryTree.Node<E> rightNode;
+        BinaryTree.TreeNode<E> node = head;
+        BinaryTree.TreeNode<E> rightNode;
         while (node != null) {
             rightNode = node.left;
             if (rightNode != null) {
@@ -71,12 +71,12 @@ public class MorrisTraversalBT {
     }
 
     // 后序遍历
-    public static <E> void morrisTraversalPost(BinaryTree.Node<E> head) {
+    public static <E> void morrisTraversalPost(BinaryTree.TreeNode<E> head) {
         if (head == null) {
             return;
         }
-        BinaryTree.Node<E> node = head;
-        BinaryTree.Node<E> rightNode;
+        BinaryTree.TreeNode<E> node = head;
+        BinaryTree.TreeNode<E> rightNode;
         while (node != null) {
             rightNode = node.left;
             if (rightNode != null) {
@@ -98,11 +98,11 @@ public class MorrisTraversalBT {
         System.out.println();
     }
 
-    private static <E> void printEdge(BinaryTree.Node<E> head) {
-        BinaryTree.Node<E> right = head;
-        BinaryTree.Node<E> pre = null;
+    private static <E> void printEdge(BinaryTree.TreeNode<E> head) {
+        BinaryTree.TreeNode<E> right = head;
+        BinaryTree.TreeNode<E> pre = null;
         while (right != null) {
-            BinaryTree.Node<E> temp = right.right;
+            BinaryTree.TreeNode<E> temp = right.right;
             right.right = pre;
             pre = right;
             right = temp;
@@ -110,7 +110,7 @@ public class MorrisTraversalBT {
 
         while (pre != null) {
             System.out.print(pre.element + ",");
-            BinaryTree.Node<E> temp = pre.right;
+            BinaryTree.TreeNode<E> temp = pre.right;
             pre.right = right;
             right = pre;
             pre = temp;

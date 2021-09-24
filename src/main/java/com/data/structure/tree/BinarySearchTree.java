@@ -30,8 +30,8 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
             fixAfterInsertion(root);
             return;
         }
-        Node<E> parent = null;
-        Node<E> current = root;
+        TreeNode<E> parent = null;
+        TreeNode<E> current = root;
         int res = 0;
         while (current != null) {
             res = compareTo(current.element, element);
@@ -45,7 +45,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
                 return;
             }
         }
-        Node<E> node = createNode(element, parent);
+        TreeNode<E> node = createNode(element, parent);
         if (res > 0) {
             parent.left = node;
         } else {
@@ -56,7 +56,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
     }
 
 
-    public void fixAfterInsertion(Node<E> node) {
+    public void fixAfterInsertion(TreeNode<E> node) {
 
     }
 
@@ -68,7 +68,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
     }
 
     // 根据节点删除元素
-    private void remove(Node<E> node) {
+    private void remove(TreeNode<E> node) {
         if (node == null) {
             return;
         }
@@ -77,7 +77,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         // 度为2的节点
         if (node.hasTwoChildren()) {
             // 找到后继节点
-            Node<E> s = successor(node);
+            TreeNode<E> s = successor(node);
             // 用后继节点的值覆盖度为2的节点的值
             node.element = s.element;
             // 删除后继节点
@@ -85,7 +85,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         }
 
         // 删除node节点（node的度必然是1或者0）
-        Node<E> replacement = node.left != null ? node.left : node.right;
+        TreeNode<E> replacement = node.left != null ? node.left : node.right;
         // node是度为1的节点
         if (replacement != null) {
             // 更改parent
@@ -118,7 +118,7 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
         }
     }
 
-    public void fixAfterDeletion(Node<E> node) {
+    public void fixAfterDeletion(TreeNode<E> node) {
 
     }
 
@@ -131,10 +131,10 @@ public class BinarySearchTree<E> extends BinaryTree<E> {
     }
 
     // 根据元素值获取节点元素
-    public Node<E> node(E element) {
+    public TreeNode<E> node(E element) {
         elementNotNullCheck(element);
 
-        Node<E> node = root;
+        TreeNode<E> node = root;
         while (node != null) {
             int cmp = compareTo(element, node.element);
             if (cmp < 0) {

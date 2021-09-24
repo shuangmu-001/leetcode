@@ -31,12 +31,12 @@ public class RedBlackTree<E> extends BalanceBST<E> {
     }
 
     @Override
-    protected RBNode<E> createNode(E element, Node<E> parent) {
+    protected RBNode<E> createNode(E element, TreeNode<E> parent) {
         return new RBNode<>(element, parent);
     }
 
     @Override
-    public void fixAfterInsertion(Node<E> node) {
+    public void fixAfterInsertion(TreeNode<E> node) {
         RBNode<E> rbNode = cast(node);
         RBNode<E> parent = rbNode.getParent();
         // 上溢到根节点
@@ -65,7 +65,7 @@ public class RedBlackTree<E> extends BalanceBST<E> {
     }
 
     @Override
-    public void fixAfterDeletion(Node<E> node) {
+    public void fixAfterDeletion(TreeNode<E> node) {
         RBNode<E> rbNode = cast(node);
         // 删除红色叶子节点或替换的节点是RED
         if (isRed(rbNode)) {
@@ -130,15 +130,15 @@ public class RedBlackTree<E> extends BalanceBST<E> {
         return colorOf(rbNode) == BLACK;
     }
 
-    private static <E> RBNode<E> cast(Node<E> node) {
+    private static <E> RBNode<E> cast(TreeNode<E> node) {
         return (RBNode<E>) node;
     }
 
-    private static class RBNode<E> extends Node<E> {
+    private static class RBNode<E> extends TreeNode<E> {
 
         private boolean color = RED;
 
-        public RBNode(E element, Node<E> parent) {
+        public RBNode(E element, TreeNode<E> parent) {
             super(element, parent);
         }
 

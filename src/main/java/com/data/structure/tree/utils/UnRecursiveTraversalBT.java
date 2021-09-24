@@ -10,15 +10,15 @@ import java.util.Stack;
  */
 public class UnRecursiveTraversalBT {
 
-    public static <E> void pre(BinaryTree.Node<E> node) {
+    public static <E> void pre(BinaryTree.TreeNode<E> node) {
         System.out.print("pre-order : ");
         if (node == null) {
             return;
         }
-        Stack<BinaryTree.Node<E>> stack = new Stack<>();
+        Stack<BinaryTree.TreeNode<E>> stack = new Stack<>();
         stack.push(node);
         while (!stack.isEmpty()) {
-            BinaryTree.Node<E> pop = stack.pop();
+            BinaryTree.TreeNode<E> pop = stack.pop();
             System.out.print(pop.element + " ");
             if (pop.right != null) {
                 stack.push(pop.right);
@@ -30,12 +30,12 @@ public class UnRecursiveTraversalBT {
         System.out.println();
     }
 
-    public static <E> void in(BinaryTree.Node<E> node) {
+    public static <E> void in(BinaryTree.TreeNode<E> node) {
         System.out.print("in-order : ");
         if (node == null) {
             return;
         }
-        Stack<BinaryTree.Node<E>> stack = new Stack<>();
+        Stack<BinaryTree.TreeNode<E>> stack = new Stack<>();
         while (!stack.isEmpty() || node != null) {
             if (node != null) {
                 stack.push(node);
@@ -49,16 +49,16 @@ public class UnRecursiveTraversalBT {
         System.out.println();
     }
 
-    public static <E> void post(BinaryTree.Node<E> node) {
+    public static <E> void post(BinaryTree.TreeNode<E> node) {
         System.out.print("post-order : ");
         if (node == null) {
             return;
         }
-        Stack<BinaryTree.Node<E>> s1 = new Stack<>();
-        Stack<BinaryTree.Node<E>> s2 = new Stack<>();
+        Stack<BinaryTree.TreeNode<E>> s1 = new Stack<>();
+        Stack<BinaryTree.TreeNode<E>> s2 = new Stack<>();
         s1.push(node);
         while (!s1.isEmpty()) {
-            BinaryTree.Node<E> pop = s1.pop();
+            BinaryTree.TreeNode<E> pop = s1.pop();
             s2.push(pop);
             if (pop.left != null) {
                 s1.push(pop.left);
@@ -68,21 +68,21 @@ public class UnRecursiveTraversalBT {
             }
         }
         while (!s2.isEmpty()) {
-            BinaryTree.Node<E> pop = s2.pop();
+            BinaryTree.TreeNode<E> pop = s2.pop();
             System.out.print(pop.element + " ");
         }
         System.out.println();
     }
 
-    public static <E> void post2(BinaryTree.Node<E> node) {
+    public static <E> void post2(BinaryTree.TreeNode<E> node) {
         System.out.print("post-order : ");
         if (node == null) {
             return;
         }
-        Stack<BinaryTree.Node<E>> s1 = new Stack<>();
+        Stack<BinaryTree.TreeNode<E>> s1 = new Stack<>();
         s1.push(node);
-        BinaryTree.Node<E> c;
-        BinaryTree.Node<E> h = node;
+        BinaryTree.TreeNode<E> c;
+        BinaryTree.TreeNode<E> h = node;
         while (!s1.isEmpty()) {
             c = s1.peek();
             // h 表示前一次打印的节点

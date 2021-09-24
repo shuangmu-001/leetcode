@@ -16,13 +16,13 @@ import java.util.function.Function;
  */
 public class SerializeAndReconstructTree {
 
-    public static <E> Queue<E> preSerial(BinaryTree.Node<E> node) {
+    public static <E> Queue<E> preSerial(BinaryTree.TreeNode<E> node) {
         Queue<E> queue = new LinkedList<>();
         preSerialHelper(node, queue);
         return queue;
     }
 
-    private static <E> void preSerialHelper(BinaryTree.Node<E> node, Queue<E> queue) {
+    private static <E> void preSerialHelper(BinaryTree.TreeNode<E> node, Queue<E> queue) {
         if (node == null) {
             queue.add(null);
             return;
@@ -32,31 +32,31 @@ public class SerializeAndReconstructTree {
         preSerialHelper(node.right, queue);
     }
 
-    public static <E> BinaryTree.Node<E> buildByPreQueue(Queue<E> preQueue) {
+    public static <E> BinaryTree.TreeNode<E> buildByPreQueue(Queue<E> preQueue) {
         if (preQueue == null || preQueue.size() == 0) {
             return null;
         }
         return buildByPreQueueHelper(preQueue);
     }
 
-    private static <E> BinaryTree.Node<E> buildByPreQueueHelper(Queue<E> preQueue) {
+    private static <E> BinaryTree.TreeNode<E> buildByPreQueueHelper(Queue<E> preQueue) {
         E poll = preQueue.poll();
         if (poll == null) {
             return null;
         }
-        BinaryTree.Node<E> node = new BinaryTree.Node<>(poll, null);
+        BinaryTree.TreeNode<E> node = new BinaryTree.TreeNode<>(poll, null);
         node.left = buildByPreQueueHelper(preQueue);
         node.right = buildByPreQueueHelper(preQueue);
         return node;
     }
 
-    public static <E> Queue<E> inSerial(BinaryTree.Node<E> node) {
+    public static <E> Queue<E> inSerial(BinaryTree.TreeNode<E> node) {
         Queue<E> queue = new LinkedList<>();
         inSerialHelper(node, queue);
         return queue;
     }
 
-    private static <E> void inSerialHelper(BinaryTree.Node<E> node, Queue<E> queue) {
+    private static <E> void inSerialHelper(BinaryTree.TreeNode<E> node, Queue<E> queue) {
         if (node == null) {
             queue.add(null);
             return;
@@ -66,7 +66,7 @@ public class SerializeAndReconstructTree {
         inSerialHelper(node.right, queue);
     }
 
-//    public static <E> BinaryTree.Node<E> buildByInQueue(Queue<E> inQueue) {
+//    public static <E> BinaryTree.TreeNode<E> buildByInQueue(Queue<E> inQueue) {
 //        if (inQueue == null || inQueue.size() == 0) {
 //            return null;
 //        }
@@ -74,28 +74,28 @@ public class SerializeAndReconstructTree {
 ////    }
 
     // TODO 通过中序队列反序列化成树
-//    private static <E> BinaryTree.Node<E> buildByInQueueHelper(Queue<E> inQueue) {
+//    private static <E> BinaryTree.TreeNode<E> buildByInQueueHelper(Queue<E> inQueue) {
 //        if (inQueue.isEmpty()) {
 //            return null;
 //        }
 //        E poll = inQueue.poll();
-//        BinaryTree.Node<E> left = buildByInQueueHelper(inQueue);
+//        BinaryTree.TreeNode<E> left = buildByInQueueHelper(inQueue);
 //        if (poll == null) {
 //            return null;
 //        }
-//        BinaryTree.Node<E> node = new BinaryTree.Node<>(poll, null);
+//        BinaryTree.TreeNode<E> node = new BinaryTree.TreeNode<>(poll, null);
 //        node.left = left;
 //        node.right = buildByInQueueHelper(inQueue);
 //        return node;
 //    }
 
-    public static <E> Queue<E> postSerial(BinaryTree.Node<E> node) {
+    public static <E> Queue<E> postSerial(BinaryTree.TreeNode<E> node) {
         Queue<E> queue = new LinkedList<>();
         postSerialHelper(node, queue);
         return queue;
     }
 
-    private static <E> void postSerialHelper(BinaryTree.Node<E> node, Queue<E> queue) {
+    private static <E> void postSerialHelper(BinaryTree.TreeNode<E> node, Queue<E> queue) {
         if (node == null) {
             queue.add(null);
             return;
@@ -105,7 +105,7 @@ public class SerializeAndReconstructTree {
         queue.add(node.element);
     }
 
-    public static <E> BinaryTree.Node<E> buildByPostQueue(Deque<E> postQueue) {
+    public static <E> BinaryTree.TreeNode<E> buildByPostQueue(Deque<E> postQueue) {
         if (postQueue == null || postQueue.size() == 0) {
             return null;
         }
@@ -113,24 +113,24 @@ public class SerializeAndReconstructTree {
     }
 
     // 通过后序队列反序列化成树
-    private static <E> BinaryTree.Node<E> buildByPostQueueHelper(Deque<E> postQueue) {
+    private static <E> BinaryTree.TreeNode<E> buildByPostQueueHelper(Deque<E> postQueue) {
         E poll = postQueue.pollLast();
         if (poll == null) {
             return null;
         }
-        BinaryTree.Node<E> node = new BinaryTree.Node<>(poll, null);
+        BinaryTree.TreeNode<E> node = new BinaryTree.TreeNode<>(poll, null);
         node.right = buildByPostQueueHelper(postQueue);
         node.left = buildByPostQueueHelper(postQueue);
         return node;
     }
 
-    public static <E> Queue<E> levelSerial(BinaryTree.Node<E> node) {
+    public static <E> Queue<E> levelSerial(BinaryTree.TreeNode<E> node) {
         Queue<E> queue = new LinkedList<>();
         if (node == null) {
             queue.add(null);
             return queue;
         }
-        Queue<BinaryTree.Node<E>> nodes = new LinkedList<>();
+        Queue<BinaryTree.TreeNode<E>> nodes = new LinkedList<>();
         nodes.add(node);
         queue.add(node.element);
         while (!nodes.isEmpty()) {
@@ -151,16 +151,16 @@ public class SerializeAndReconstructTree {
         return queue;
     }
 
-    public static <E> BinaryTree.Node<E> buildByLevelQueue(Queue<E> levelQueue) {
+    public static <E> BinaryTree.TreeNode<E> buildByLevelQueue(Queue<E> levelQueue) {
         if (levelQueue == null || levelQueue.size() == 0) {
             return null;
         }
-        Queue<BinaryTree.Node<E>> nodes = new LinkedList<>();
-        BinaryTree.Node<E> root = generateNode(levelQueue.poll());
+        Queue<BinaryTree.TreeNode<E>> nodes = new LinkedList<>();
+        BinaryTree.TreeNode<E> root = generateNode(levelQueue.poll());
         if (root != null) {
             nodes.add(root);
         }
-        BinaryTree.Node<E> node = null;
+        BinaryTree.TreeNode<E> node = null;
         while (!nodes.isEmpty()) {
             node = nodes.poll();
             node.left = generateNode(levelQueue.poll());
@@ -177,11 +177,11 @@ public class SerializeAndReconstructTree {
         return root;
     }
 
-    public static <E> BinaryTree.Node<E> generateNode(E element) {
+    public static <E> BinaryTree.TreeNode<E> generateNode(E element) {
         if (element == null) {
             return null;
         }
-        return new BinaryTree.Node<>(element, null);
+        return new BinaryTree.TreeNode<>(element, null);
     }
 
     public static void main(String[] args) {
@@ -214,9 +214,9 @@ public class SerializeAndReconstructTree {
     }
 
     public static void print(Queue<Integer> queue,
-                             Function<Queue<Integer>, BinaryTree.Node<Integer>> function) {
+                             Function<Queue<Integer>, BinaryTree.TreeNode<Integer>> function) {
         System.out.println(queue);
-        BinaryTree.Node<Integer> root = function.apply(queue);
+        BinaryTree.TreeNode<Integer> root = function.apply(queue);
         BinaryTree<Integer> newTree = new BinaryTree<>(root);
         BinaryTrees.print(newTree);
         System.out.println();

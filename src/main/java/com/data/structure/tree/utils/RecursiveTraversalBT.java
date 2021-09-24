@@ -8,7 +8,7 @@ import com.data.structure.tree.BinaryTree;
  */
 public class RecursiveTraversalBT {
 
-    public static <E> void pre(BinaryTree.Node<E> node) {
+    public static <E> void pre(BinaryTree.TreeNode<E> node) {
         if (node == null) {
             return;
         }
@@ -17,7 +17,7 @@ public class RecursiveTraversalBT {
         pre(node.right);
     }
 
-    public static <E> void in(BinaryTree.Node<E> node) {
+    public static <E> void in(BinaryTree.TreeNode<E> node) {
         if (node == null) {
             return;
         }
@@ -26,7 +26,7 @@ public class RecursiveTraversalBT {
         in(node.right);
     }
 
-    public static <E> void post(BinaryTree.Node<E> node) {
+    public static <E> void post(BinaryTree.TreeNode<E> node) {
         if (node == null) {
             return;
         }

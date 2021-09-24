@@ -20,7 +20,7 @@ public class AVLTree<E> extends BalanceBST<E> {
     }
 
     @Override
-    public void fixAfterInsertion(Node<E> node) {
+    public void fixAfterInsertion(TreeNode<E> node) {
         AVLNode<E> avlNode = cast(node);
         while ((avlNode = avlNode.getParent()) != null) {
             if (isBalance(avlNode)) {
@@ -34,7 +34,7 @@ public class AVLTree<E> extends BalanceBST<E> {
     }
 
     @Override
-    public void fixAfterDeletion(Node<E> node) {
+    public void fixAfterDeletion(TreeNode<E> node) {
         AVLNode<E> avlNode = cast(node);
         while ((avlNode = avlNode.getParent()) != null) {
             if (isBalance(avlNode)) {
@@ -47,7 +47,7 @@ public class AVLTree<E> extends BalanceBST<E> {
     }
 
     @Override
-    protected void rotate(Node<E> node, boolean direction) {
+    protected void rotate(TreeNode<E> node, boolean direction) {
         super.rotate(node, direction);
         AVLNode<E> avlNode = cast(node);
         avlNode.updateHeight();
@@ -66,7 +66,7 @@ public class AVLTree<E> extends BalanceBST<E> {
         node.updateHeight();
     }
 
-    private static <E> AVLNode<E> cast(Node<E> node) {
+    private static <E> AVLNode<E> cast(TreeNode<E> node) {
         return (AVLNode<E>) node;
     }
 
@@ -89,15 +89,15 @@ public class AVLTree<E> extends BalanceBST<E> {
     }
 
     @Override
-    protected AVLNode<E> createNode(E element, Node<E> parent) {
+    protected AVLNode<E> createNode(E element, TreeNode<E> parent) {
         return new AVLNode<>(element, parent);
     }
 
-    private static class AVLNode<E> extends Node<E> {
+    private static class AVLNode<E> extends TreeNode<E> {
 
         int height = 1;
 
-        public AVLNode(E element, Node<E> parent) {
+        public AVLNode(E element, TreeNode<E> parent) {
             super(element, parent);
         }
 

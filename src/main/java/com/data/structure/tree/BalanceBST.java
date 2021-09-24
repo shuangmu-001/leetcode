@@ -15,7 +15,7 @@ public class BalanceBST<E> extends BinarySearchTree<E> {
         super(comparator);
     }
 
-    protected void balance(Node<E> avlNode, Node<E> child, Node<E> son) {
+    protected void balance(TreeNode<E> avlNode, TreeNode<E> child, TreeNode<E> son) {
         if (child.isLeftChild()) {
             if (son.isRightChild()) {
                 rotateLeft(child);
@@ -30,16 +30,16 @@ public class BalanceBST<E> extends BinarySearchTree<E> {
     }
 
     // 右旋 LL(左左子树)
-    private void rotateRight(Node<E> node) {
+    private void rotateRight(TreeNode<E> node) {
         rotate(node, true);
     }
 
     // 左旋 RR(右右子树)
-    private void rotateLeft(Node<E> node) {
+    private void rotateLeft(TreeNode<E> node) {
         rotate(node, false);
     }
 
-    protected void rotate(Node<E> node, boolean direction) {
+    protected void rotate(TreeNode<E> node, boolean direction) {
         if (node == null) {
             throw new IllegalArgumentException("旋转的节点不能为空");
         }
@@ -48,7 +48,7 @@ public class BalanceBST<E> extends BinarySearchTree<E> {
             throw new IllegalArgumentException("旋转的节点不能为叶子节点 : " + node);
         }
 
-        Node<E> child;
+        TreeNode<E> child;
         if (direction) {
             child = node.getLeft();
             node.left = child.right;
@@ -65,7 +65,7 @@ public class BalanceBST<E> extends BinarySearchTree<E> {
             child.left = node;
         }
 
-        Node<E> parent = node.getParent();
+        TreeNode<E> parent = node.getParent();
         if (parent == null) {
             this.root = child;
         } else if (node.isRightChild()) {
