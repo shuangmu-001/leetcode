@@ -1,0 +1,4 @@
+1、https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/
+2、如果一个节点X，它的左树结构和右树结构完全一样，那么我们树以X为头的树是相等树，给定一个二叉树的头节点head，返回head整棵树上有多少棵相等子树？
+3、https://leetcode.com/problems/edit-distance/
+4、给定两个字符串s1和s2，问s2至少删除多少个字符可以成为s1的子串？比如 s1 = "abcde" s2 = "axbc"
