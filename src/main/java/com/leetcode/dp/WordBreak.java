@@ -41,11 +41,11 @@ public class WordBreak {
      * All the strings of wordDict are unique.
      */
     public static boolean wordBreak01(String s, List<String> wordDict) {
-        Tire tire = new Tire();
+        Trie trie = new Trie();
         for (String str : wordDict) {
-            tire.add(str);
+            trie.add(str);
         }
-        return process(s, 0, tire.root);
+        return process(s, 0, trie.root);
     }
 
     private static boolean process(String str, int index, Node root) {
@@ -73,7 +73,7 @@ public class WordBreak {
         private final Node[] next = new Node[26];
     }
 
-    private static class Tire {
+    private static class Trie {
 
         private final Node root = new Node();
 
@@ -90,15 +90,15 @@ public class WordBreak {
     }
 
     public static boolean wordBreak(String s, List<String> wordDict) {
-        Tire tire = new Tire();
+        Trie trie = new Trie();
         for (String str : wordDict) {
-            tire.add(str);
+            trie.add(str);
         }
         int length = s.length();
         boolean[] dp = new boolean[length + 1];
         dp[length] = true;
         for (int i = length - 1; i >= 0; i--) {
-            Node node = tire.root;
+            Node node = trie.root;
             for (int j = i; j < length; j++) {
                 int index = s.charAt(j) - 'a';
                 if (node.next[index] == null) {
