@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:08 AM 2020/5/8
  * <a href="https://leetcode.com/problems/subsets/">
  *  Subsets</a>

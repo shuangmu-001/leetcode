@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:54 AM 2020/4/3
  * <a href="https://leetcode.com/problems/binary-search/">
  *     Binary Search</a>

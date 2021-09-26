@@ -3,7 +3,7 @@ package com.leetcode.string;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:10 上午 2020/7/14
  * <a href="https://leetcode.com/problems/number-of-substrings-with-only-1s/">
  *     Number of Substrings With Only 1s</a>

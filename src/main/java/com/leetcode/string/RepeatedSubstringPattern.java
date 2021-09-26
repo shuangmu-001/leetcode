@@ -3,7 +3,7 @@ package com.leetcode.string;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:16 上午 2020/9/4
  * <a href="https://leetcode.com/problems/repeated-substring-pattern/">
  * Repeated Substring Pattern</a>

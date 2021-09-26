@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:24 AM 2020/3/19
  * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">
  *     Lowest Common Ancestor of a Binary Tree</a>

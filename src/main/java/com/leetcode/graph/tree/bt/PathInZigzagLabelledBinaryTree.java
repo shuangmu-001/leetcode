@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:32 AM 2020/3/19
  * <a href="https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/">
  *      Path In Zigzag Labelled Binary Tree</a>

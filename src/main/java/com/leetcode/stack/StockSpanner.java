@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:30 下午 2020/5/19
  * <a href="https://leetcode.com/problems/online-stock-span/">
  * Online Stock Span</a>

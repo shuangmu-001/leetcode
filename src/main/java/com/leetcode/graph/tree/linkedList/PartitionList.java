@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:03 PM 2020/4/9
  * <a href="https://leetcode.com/problems/partition-list/">
  *     Partition List</a>

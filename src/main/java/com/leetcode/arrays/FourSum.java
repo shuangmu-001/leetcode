@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * {@link "https://leetcode.com/problems/4sum/"}
  *
- * @author wcl
+ * @author zms
  * @date 11:10 AM 2020/2/17
  * @see ThreeSum
  * @see ThreeSumClosest

@@ -3,7 +3,7 @@ package com.leetcode.string;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:54 PM 2020/5/5
  * <a href="https://leetcode.com/problems/first-unique-character-in-a-string/">
  *      First Unique Character in a String</a>

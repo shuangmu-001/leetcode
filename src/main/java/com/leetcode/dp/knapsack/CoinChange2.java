@@ -1,7 +1,7 @@
 package com.leetcode.dp.knapsack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:45 下午 2020/5/20
  * <a href="https://leetcode.com/problems/coin-change-2/">
  * Coin Change 2</a>

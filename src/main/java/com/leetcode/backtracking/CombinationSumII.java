@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:54 AM 2020/5/12
  * <a href="https://leetcode.com/problems/combination-sum-ii/">
  * Combination Sum II</a>

@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:34 AM 2020/4/9
  * <a href="https://leetcode.com/problems/remove-linked-list-elements/">
  *     Remove Linked List Elements</a>

@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:17 PM 2020/4/7
  * <a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii/">
  *     Search in Rotated Sorted Array II</a>

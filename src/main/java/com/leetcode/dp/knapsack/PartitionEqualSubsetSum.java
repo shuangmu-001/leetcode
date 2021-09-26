@@ -4,7 +4,7 @@ package com.leetcode.dp.knapsack;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:23 PM 2020/5/18
  * <a href="https://leetcode.com/problems/partition-equal-subset-sum/">
  * Partition Equal Subset Sum</a>

@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * 给定一个文件目录的路径，写一个函数统计这个目录下所有的文件数量并返回，隐藏文件也算，但是文件夹不算
  *
- * @author wcl
+ * @author zms
  * @date 3:46 下午 2021/9/15
  */
 public class Code02FileNum {

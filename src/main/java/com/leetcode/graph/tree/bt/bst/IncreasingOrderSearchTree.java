@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:24 PM 2020/3/8
  * {@link "https://leetcode.com/problems/increasing-order-search-tree/"}
  */

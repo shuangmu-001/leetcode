@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:20 PM 2020/4/23
  * <a href="https://leetcode.com/problems/number-of-1-bits/">
  *     Number of 1 Bits</a>

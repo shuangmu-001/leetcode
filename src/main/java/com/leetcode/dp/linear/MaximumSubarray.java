@@ -1,7 +1,7 @@
 package com.leetcode.dp.linear;
 
 /**
- * @Author: wcl
+ * @Author: zms
  * @Description:
  * @Date: Create in 11:14 上午 2019/11/12
  * @Modified By:

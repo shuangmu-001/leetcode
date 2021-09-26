@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:03 PM 2020/4/23
  * <a href="https://leetcode.com/problems/missing-number/">
  *     Missing Number</a>

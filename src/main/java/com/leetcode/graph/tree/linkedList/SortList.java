@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.linkedList;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:38 AM 2020/4/15
  * <a href="https://leetcode.com/problems/sort-list/"> Sort List</a>
  * @see MergeKSortedLists

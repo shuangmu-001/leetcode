@@ -3,7 +3,7 @@ package com.leetcode.bit;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:22 PM 2020/4/23
  * <a href="https://leetcode.com/problems/majority-element/">
  *     Majority Element</a>

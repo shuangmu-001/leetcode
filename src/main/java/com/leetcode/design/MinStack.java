@@ -3,7 +3,7 @@ package com.leetcode.design;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:40 PM 2020/4/10
  * <a href="https://leetcode.com/problems/min-stack/">
  *     Min Stack</a>

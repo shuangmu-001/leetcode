@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:54 AM 2020/3/19
  * <a href="https://leetcode.com/problems/delete-leaves-with-a-given-value/">
  *     Delete Leaves With a Given Value</a>

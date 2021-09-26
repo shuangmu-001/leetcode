@@ -1,7 +1,7 @@
 package com.leetcode.dp.fibonacci;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:45 下午 2020/5/22
  * <a href="https://leetcode.com/problems/n-th-tribonacci-number/">
  * Nth Tribonacci Number</a>

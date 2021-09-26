@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:06 PM 2019/12/10
  */
 public class StringToInteger {

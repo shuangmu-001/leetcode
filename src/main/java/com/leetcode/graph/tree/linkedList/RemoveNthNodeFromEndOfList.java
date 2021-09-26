@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:01 PM 2020/2/17
  * {@link "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"}
  *
@@ -31,8 +31,8 @@ public class RemoveNthNodeFromEndOfList {
      * Follow up:
      * Could you do this in one pass?
      *
-     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Nth Node From End of List.
-     * Memory Usage: 37.9 MB, less than 6.37% of Java online submissions for Remove Nth Node From End of List.
+     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Nth TreeNode From End of List.
+     * Memory Usage: 37.9 MB, less than 6.37% of Java online submissions for Remove Nth TreeNode From End of List.
      */
     public static ListNode removeNthFromEnd1(ListNode head, int n) {
 

@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * {@link "https://leetcode.com/problems/3sum/"}
- * @author wcl
+ * @author zms
  * @date 9:17 PM 2020/2/14
  * @see TwoSum
  */

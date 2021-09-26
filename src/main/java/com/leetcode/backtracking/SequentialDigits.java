@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:15 下午 2020/9/19
  * <a href="https://leetcode.com/problems/sequential-digits/">
  *     Sequential Digits</a>

@@ -4,7 +4,7 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:54 PM 2020/5/8
  * <a href="https://leetcode.com/problems/valid-triangle-number/">
  * Valid Triangle Number</a>

@@ -3,7 +3,7 @@ package com.leetcode.graph;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:13 PM 2020/5/10
  * <a href="https://leetcode.com/problems/find-the-town-judge/">
  * Find the Town Judge</a>

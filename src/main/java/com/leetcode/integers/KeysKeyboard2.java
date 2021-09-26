@@ -1,7 +1,7 @@
 package com.leetcode.integers;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:19 PM 2020/2/22
  * {@link "https://leetcode.com/problems/2-keys-keyboard/"}
  */

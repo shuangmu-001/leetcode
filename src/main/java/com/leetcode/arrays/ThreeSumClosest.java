@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * {@link "https://leetcode.com/problems/3sum-closest/"}
- * @author wcl
+ * @author zms
  * @date 11:11 AM 2020/2/14
  * @see ThreeSum
  */

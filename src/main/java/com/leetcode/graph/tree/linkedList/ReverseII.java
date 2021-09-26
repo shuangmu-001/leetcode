@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.linkedList;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:21 PM 2020/4/7
  * <a href="https://leetcode.com/problems/reverse-linked-list-ii/">
  *     Reverse Linked List II</a>

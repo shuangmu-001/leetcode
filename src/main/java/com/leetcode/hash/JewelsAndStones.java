@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:43 PM 2020/5/2
  * <a href="https://leetcode.com/problems/jewels-and-stones/">
  *     Jewels and Stones</a>

@@ -1,7 +1,7 @@
 package com.leetcode.dp.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:46 PM 2020/2/26
  * {@link "https://leetcode.com/problems/is-subsequence/"}
  */

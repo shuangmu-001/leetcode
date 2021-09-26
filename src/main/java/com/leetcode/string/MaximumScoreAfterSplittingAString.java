@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:25 AM 2020/4/30
  * <a href="https://leetcode.com/problems/maximum-score-after-splitting-a-string/">
  *     Maximum Score After Splitting a String</a>

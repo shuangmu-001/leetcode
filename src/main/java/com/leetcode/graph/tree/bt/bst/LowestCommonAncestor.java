@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:27 PM 2020/3/15
  * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/">
  *    Lowest Common Ancestor of a Binary Search Tree</a>

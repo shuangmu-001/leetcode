@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:51 下午 2020/9/18
  * <a href="https://leetcode.com/problems/map-sum-pairs/">Map Sum Pairs</a>
  */

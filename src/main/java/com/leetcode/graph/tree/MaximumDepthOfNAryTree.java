@@ -3,7 +3,7 @@ package com.leetcode.graph.tree;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:49 PM 2020/3/8
  * {@link "https://leetcode.com/problems/maximum-depth-of-n-ary-tree/"}
  */

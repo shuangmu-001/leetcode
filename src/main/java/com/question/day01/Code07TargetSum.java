@@ -12,7 +12,7 @@ import java.util.Map;
  * <a href="https://leetcode.com/problems/target-sum/">
  * Target Sum</a>
  *
- * @author wcl
+ * @author zms
  * @date 3:46 下午 2021/9/15
  */
 public class Code07TargetSum implements Test {

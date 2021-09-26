@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:32 下午 2020/5/23
  * <a href="https://leetcode.com/problems/interval-list-intersections/">
  * Interval List Intersections</a>

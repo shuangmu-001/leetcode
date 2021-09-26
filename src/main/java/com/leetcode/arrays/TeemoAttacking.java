@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:51 下午 2020/9/26
  * TODO <a href="https://leetcode-cn.com/problems/teemo-attacking/">Teemo Attacking</a>
  */

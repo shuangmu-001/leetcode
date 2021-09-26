@@ -3,7 +3,7 @@ package com.leetcode.dp.linear;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:40 AM 2020/1/3
  * {@link "https://leetcode.com/problems/number-of-longest-increasing-subsequence/"}
  * @see LongestIncreasingSubsequence

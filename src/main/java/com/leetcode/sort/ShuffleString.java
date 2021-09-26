@@ -2,7 +2,7 @@ package com.leetcode.sort;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:44 下午 2020/8/25
  * <a href="https://leetcode.com/problems/shuffle-string/">Shuffle String</a>
  */

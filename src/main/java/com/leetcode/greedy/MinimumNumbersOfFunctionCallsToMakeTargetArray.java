@@ -1,7 +1,7 @@
 package com.leetcode.greedy;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:41 下午 2020/8/28
  * <a href="https://leetcode.com/problems/minimum-numbers-of-function-calls-to-make-target-array/">
  * Minimum Numbers of Function Calls to Make Target Array</a>

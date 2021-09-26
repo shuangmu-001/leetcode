@@ -2,7 +2,7 @@ package com.leetcode.arrays;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:14 PM 2020/5/7
  * <a href="https://leetcode.com/problems/third-maximum-number/">
  *     Third Maximum Number</a>

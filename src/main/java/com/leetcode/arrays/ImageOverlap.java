@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:27 上午 2020/9/7
  * TODO <a href="https://leetcode.com/problems/image-overlap/">Image Overlap</a>
  */

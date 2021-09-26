@@ -4,7 +4,7 @@ import com.Utils;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:46 PM 2020/4/21
  * <a href="https://leetcode.com/problems/decompress-run-length-encoded-list/">
  *     Decompress Run-Length Encoded List</a>

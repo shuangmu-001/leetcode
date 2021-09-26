@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.linkedList;
 import java.util.Objects;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:30 PM 2020/2/17
  */
 public class ListNode {

@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:51 AM 2020/2/18
  * {@link <https://leetcode.com/problems/merge-two-sorted-lists/>}
  */

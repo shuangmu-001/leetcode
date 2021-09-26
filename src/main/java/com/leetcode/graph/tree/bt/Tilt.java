@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import static com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST.sortedArrayToBST;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:41 PM 2020/3/15
  * <a href="https://leetcode.com/problems/binary-tree-tilt/">
  *     Binary Tree Tilt</a>

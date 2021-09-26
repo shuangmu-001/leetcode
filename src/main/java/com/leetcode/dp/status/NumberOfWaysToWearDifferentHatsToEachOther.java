@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:47 PM 2020/5/6
  * <a href="https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/">
  *     Number of Ways to Wear Different Hats to Each Other</a>

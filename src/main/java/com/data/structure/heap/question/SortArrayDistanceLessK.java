@@ -3,7 +3,7 @@ package com.data.structure.heap.question;
 import java.util.PriorityQueue;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:53 上午 2021/5/11
  */
 public class SortArrayDistanceLessK {

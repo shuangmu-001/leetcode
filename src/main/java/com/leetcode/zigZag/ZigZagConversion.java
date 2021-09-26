@@ -3,7 +3,7 @@ package com.leetcode.zigZag;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date Create in 3:16 下午 2019/11/27
  * {@link "https://leetcode.com/problems/zigzag-conversion/"}
  */

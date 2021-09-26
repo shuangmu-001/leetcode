@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:45 PM 2020/3/15
  * <a href="https://leetcode.com/problems/diameter-of-binary-tree/">
  *     Diameter of Binary Tree</a>

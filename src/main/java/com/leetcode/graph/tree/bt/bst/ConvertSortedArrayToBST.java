@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:29 PM 2020/3/11
  * {@link "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/"}
  */

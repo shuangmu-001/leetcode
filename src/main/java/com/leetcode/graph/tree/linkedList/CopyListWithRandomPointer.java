@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:18 PM 2020/4/9
  * <a href="https://leetcode.com/problems/copy-list-with-random-pointer/">
  * Copy List with Random Pointer</a>
@@ -14,7 +14,7 @@ public class CopyListWithRandomPointer {
      * A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
      * Return a deep copy of the list.
      * The Linked List is represented in the input/output as a list of n nodes. Each node is represented as a pair of [val, random_index] where:
-     * val: an integer representing Node.val
+     * val: an integer representing TreeNode.val
      * random_index: the index of the node (range from 0 to n-1) where random pointer points to, or null if it does not point to any node.
      * <p>
      * Example 1:
@@ -35,8 +35,8 @@ public class CopyListWithRandomPointer {
      * Explanation: Given linked list is empty (null pointer), so return null.
      * <p>
      * Constraints:
-     * -10000 <= Node.val <= 10000
-     * Node.random is null or pointing to a node in the linked list.
+     * -10000 <= TreeNode.val <= 10000
+     * TreeNode.random is null or pointing to a node in the linked list.
      * Number of Nodes will not exceed 1000.
      */
     public Node copyRandomList1(Node head) {

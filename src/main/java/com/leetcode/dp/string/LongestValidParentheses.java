@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:48 PM 2020/2/24
  * TODO {@link "https://leetcode.com/problems/longest-valid-parentheses/"}
  */

@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:24 PM 2020/1/15
  * {@link "https://leetcode.com/problems/search-insert-position/"}
  * 二分查找法

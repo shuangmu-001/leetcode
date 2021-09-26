@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:44 AM 2020/4/9
  * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/">
  *     Remove Duplicates from Sorted List</a>

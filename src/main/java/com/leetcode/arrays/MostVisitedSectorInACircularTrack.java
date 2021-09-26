@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:09 上午 2020/8/28
  * <a herf="https://leetcode.com/problems/most-visited-sector-in-a-circular-track/">
  * Most Visited Sector in a Circular Track</a>

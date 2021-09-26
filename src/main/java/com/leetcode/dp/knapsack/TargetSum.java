@@ -5,7 +5,7 @@ import com.Utils;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:12 PM 2020/5/18
  * <a href="https://leetcode.com/problems/target-sum/">
  * Target Sum</a>

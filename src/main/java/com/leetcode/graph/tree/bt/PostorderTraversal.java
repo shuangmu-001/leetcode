@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:10 PM 2020/3/18
  * <a href="https://leetcode.com/problems/binary-tree-postorder-traversal/">
  *     Binary Tree Postorder Traversal</a>

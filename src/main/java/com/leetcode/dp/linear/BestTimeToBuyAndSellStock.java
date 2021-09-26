@@ -1,7 +1,7 @@
 package com.leetcode.dp.linear;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:14 AM 2020/2/26
  * {@link "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"}
  */

@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:21 下午 2020/9/16
  * <a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/">
  *     Maximum XOR of Two Numbers in an Array</a>

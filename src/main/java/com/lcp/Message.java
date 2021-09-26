@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:31 PM 2020/4/28
  * <a href="https://leetcode-cn.com/problems/chuan-di-xin-xi/">
  *     传递信息</a>

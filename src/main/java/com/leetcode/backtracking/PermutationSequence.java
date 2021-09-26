@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:37 PM 2020/5/11
  * <a href="https://leetcode.com/problems/permutation-sequence/">
  * Permutation Sequence</a>

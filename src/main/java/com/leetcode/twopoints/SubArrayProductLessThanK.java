@@ -1,7 +1,7 @@
 package com.leetcode.twopoints;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:41 下午 2020/9/28
  * <a href="https://leetcode-cn.com/problems/subarray-product-less-than-k/">
  *     SubArray Product Less Than K</a>

@@ -9,7 +9,7 @@ import com.leetcode.graph.tree.linkedList.ListNode;
  * 时间复杂度O(N),额外空间复杂度O(1)
  * TODO 约瑟夫环
  *
- * @author wcl
+ * @author zms
  * @date 2:45 下午 2021/5/8
  */
 public class Cycle {

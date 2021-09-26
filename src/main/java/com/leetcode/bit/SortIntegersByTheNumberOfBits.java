@@ -3,7 +3,7 @@ package com.leetcode.bit;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:28 PM 2020/4/23
  * TODO <a href="https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/">
  *     Sort Integers by The Number of 1 Bits</a>

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:20 PM 2020/5/12
  * <a href="https://leetcode.com/problems/subsets-ii/">
  * Subsets II</a>

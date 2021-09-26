@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:03 PM 2020/4/23
  * <a href="https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/">
  *     Prime Number of Set Bits in Binary Representation</a>

@@ -3,7 +3,7 @@ package com.leetcode.dp;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:12 PM 2020/3/30
  * <a href="https://leetcode.com/problems/ugly-number-ii/">
  *     Ugly Number II</a>

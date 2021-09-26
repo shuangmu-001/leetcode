@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:07 PM 2020/3/23
  * <a href="https://leetcode.com/problems/smallest-string-starting-from-leaf/">
  *     Smallest String Starting From Leaf</a>

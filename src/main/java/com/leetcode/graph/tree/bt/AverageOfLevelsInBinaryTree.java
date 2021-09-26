@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:46 PM 2020/3/10
  */
 public class AverageOfLevelsInBinaryTree {

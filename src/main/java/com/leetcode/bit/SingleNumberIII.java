@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:16 AM 2020/4/24
  * TODO <a href="https://leetcode.com/problems/single-number-iii/">
  *     Single Number III</a>

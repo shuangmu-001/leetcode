@@ -1,7 +1,7 @@
 package com.leetcode.graph.dfs;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:52 下午 2020/5/27
  * <a href="https://leetcode-cn.com/problems/possible-bipartition/">
  * Possible Bipartition</a>

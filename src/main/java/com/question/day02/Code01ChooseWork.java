@@ -8,7 +8,7 @@ package com.question.day02;
  *
  * TODO 线性表
  *
- * @author wcl
+ * @author zms
  * @date 5:10 下午 2021/9/17
  */
 public class Code01ChooseWork {

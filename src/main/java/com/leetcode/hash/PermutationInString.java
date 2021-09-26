@@ -3,7 +3,7 @@ package com.leetcode.hash;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:27 PM 2020/5/18
  * <a href="https://leetcode.com/problems/permutation-in-string/">
  * Permutation In String</a>

@@ -3,7 +3,7 @@ package com.leetcode.heap;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:26 下午 2020/9/18
  * <a href="https://leetcode.com/problems/top-k-frequent-words/">Top K Frequent Words</a>
  */

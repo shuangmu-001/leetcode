@@ -6,7 +6,7 @@ import com.Test;
 /**
  * 给定一个非负整数num，如何不用循环语句返回 >=num, 并且离num最近的，2的某次方
  *
- * @author wcl
+ * @author zms
  * @date 3:46 下午 2021/9/15
  */
 public class Code03Near2Power implements Test {

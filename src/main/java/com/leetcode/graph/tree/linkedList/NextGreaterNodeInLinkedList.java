@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:33 PM 2020/4/11
  * <a href="https://leetcode.com/problems/next-greater-node-in-linked-list/">
- *     Next Greater Node In Linked List</a>
+ *     Next Greater TreeNode In Linked List</a>
  */
 public class NextGreaterNodeInLinkedList {
     /**

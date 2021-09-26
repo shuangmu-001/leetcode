@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:00 PM 2020/2/20
  * {@link "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"}
  * @see RemoveElement

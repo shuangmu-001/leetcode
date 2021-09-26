@@ -3,7 +3,7 @@ package com.leetcode.math;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:50 PM 2020/4/28
  * <a href="https://leetcode-cn.com/contest/season/2020-spring/problems/qi-wang-ge-shu-tong-ji/">
  *     期望个数统计</a>

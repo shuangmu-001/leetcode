@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:56 PM 2020/3/13
  * {@link "https://leetcode.com/problems/same-tree/"}
  */

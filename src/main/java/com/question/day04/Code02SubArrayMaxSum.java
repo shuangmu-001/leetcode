@@ -5,7 +5,7 @@ import com.Test;
 /**
  * <a href="https://leetcode.com/problems/maximum-subarray/">maximum subarray</a>
  *
- * @author wcl
+ * @author zms
  * @date 7:46 下午 2021/9/19
  */
 public class Code02SubArrayMaxSum implements Test {

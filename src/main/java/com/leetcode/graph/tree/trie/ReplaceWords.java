@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.trie;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:17 上午 2020/9/18
  * <a href="https://leetcode.com/problems/replace-words/">Replace Words</a>
  */

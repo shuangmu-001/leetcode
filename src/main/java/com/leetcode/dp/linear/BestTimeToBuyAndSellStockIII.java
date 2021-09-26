@@ -3,7 +3,7 @@ package com.leetcode.dp.linear;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:38 PM 2020/3/24
  * <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/">
  *     Best Time to Buy and Sell Stock III</a>

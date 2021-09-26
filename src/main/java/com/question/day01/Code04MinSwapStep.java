@@ -11,7 +11,7 @@ import java.util.Random;
  * 如果B都放在左侧，G都放在右侧，那么至少需要交换几次，
  * B放在左侧和G放在左侧，那个交换次数少？至少需要交换几次
  *
- * @author wcl
+ * @author zms
  * @date 3:46 下午 2021/9/15
  */
 public class Code04MinSwapStep implements Test {

@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:26 PM 2020/3/16
  * <a href="https://leetcode.com/problems/maximum-binary-tree/">
  *     Maximum Binary Tree</a>

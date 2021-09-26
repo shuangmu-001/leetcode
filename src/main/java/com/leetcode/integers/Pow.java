@@ -1,7 +1,7 @@
 package com.leetcode.integers;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:31 PM 2020/2/25
  * {@link "https://leetcode.com/problems/powx-n/"}
  */

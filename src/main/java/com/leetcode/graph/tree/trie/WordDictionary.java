@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:39 下午 2020/9/18
  * TODO <a href="https://leetcode.com/problems/design-add-and-search-words-data-structure/">
  *     Design Add and Search Words Data Structure</a>

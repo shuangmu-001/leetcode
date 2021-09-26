@@ -7,7 +7,7 @@ import java.util.Map;
  * <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">
  * Longest Substring Without Repeating Characters</a>
  *
- * @author wcl
+ * @author zms
  * @date 3:07 下午 2021/9/19
  */
 public class Code01LongestSubstringWithoutRepeatingCharacters {

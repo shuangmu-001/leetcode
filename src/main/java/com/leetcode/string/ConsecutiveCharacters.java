@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:19 下午 2020/5/19
  * <a href="https://leetcode.com/problems/consecutive-characters/">
  * Consecutive Characters</a>

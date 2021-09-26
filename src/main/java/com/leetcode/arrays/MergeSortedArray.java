@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:27 PM 2020/4/13
  * <a href="https://leetcode.com/problems/merge-sorted-array/">
  *     Merge Sorted Array</a>

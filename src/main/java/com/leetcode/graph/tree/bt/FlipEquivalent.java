@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:03 PM 2020/3/21
  * <a href="https://leetcode.com/problems/flip-equivalent-binary-trees/">
  *     Flip Equivalent Binary Trees</a>

@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:27 AM 2020/5/11
  * <a href="https://leetcode.com/problems/next-permutation/">
  * Next Permutation</a>

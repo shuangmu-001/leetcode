@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:06 PM 2020/5/12
  * <a href="https://leetcode.com/problems/single-element-in-a-sorted-array/">
  * Single Element in a Sorted Array</a>

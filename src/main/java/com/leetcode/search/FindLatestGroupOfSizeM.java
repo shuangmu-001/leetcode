@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:01 下午 2020/8/27
  * TODO <a href="https://leetcode.com/problems/find-latest-group-of-size-m/">
  * Find Latest Group of Size M</a>

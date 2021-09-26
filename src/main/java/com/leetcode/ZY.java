@@ -3,7 +3,7 @@ package com.leetcode;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date Create in 16:47 2019-03-20
  */
 public class ZY {

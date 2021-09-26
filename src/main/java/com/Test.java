@@ -1,12 +1,13 @@
 package com;
 
+import com.leetcode.graph.tree.bt.TreeNode;
 import com.leetcode.graph.tree.linkedList.ListNode;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:09 下午 2021/5/12
  */
 public interface Test {
@@ -115,4 +116,16 @@ public interface Test {
         }
         return arr;
     }
+
+    /**
+     * 随机生成节点数为n的二叉树
+     *
+     * @param n 二叉树的节点数
+     * @return 目标字符串数组
+     */
+    default TreeNode genRandomTreeNode(int n) {
+       return null;
+    }
+
+    // 可以生成一个两个随机数组
 }

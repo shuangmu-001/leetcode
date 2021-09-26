@@ -1,7 +1,7 @@
 package com.leetcode.dp;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:12 上午 2020/7/15
  * <a href="https://leetcode.com/problems/count-submatrices-with-all-ones/">
  *     Count Submatrices With All Ones</a>

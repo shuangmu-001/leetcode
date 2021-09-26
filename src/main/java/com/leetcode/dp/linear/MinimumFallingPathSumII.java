@@ -1,7 +1,7 @@
 package com.leetcode.dp.linear;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:29 PM 2020/3/30
  * <a href="https://leetcode.com/problems/minimum-falling-path-sum-ii/">
  *     Minimum Falling Path Sum II</a>

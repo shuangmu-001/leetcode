@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:30 AM 2020/1/15
  * {@link "https://leetcode.com/problems/minimum-absolute-difference/"}
  */

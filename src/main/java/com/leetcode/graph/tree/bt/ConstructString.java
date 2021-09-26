@@ -2,7 +2,7 @@ package com.leetcode.graph.tree.bt;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:22 PM 2020/3/13
  * {@link "https://leetcode.com/problems/construct-string-from-binary-tree/"}
  */

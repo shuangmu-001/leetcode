@@ -1,7 +1,7 @@
 package com.leetcode.dp;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:13 PM 2020/4/27
  * <a href="https://leetcode.com/problems/maximal-square/">
  *     Maximal Square</a>

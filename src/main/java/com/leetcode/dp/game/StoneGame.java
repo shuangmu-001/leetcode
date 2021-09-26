@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:18 AM 2020/2/28
  * TODO {@link "https://leetcode.com/problems/stone-game/"}
  * 博弈+区间动态规划

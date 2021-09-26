@@ -1,7 +1,7 @@
 package com.leetcode.greedy;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:27 下午 2020/7/24
  * <a href="https://leetcode.com/problems/water-bottles/">
  *     Water Bottles</a>

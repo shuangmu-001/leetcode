@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:38 上午 2020/6/8
  * <a href="https://leetcode.com/problems/shuffle-the-array/">
  *     Shuffle the Array</a>

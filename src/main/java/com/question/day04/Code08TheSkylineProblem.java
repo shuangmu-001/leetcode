@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * <a href="https://leetcode.com/problems/the-skyline-problem/">the skyline problem</a>
  *
- * @author wcl
+ * @author zms
  * @date 8:31 下午 2021/9/19
  */
 public class Code08TheSkylineProblem {

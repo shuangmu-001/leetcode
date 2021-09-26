@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:32 PM 2020/4/22
  * <a href="https://leetcode.com/problems/subarray-sum-equals-k/">
  *     Subarray Sum Equals K</a>

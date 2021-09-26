@@ -1,7 +1,7 @@
 package com.leetcode.dp.game;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:48 PM 2020/2/25
  * TODO {@link "https://leetcode.com/problems/divisor-game/"}
  */

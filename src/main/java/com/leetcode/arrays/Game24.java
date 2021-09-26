@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:46 PM 2020/2/23
  * TODO {@link "https://leetcode.com/problems/24-game/"}
  */

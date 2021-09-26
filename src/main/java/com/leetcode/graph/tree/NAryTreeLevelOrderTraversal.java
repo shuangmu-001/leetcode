@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:08 PM 2020/3/21
  * <a href="https://leetcode.com/problems/n-ary-tree-level-order-traversal/">
  *      N-ary Tree Level Order Traversal</a>

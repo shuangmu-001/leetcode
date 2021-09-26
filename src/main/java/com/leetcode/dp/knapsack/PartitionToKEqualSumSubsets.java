@@ -3,7 +3,7 @@ package com.leetcode.dp.knapsack;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:14 PM 2020/5/18
  * <a href="https://leetcode.com/problems/partition-to-k-equal-sum-subsets/">
  * Partition To K Equal Sum Subsets</a>

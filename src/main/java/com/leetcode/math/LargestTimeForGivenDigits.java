@@ -3,7 +3,7 @@ package com.leetcode.math;
 import java.util.TreeMap;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:07 下午 2020/9/1
  * <a href="https://leetcode.com/problems/largest-time-for-given-digits/">Largest Time for Given Digits</a>
  * TODO 排列组合

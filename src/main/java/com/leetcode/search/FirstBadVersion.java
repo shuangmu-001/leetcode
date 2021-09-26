@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:52 PM 2020/4/3
  * <a href="https://leetcode.com/problems/first-bad-version/">
  *     First Bad Version</a>

@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:48 PM 2020/4/30
  * <a href="https://leetcode.com/problems/diagonal-traverse/">
  *     Diagonal Traverse</a>

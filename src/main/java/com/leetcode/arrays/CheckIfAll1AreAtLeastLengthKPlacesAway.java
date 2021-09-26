@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:27 AM 2020/5/7
  * <a href="https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/">
  *     Check If All 1's Are at Least Length K Places Away</a>

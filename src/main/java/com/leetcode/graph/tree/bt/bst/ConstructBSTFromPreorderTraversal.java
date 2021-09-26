@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:25 PM 2020/3/17
  * <a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/">
  *     Construct Binary Search Tree from Preorder Traversal</a>

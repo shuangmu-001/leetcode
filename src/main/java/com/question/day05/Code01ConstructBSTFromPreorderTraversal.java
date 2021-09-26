@@ -9,7 +9,7 @@ import java.util.Stack;
  * <a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/">
  * Construct Binary Search Tree from Preorder Traversal</a>
  *
- * @author wcl
+ * @author zms
  * @date 4:38 下午 2021/9/23
  */
 public class Code01ConstructBSTFromPreorderTraversal implements Test {

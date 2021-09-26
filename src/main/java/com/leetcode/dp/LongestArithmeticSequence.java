@@ -5,7 +5,7 @@ import com.Utils;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:36 PM 2020/3/31
  * <a href="https://leetcode.com/problems/longest-arithmetic-sequence/">
  *     Longest Arithmetic Sequence</a>

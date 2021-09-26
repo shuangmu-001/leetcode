@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:23 下午 2020/9/15
  * <a href="https://leetcode.com/problems/length-of-last-word/">
  *     Length of Last Word</a>

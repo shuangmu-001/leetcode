@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:36 PM 2020/4/23
  * TODO <a href="https://leetcode.com/problems/sum-of-two-integers/">
  * Sum of Two Integers</a>

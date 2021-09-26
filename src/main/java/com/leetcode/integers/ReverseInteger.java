@@ -1,7 +1,7 @@
 package com.leetcode.integers;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:28 PM 2019/12/10
  */
 public class ReverseInteger {

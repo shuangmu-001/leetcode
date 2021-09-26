@@ -2,7 +2,7 @@ package com.leetcode.greedy;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:39 AM 2020/4/26
  * <a href="https://leetcode.com/problems/jump-game-ii/">
  *     Jump Game II</a>

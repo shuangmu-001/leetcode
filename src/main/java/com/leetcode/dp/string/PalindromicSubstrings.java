@@ -5,7 +5,7 @@ import com.Utils;
 /**
  * {@link "https://leetcode.com/problems/palindromic-substrings/"}
  *
- * @author wcl
+ * @author zms
  * @date 5:09 下午 2021/5/7
  */
 public class PalindromicSubstrings {

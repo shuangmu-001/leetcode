@@ -3,7 +3,7 @@ package com.leetcode.dp;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:38 AM 2020/2/28
  * {@link "https://leetcode.com/problems/count-square-submatrices-with-all-ones/"}
  * @see MaximalSquare

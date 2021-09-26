@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * <a href="https://leetcode-cn.com/problems/word-break/">Word Break</a>
  *
- * @author wcl
+ * @author zms
  * @date 10:34 下午 2020/9/29
  */
 public class WordBreak {

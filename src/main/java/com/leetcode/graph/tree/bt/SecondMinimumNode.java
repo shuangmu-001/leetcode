@@ -4,10 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:01 PM 2020/3/15
  * <a href="https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/">
- *     Second Minimum Node In a Binary Tree</a>
+ *     Second Minimum TreeNode In a Binary Tree</a>
  */
 public class SecondMinimumNode {
     /**

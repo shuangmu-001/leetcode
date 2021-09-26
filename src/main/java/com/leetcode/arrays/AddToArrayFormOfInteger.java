@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:53 PM 2020/5/7
  * <a href="https://leetcode.com/problems/add-to-array-form-of-integer/">
  *     Add to Array-Form of Integer</a>

@@ -1,7 +1,7 @@
 package com.leetcode.dp;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:48 AM 2020/4/20
  * TODO <a href="https://leetcode.com/problems/create-maximum-number/">
  *     Create Maximum Number</a>

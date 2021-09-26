@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:40 PM 2020/4/4
  * <a href="https://leetcode-cn.com/problems/move-zeroes/">
  *     Move Zeroes</a>

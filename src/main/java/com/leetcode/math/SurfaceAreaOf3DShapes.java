@@ -1,7 +1,7 @@
 package com.leetcode.math;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:53 AM 2020/3/25
  * <a href="https://leetcode.com/problems/surface-area-of-3d-shapes/">
  *     Surface Area of 3D Shapes</a>

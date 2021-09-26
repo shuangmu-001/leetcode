@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:50 PM 2020/3/20
  * <a href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/">
  *     Maximum Product of Splitted Binary Tree</a>

@@ -1,10 +1,10 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:31 AM 2020/4/9
  * <a href="https://leetcode.com/problems/delete-node-in-a-linked-list/">
- *     Delete Node in a Linked List</a>
+ *     Delete TreeNode in a Linked List</a>
  */
 public class Delete {
     /**

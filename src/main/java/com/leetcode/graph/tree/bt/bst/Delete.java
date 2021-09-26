@@ -1,12 +1,10 @@
 package com.leetcode.graph.tree.bt.bst;
 
-import com.leetcode.graph.tree.bt.TreeNode;
-
 /**
- * @author wcl
+ * @author zms
  * @date 3:53 PM 2020/3/20
  * <a href="https://leetcode.com/problems/delete-node-in-a-bst/">
- *     Delete Node in a BST</a>
+ *     Delete TreeNode in a BST</a>
  */
 public class Delete {
     /**
@@ -48,12 +46,12 @@ public class Delete {
      *    \   \
      *     4   7
      */
-    public TreeNode deleteNode(TreeNode root, int key) {
+    public com.leetcode.graph.tree.bt.TreeNode deleteNode(com.leetcode.graph.tree.bt.TreeNode root, int key) {
        if(root == null) {
            return null;
        }
-        TreeNode dummy = root;
-        TreeNode parent = null;
+        com.leetcode.graph.tree.bt.TreeNode dummy = root;
+        com.leetcode.graph.tree.bt.TreeNode parent = null;
 
         while (dummy != null) {
             if(dummy.val == key) {
@@ -70,8 +68,8 @@ public class Delete {
         if(dummy == null) {
             return root;
         }
-        TreeNode left = dummy.left;
-        TreeNode right = dummy.right;
+        com.leetcode.graph.tree.bt.TreeNode left = dummy.left;
+        com.leetcode.graph.tree.bt.TreeNode right = dummy.right;
         if(parent == null) {
             root = left == null ? right : left;
         } else if(parent.val < dummy.val) {
@@ -89,13 +87,13 @@ public class Delete {
         return root;
     }
     // Recursive
-    public TreeNode delNode(TreeNode root, int key) {
+    public com.leetcode.graph.tree.bt.TreeNode delNode(com.leetcode.graph.tree.bt.TreeNode root, int key) {
         if(root == null) {
             return null;
         }
         if(root.val == key) {
-            TreeNode left = root.left;
-            TreeNode right = root.right;
+            com.leetcode.graph.tree.bt.TreeNode left = root.left;
+            com.leetcode.graph.tree.bt.TreeNode right = root.right;
             if(left != null) {
                 while(left.right != null) {
                     left = left.right;

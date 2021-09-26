@@ -1,7 +1,7 @@
 package com.data.structure.tree.question;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:34 下午 2021/5/7
  */
 public class PaperFolding {

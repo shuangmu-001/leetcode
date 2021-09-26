@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:19 PM 2020/4/24
  * <a href="https://leetcode.com/problems/merge-k-sorted-lists/">
  * Merge k Sorted Lists</a>

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:05 PM 2020/3/16
  * <a href="https://leetcode.com/problems/subtree-of-another-tree/">
  * Subtree of Another Tree</a>

@@ -3,7 +3,7 @@ package com.leetcode.dp.linear;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:33 AM 2020/4/1
  * TODO <a href="https://leetcode.com/problems/longest-common-subsequence/">
  *     Longest Common Subsequence</a>

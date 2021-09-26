@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:01 PM 2020/4/14
  * <a href="https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/529/week-2/3299/">
  * Perform String Shifts</a>

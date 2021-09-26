@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:13 PM 2020/1/2
  * {@link <https://leetcode.com/problems/increasing-triplet-subsequence/>}
  */

@@ -1,7 +1,7 @@
 package com.leetcode.dp.fibonacci;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:08 PM 2020/4/1
  * <a href="https://leetcode.com/problems/delete-and-earn/">
  *     Delete and Earn</a>

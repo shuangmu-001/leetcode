@@ -1,7 +1,7 @@
 package com.leetcode.recursion;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:47 下午 2020/9/3
  * <a href="https://leetcode.com/problems/k-th-symbol-in-grammar/">K-th Symbol in Grammar</a>
  */
@@ -61,7 +61,7 @@ public class KThSymbolInGrammar {
         if((res & 1) == 0) {
             return res ^ 1;
         } else {
-            return res ^ 0;
+            return res;
         }
     }
 

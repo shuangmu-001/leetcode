@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:32 PM 2020/3/30
  * <a href="https://leetcode.com/problems/maximum-product-of-three-numbers/">
  *      Maximum Product of Three Numbers</a>

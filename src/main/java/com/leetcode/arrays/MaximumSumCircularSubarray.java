@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:07 PM 2020/5/15
  * <a href="https://leetcode-cn.com/problems/maximum-sum-circular-subarray/">
  * Maximum Sum Circular Subarray</a>

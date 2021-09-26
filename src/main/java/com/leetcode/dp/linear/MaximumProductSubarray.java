@@ -2,7 +2,7 @@ package com.leetcode.dp.linear;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:01 PM 2020/3/25
  * <a href="https://leetcode.com/problems/maximum-product-subarray/">
  *      Maximum Product Subarray</a>

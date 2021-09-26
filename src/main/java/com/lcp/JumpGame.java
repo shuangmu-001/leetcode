@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:12 PM 2020/4/29
  * <a href="https://leetcode-cn.com/problems/zui-xiao-tiao-yue-ci-shu/">
  *     最小跳跃次数</a>

@@ -4,7 +4,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:02 PM 2020/2/29
  * {@link "https://leetcode.com/problems/range-sum-of-bst/"}
  * @see com.leetcode.graph.tree.TreeTraversal

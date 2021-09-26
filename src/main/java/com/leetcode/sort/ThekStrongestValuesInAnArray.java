@@ -3,7 +3,7 @@ package com.leetcode.sort;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:49 上午 2020/6/8
  * <a href="https://leetcode.com/problems/the-k-strongest-values-in-an-array/">
  *     The k Strongest Values in an Array</a>

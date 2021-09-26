@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:30 PM 2020/4/22
  * <a href="https://leetcode.com/problems/rotate-array/">
  * Rotate Array</a>

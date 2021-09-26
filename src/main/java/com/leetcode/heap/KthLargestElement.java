@@ -3,7 +3,7 @@ package com.leetcode.heap;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:08 PM 2020/5/7
  * <a href="https://leetcode.com/problems/kth-largest-element-in-an-array/">
  *     Kth Largest Element in an Array</a>

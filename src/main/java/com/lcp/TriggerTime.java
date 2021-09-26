@@ -4,7 +4,7 @@ import com.Utils;
 import com.leetcode.search.FindFirstAndLastPositionOfElementInSortedArray;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:32 AM 2020/4/29
  * <a href="https://leetcode-cn.com/problems/ju-qing-hong-fa-shi-jian/">
  *      剧情触发时间</a>

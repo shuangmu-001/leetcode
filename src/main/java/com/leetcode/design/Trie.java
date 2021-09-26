@@ -3,7 +3,7 @@ package com.leetcode.design;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:55 PM 2020/5/14
  * <a href="https://leetcode.com/problems/implement-trie-prefix-tree/">
  *  Implement Trie (Prefix Tree)</a>

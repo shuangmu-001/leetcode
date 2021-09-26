@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:58 PM 2020/4/20
  * <a href="https://leetcode.com/problems/design-linked-list/">
  * Design Linked List</a>

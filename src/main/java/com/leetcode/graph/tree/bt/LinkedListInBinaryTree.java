@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import com.leetcode.graph.tree.linkedList.ListNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:57 PM 2020/3/22
  * <a href="https://leetcode.com/problems/linked-list-in-binary-tree/">
  *     Linked List in Binary Tree</a>

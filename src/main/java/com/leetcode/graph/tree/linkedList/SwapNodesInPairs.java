@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:53 PM 2019/12/23
  */
 public class SwapNodesInPairs {

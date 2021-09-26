@@ -1,7 +1,7 @@
 package com.leetcode.dp.knapsack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:32 PM 2020/5/12
  * <a href="https://leetcode.com/problems/combination-sum-iv/">
  * Combination Sum IV</a>

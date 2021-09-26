@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:10 PM 2020/5/7
  * <a href="https://leetcode.com/problems/plus-one/">
  *     Plus One</a>

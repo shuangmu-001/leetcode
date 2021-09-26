@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:45 PM 2020/4/30
  * TODO <a href="https://leetcode.com/problems/diagonal-traverse-ii/">
  *     Diagonal Traverse II</a>

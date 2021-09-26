@@ -3,7 +3,7 @@ package com.leetcode.dp;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:54 AM 2020/4/28
  * <a href="https://leetcode.com/problems/maximal-rectangle/">
  *     Maximal Rectangle</a>

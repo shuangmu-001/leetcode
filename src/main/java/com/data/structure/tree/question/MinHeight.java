@@ -8,7 +8,7 @@ import com.data.structure.tree.printer.BinaryTrees;
 import java.util.Random;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:28 下午 2021/5/11
  */
 public class MinHeight {

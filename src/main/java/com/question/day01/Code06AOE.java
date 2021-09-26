@@ -11,7 +11,7 @@ import com.Test;
  * TODO 线段数
  * TODO 贪心
  *
- * @author wcl
+ * @author zms
  * @date 3:46 下午 2021/9/15
  */
 public class Code06AOE implements Test {

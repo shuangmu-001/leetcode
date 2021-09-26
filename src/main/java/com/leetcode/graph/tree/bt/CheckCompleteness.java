@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:07 PM 2020/3/22
  * <a href="https://leetcode.com/problems/check-completeness-of-a-binary-tree/">
  *     Check Completeness of a Binary Tree</a>

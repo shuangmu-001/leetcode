@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * 逆序对
  *
- * @author wcl
+ * @author zms
  * @date 4:53 下午 2021/5/12
  */
 public class ReversePair implements Test {

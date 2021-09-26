@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:52 PM 2020/4/9
  * <a href="https://leetcode.com/problems/odd-even-linked-list/">
  *     Odd Even Linked List</a>

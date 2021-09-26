@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:00 PM 2020/1/2
  * {@link "https://leetcode.com/problems/maximum-length-of-pair-chain/"}
  * @see LongestIncreasingSubsequence

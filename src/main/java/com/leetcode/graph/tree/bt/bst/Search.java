@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:27 AM 2020/3/5
  * {@link "https://leetcode.com/problems/search-in-a-binary-search-tree/"}
  */

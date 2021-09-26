@@ -1,7 +1,7 @@
 package com.leetcode.dp.fibonacci;
 
 /**
- * @author wcl
+ * @author zms
  * @date 1:49 PM 2020/2/27
  * {@link "https://leetcode.com/problems/house-robber/"}
  * @see MinCostClimbingStairs

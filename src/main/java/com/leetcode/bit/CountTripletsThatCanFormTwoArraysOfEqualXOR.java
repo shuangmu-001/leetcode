@@ -3,7 +3,7 @@ package com.leetcode.bit;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:36 PM 2020/5/12
  * <a href="https://leetcode-cn.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/">
  * Count Triplets That Can Form Two Arrays Of Equal XOR</a>

@@ -1,7 +1,7 @@
 package com.leetcode.math;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:01 PM 2020/3/30
  * <a href="">
  *     Ugly Number</a>

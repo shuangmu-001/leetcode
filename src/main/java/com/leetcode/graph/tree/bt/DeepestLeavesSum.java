@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:27 PM 2020/3/16
  * <a href="https://leetcode.com/problems/deepest-leaves-sum/">
  *     Deepest Leaves Sum</a>

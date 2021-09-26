@@ -3,7 +3,7 @@ package com.leetcode.dp.linear;
 import com.leetcode.dp.linear.MinimumPathSum;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:56 PM 2020/4/19
  * <a href="https://leetcode.com/problems/dungeon-game/">
  *     Dungeon Game</a>

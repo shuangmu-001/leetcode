@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:10 下午 2020/5/22
  * <a href="https://leetcode.com/problems/knight-dialer/">
  * Knight Dialer</a>

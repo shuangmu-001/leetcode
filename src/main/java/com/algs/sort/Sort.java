@@ -4,7 +4,7 @@ package com.algs.sort;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:02 PM 2020/4/13
  */
 public class Sort {

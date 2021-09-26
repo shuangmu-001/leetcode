@@ -3,7 +3,7 @@ package com.leetcode.search;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:19 PM 2020/4/21
  * <a href="https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/530/week-3/3306/">
  * Leftmost Column with at Least a One</a>

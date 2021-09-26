@@ -3,7 +3,7 @@ package com.leetcode.graph;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:55 PM 2020/4/26
  * <a href="https://leetcode.com/problems/jump-game-iii/">
  *     Jump Game III</a>

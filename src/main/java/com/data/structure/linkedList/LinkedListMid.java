@@ -4,7 +4,7 @@ import com.Utils;
 import com.leetcode.graph.tree.linkedList.ListNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:46 上午 2021/5/8
  */
 public class LinkedListMid {

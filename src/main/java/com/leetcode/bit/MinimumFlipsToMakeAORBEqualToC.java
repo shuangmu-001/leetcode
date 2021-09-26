@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:55 AM 2020/4/24
  * <a href="https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/">
  *     Minimum Flips to Make a OR b Equal to c</a>

@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:43 PM 2020/2/17
  * {@link "https://leetcode.com/problems/valid-parentheses/"}
  * 1、后进先出 --> 栈

@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:50 PM 2020/4/23
  * <a href="https://leetcode.com/problems/convert-a-number-to-hexadecimal/">
  *     Convert a Number to Hexadecimal</a>

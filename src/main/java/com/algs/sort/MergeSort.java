@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * 归并排序 O(NlogN)
  *
- * @author wcl
+ * @author zms
  * @date 10:52 上午 2021/5/12
  */
 public class MergeSort implements Test {

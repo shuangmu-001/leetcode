@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:20 PM 2020/4/23
  * TODO <a href="https://leetcode.com/problems/binary-watch/">
  *     Binary Watch</a>

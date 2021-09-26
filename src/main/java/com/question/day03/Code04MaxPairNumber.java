@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * TODO 暴力解
  *
- * @author wcl
+ * @author zms
  * @date 7:45 下午 2021/9/19
  */
 public class Code04MaxPairNumber {

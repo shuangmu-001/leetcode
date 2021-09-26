@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:13 下午 2020/9/22
  * <a href="https://leetcode.com/problems/majority-element-ii/">Majority Element II</a>
  */

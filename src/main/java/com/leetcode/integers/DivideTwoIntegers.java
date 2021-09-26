@@ -1,7 +1,7 @@
 package com.leetcode.integers;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:38 PM 2020/2/20
  * {@link "https://leetcode.com/problems/divide-two-integers/"}
  * 逻辑运算实现加减乘除

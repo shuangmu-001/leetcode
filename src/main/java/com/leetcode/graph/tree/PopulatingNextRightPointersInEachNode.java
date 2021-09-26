@@ -1,21 +1,21 @@
 package com.leetcode.graph.tree;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:00 PM 2020/3/22
  * <a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node/">
- *     Populating Next Right Pointers in Each Node</a>
+ *     Populating Next Right Pointers in Each TreeNode</a>
  */
 public class PopulatingNextRightPointersInEachNode {
     /**
      * You are given a perfect binary tree where all leaves are on the same level,
      * and every parent has two children. The binary tree has the following definition:
      *
-     * struct Node {
+     * struct TreeNode {
      *   int val;
-     *   Node *left;
-     *   Node *right;
-     *   Node *next;
+     *   TreeNode *left;
+     *   TreeNode *right;
+     *   TreeNode *next;
      * }
      * Populate each next pointer to point to its next right node.
      * If there is no next right node, the next pointer should be set to NULL.
@@ -97,7 +97,7 @@ public class PopulatingNextRightPointersInEachNode {
 
         @Override
         public String toString() {
-            return "Node{" +
+            return "TreeNode{" +
                     "val=" + val +
                     ", left=" + left +
                     ", right=" + right +

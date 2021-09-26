@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:48 PM 2020/2/21
  * {@link "https://leetcode.com/problems/substring-with-concatenation-of-all-words/"}
  * TODO 实现排列组合

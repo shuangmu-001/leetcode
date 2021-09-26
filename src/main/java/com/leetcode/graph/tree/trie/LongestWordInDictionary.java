@@ -2,7 +2,7 @@ package com.leetcode.graph.tree.trie;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:30 下午 2020/9/17
  * <a href="https://leetcode.com/problems/longest-word-in-dictionary/">
  *     Longest Word in Dictionary</a>

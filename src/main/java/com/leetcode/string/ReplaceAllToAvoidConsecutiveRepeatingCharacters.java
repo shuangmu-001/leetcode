@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:53 下午 2020/9/8
  * <a href="https://leetcode.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters/">
  *     Replace All ?'s to Avoid Consecutive Repeating Characters</a>

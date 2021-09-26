@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:23 PM 2020/5/7
  * <a href="https://leetcode.com/problems/add-binary/">
  * Add Binary</a>

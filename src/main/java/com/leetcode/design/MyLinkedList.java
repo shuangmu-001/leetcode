@@ -1,7 +1,7 @@
 package com.leetcode.design;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:29 PM 2020/4/10
  * TODO <a href="https://leetcode.com/problems/design-linked-list/">
  * design linked list</a>

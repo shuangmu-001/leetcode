@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:08 PM 2020/4/24
  * TODO <a href="https://leetcode.com/problems/lru-cache/">
  *     LRU Cache</a>

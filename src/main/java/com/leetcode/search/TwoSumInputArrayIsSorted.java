@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:20 PM 2020/4/3
  * <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">
  *     Two Sum II - Input array is sorted</a>

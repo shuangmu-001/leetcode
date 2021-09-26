@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:46 PM 2020/4/2
  * TODO <a href="https://leetcode.com/problems/find-the-duplicate-number/">
  *     Find the Duplicate Number</a>

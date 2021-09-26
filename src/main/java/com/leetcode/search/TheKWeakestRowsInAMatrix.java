@@ -4,7 +4,7 @@ package com.leetcode.search;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:26 PM 2020/4/3
  * <a href="https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/">
  *     The K Weakest Rows in a Matrix</a>

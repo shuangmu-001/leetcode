@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:59 PM 2020/2/19
  * {@link "https://leetcode.com/problems/reverse-nodes-in-k-group/"}
  */

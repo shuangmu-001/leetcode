@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:32 PM 2020/3/19
  * <a href="https://leetcode.com/problems/binary-tree-coloring-game/">
  * Binary Tree Coloring Game</a>

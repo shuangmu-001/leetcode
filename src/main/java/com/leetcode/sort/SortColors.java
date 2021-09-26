@@ -3,7 +3,7 @@ package com.leetcode.sort;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:26 下午 2020/6/12
  * <a href="https://leetcode.com/problems/sort-colors/">
  * Sort Colors</a>

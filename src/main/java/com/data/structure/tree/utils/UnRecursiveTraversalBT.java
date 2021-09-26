@@ -5,7 +5,7 @@ import com.data.structure.tree.BinaryTree;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:56 下午 2021/5/6
  */
 public class UnRecursiveTraversalBT {

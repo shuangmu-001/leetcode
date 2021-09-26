@@ -6,7 +6,7 @@ import com.leetcode.graph.tree.linkedList.ListNode;
 /**
  * 判断一个链表是否是否为回文
  *
- * @author wcl
+ * @author zms
  * @date 12:32 下午 2021/5/8
  */
 public class IsPalindromeList {

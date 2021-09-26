@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:27 PM 2020/3/15
  * TODO <a href="https://leetcode.com/problems/longest-univalue-path/">
  *      Longest Univalue Path</a>

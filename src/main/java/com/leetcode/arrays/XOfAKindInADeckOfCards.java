@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:19 PM 2020/3/27
  * <a href="https://leetcode-cn.com/problems/x-of-a-kind-in-a-deck-of-cards/">
  *     X of a Kind in a Deck of Cards</a>

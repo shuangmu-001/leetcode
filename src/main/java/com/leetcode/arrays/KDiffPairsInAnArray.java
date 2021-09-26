@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:40 PM 2020/1/3
  * {@link <https://leetcode.com/problems/k-diff-pairs-in-an-array/>}
  */

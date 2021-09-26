@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:01 PM 2020/4/7
  * <a href="https://leetcode.com/problems/reverse-linked-list/">
  *     Reverse Linked List</a>

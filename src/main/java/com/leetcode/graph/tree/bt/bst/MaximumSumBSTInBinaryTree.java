@@ -4,7 +4,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 import edu.princeton.cs.algs4.In;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:08 PM 2020/3/21
  * <a href="https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/">
  *     Maximum Sum BST in Binary Tree</a>

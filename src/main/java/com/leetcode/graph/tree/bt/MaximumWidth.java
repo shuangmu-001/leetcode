@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:01 AM 2020/3/22
  * <a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">
  *     Maximum Width of Binary Tree</a>

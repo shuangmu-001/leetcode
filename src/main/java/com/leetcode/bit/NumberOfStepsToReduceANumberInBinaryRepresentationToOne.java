@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:29 PM 2020/4/24
  * <a href="https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/">
  *     Number of Steps to Reduce a Number in Binary Representation to One</a>

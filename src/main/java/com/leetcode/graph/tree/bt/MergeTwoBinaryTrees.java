@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:59 PM 2020/3/6
  * {@link "https://leetcode.com/problems/merge-two-binary-trees/"}
  * @see com.leetcode.graph.tree.TreeTraversal

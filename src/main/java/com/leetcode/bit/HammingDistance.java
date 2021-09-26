@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:09 PM 2020/4/23
  * <a href="https://leetcode.com/problems/hamming-distance/">
  *     Hamming Distance</a>

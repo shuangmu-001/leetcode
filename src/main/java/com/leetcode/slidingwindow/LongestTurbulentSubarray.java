@@ -1,7 +1,7 @@
 package com.leetcode.slidingwindow;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:15 下午 2020/5/25
  * <a href="https://leetcode.com/problems/longest-turbulent-subarray/">
  * Longest Turbulent Subarray</a>

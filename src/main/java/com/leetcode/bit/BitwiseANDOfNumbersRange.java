@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:18 PM 2020/4/23
  * <a href=https://leetcode.com/problems/bitwise-and-of-numbers-range/">
  *     Bitwise AND of Numbers Range</a>

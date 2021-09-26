@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:42 PM 2020/3/26
  * <a href="https://leetcode.com/problems/positions-of-large-groups/">
  *     Positions of Large Groups</a>

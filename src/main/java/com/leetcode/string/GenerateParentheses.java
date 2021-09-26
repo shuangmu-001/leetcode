@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:12 AM 2020/2/19
  * {@link "https://leetcode.com/problems/generate-parentheses/"}
  * @see com.leetcode.stack.ValidParentheses

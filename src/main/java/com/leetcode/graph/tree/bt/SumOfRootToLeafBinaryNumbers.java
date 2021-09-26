@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:05 PM 2020/3/9
  * {@link "https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/"}
  */

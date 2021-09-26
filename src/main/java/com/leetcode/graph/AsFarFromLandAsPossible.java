@@ -1,7 +1,7 @@
 package com.leetcode.graph;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:43 PM 2020/3/29
  * TODO <a href="https://leetcode.com/problems/as-far-from-land-as-possible/">
  *     As Far from Land as Possible</a>

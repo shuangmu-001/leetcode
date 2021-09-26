@@ -3,7 +3,7 @@ package com.leetcode.design;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:04 上午 2020/6/8
  * <a href="https://leetcode.com/problems/design-browser-history/">
  *     Browser History</a>

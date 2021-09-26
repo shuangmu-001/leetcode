@@ -1,7 +1,7 @@
 package com.leetcode.dp.linear;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:46 上午 2020/9/9
  * <a href="https://leetcode.com/problems/arithmetic-slices/">
  *     Arithmetic Slices</a>

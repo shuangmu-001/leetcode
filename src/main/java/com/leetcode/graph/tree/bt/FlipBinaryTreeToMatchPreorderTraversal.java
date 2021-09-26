@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:58 PM 2020/3/23
  * <a href="https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/">
  *     Flip Binary Tree To Match Preorder Traversal</a>

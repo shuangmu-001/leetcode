@@ -5,7 +5,7 @@ import com.Utils;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:33 AM 2020/4/20
  * <a href="https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/">
  * Flatten a Multilevel Doubly Linked List</a>
@@ -61,7 +61,7 @@ public class FlattenAMultilevelDoublyLinkedList {
      * <p>
      * Constraints:
      * Number of Nodes will not exceed 1000.
-     * 1 <= Node.val <= 10^5
+     * 1 <= TreeNode.val <= 10^5
      */
     public static Node flatten1(Node head) {
         if (head == null) {
@@ -131,7 +131,7 @@ public class FlattenAMultilevelDoublyLinkedList {
 
         @Override
         public String toString() {
-            return "Node{" +
+            return "TreeNode{" +
                     "val=" + val +
                     ", next=" + next +
                     ", child=" + child +

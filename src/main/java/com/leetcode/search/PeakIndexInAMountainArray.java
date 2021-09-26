@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:12 PM 2020/4/3
  * <a href="https://leetcode.com/problems/peak-index-in-a-mountain-array/">
  *     Peak Index in a Mountain Array</a>

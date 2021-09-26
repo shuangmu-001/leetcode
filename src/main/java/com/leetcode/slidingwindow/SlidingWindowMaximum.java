@@ -6,7 +6,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:39 下午 2020/5/25
  * <a href="https://leetcode.com/problems/sliding-window-maximum/">
  * Sliding Window Maximum</a>

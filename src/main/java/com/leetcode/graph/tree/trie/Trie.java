@@ -2,7 +2,7 @@ package com.leetcode.graph.tree.trie;
 
 /**
  * Definition for a trie tree node.
- * @author wcl
+ * @author zms
  * @date 2:59 下午 2020/9/17
  */
 public class Trie {

@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:08 PM 2020/4/9
  * <a href="https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/">
  *     Convert Binary Number in a Linked List to Integer</a>

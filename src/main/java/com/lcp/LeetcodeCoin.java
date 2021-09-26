@@ -1,7 +1,7 @@
 package com.lcp;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:26 PM 2020/4/28
  * <a href="https://leetcode-cn.com/problems/na-ying-bi/">
  *     拿硬币</a>

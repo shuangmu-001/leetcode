@@ -5,7 +5,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 import static com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST.sortedArrayToBST;
 
 /**
- * @author wcl
+ * @author zms
  * @date 1:06 PM 2020/3/13
  * {@link "https://leetcode.com/problems/convert-bst-to-greater-tree/"}
  */

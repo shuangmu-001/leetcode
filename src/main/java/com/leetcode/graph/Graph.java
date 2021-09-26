@@ -1,7 +1,7 @@
 package com.leetcode.graph;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:38 下午 2020/7/25
  * TODO 如何表示一张图
  */

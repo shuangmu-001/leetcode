@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Random;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:14 PM 2020/2/20
  * {@link "https://leetcode.com/problems/implement-strstr/"}
  *

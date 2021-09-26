@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:54 PM 2020/4/2
  * <a href="https://leetcode.com/problems/happy-number/">
  *     Happy Number</a>

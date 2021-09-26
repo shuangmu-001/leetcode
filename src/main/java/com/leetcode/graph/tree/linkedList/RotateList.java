@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 1:39 PM 2020/4/9
  * <a href="https://leetcode.com/problems/rotate-list/">
  *     Rotate List</a>

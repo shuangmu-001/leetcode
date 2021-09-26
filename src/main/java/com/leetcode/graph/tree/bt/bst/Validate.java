@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:15 AM 2020/3/18
  * <a href="https://leetcode.com/problems/validate-binary-search-tree/">
  *     Validate Binary Search Tree</a>

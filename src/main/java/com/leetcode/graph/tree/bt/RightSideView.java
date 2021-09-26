@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:37 PM 2020/3/17
  * <a href="https://leetcode.com/problems/binary-tree-right-side-view/">
  *     Binary Tree Right Side View</a>

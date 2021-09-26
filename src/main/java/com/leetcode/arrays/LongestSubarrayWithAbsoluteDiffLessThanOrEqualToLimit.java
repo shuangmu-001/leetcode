@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.TreeMap;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:58 AM 2020/5/7
  * <a href="https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/">
  *     Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit</a>

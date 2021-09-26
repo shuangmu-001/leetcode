@@ -3,7 +3,7 @@ package com.leetcode.greedy;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:52 下午 2020/10/4
  * TODO <a href="https://leetcode-cn.com/problems/remove-covered-intervals/">Remove Covered Intervals</a>
  */

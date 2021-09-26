@@ -3,7 +3,7 @@ package com.leetcode.dp.knapsack;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:40 下午 2020/5/20
  * <a href="https://leetcode.com/problems/coin-change/">
  * Coin Change</a>

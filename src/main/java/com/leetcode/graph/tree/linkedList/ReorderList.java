@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:57 PM 2020/4/9
  * <a href="https://leetcode.com/problems/reorder-list/">
  *      Reorder List</a>

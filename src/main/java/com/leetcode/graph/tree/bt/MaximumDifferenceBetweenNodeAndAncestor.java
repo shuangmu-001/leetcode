@@ -1,12 +1,10 @@
 package com.leetcode.graph.tree.bt;
 
-import com.leetcode.graph.tree.Node;
-
 /**
- * @author wcl
+ * @author zms
  * @date 4:26 PM 2020/3/20
  * <a href="https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/">
- *     Maximum Difference Between Node and Ancestor</a>
+ *     Maximum Difference Between TreeNode and Ancestor</a>
  */
 public class MaximumDifferenceBetweenNodeAndAncestor {
     /**

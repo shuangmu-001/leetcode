@@ -3,7 +3,7 @@ package com.leetcode.dp.knapsack;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:00 下午 2020/5/19
  * <a href="https://leetcode.com/problems/ones-and-zeroes/">
  * Ones And Zeroes</a>

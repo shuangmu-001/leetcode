@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:01 PM 2020/4/7
  * TODO <a href="https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/">
  *     Kth Smallest Element in a Sorted Matrix</a>

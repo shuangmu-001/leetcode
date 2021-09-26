@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * <a href="https://leetcode.com/problems/largest-1-bordered-square/">Largest 1-Bordered Square</a>
  * TODO 正方形遍历
  *
- * @author wcl
+ * @author zms
  * @date 3:33 下午 2021/9/19
  */
 public class Code03LargestBorderedSquare implements Test {

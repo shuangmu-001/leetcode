@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:26 下午 2020/5/19
  * <a href="https://leetcode.com/problems/simplified-fractions/">
  * SimplifiedFractions</a>

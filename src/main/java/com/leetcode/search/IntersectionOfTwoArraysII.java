@@ -3,7 +3,7 @@ package com.leetcode.search;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:40 PM 2020/4/3
  * <a href="https://leetcode.com/problems/intersection-of-two-arrays-ii/">
  *     Intersection of Two Arrays II</a>

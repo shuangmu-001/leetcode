@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:32 PM 2020/5/6
  * <a href="https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/">
  *     Max Difference You Can Get From Changing an Integer</a>

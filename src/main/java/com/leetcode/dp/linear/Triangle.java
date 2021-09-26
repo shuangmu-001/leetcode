@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:47 AM 2020/3/29
  * <a href="https://leetcode.com/problems/triangle/">
  *     Triangle</a>

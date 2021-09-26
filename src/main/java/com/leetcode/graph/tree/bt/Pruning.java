@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:46 PM 2020/3/21
  * <a href="https://leetcode.com/problems/binary-tree-pruning/">
  *     Binary Tree Pruning</a>

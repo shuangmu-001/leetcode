@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:22 PM 2020/3/25
  * <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">
  *     Find Minimum in Rotated Sorted Array</a>

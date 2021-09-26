@@ -3,7 +3,7 @@ package com.leetcode.dp.interval;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:18 PM 2019/12/23
  * TODO {link "https://leetcode.com/problems/longest-palindromic-substring/"}
  */

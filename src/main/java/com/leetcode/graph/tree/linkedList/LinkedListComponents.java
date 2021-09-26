@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:15 PM 2020/4/9
  * <a href="https://leetcode.com/problems/linked-list-components/">
  *     Linked List Components</a>

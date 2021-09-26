@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * @Author: wcl
+ * @Author: zms
  * @Description:
  * @Date: Create in 下午2:19 2018/8/29
  * @Modified By:

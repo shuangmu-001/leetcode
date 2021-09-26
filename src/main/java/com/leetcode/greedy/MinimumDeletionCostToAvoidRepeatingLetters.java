@@ -1,7 +1,7 @@
 package com.leetcode.greedy;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:24 下午 2020/9/8
  * <a href="https://leetcode.com/problems/minimum-deletion-cost-to-avoid-repeating-letters/">
  * Minimum Deletion Cost to Avoid Repeating Letters</a>

@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:53 PM 2020/3/18
  * <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/">
  *     Flatten Binary Tree to Linked List</a>

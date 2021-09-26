@@ -1,7 +1,7 @@
 package com.leetcode.graph.dfs;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:26 PM 2020/4/17
  * <a href="https://leetcode.com/problems/number-of-islands/">
  *      Number of Islands</a>

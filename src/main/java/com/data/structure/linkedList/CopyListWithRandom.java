@@ -5,7 +5,7 @@ package com.data.structure.linkedList;
  * 请实现一个函数完成这个链表得到复制，并返回复制的新链表的头节点。
  * 要求时间复杂度O(N),额外空间复杂度O(1)
  *
- * @author wcl
+ * @author zms
  * @date 1:43 下午 2021/5/8
  */
 public class CopyListWithRandom {

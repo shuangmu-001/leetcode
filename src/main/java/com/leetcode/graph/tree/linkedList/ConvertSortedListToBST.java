@@ -4,7 +4,7 @@ import com.Utils;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:05 AM 2020/4/20
  * <a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/">
  *     Convert Sorted List to Binary Search Tree</a>

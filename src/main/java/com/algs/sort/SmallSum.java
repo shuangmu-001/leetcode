@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author wcl
+ * @author zms
  * @date 2:35 下午 2021/5/12
  */
 public class SmallSum implements Test {

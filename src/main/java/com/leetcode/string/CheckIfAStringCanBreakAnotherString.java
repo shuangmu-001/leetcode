@@ -5,7 +5,7 @@ import com.Utils;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:10 PM 2020/5/6
  * <a href="https://leetcode.com/problems/check-if-a-string-can-break-another-string/">
  *     Check If a String Can Break Another String</a>

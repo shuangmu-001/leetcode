@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:53 PM 2020/1/9
  * {@link "https://leetcode.com/problems/magical-string/"}
  */

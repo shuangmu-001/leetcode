@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * <a href="https://leetcode.com/problems/candy/">candy</a>
  *
- * @author wcl
+ * @author zms
  * @date 7:45 下午 2021/9/19
  */
 public class Code05CandyProblem implements Test {

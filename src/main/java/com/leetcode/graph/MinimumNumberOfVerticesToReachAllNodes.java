@@ -3,7 +3,7 @@ package com.leetcode.graph;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:30 下午 2020/8/28
  * <a href="https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/">
  * Minimum Number of Vertices to Reach All Nodes</a>

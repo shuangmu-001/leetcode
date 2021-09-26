@@ -1,7 +1,7 @@
 package com.leetcode.integers;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:12 PM 2020/2/24
  * {@link "https://leetcode.com/problems/airplane-seat-assignment-probability/"}
  */

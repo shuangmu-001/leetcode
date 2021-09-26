@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:45 PM 2020/3/13
  * <a href="https://leetcode.com/problems/binary-tree-paths/">
  *     Binary Tree Paths</a>

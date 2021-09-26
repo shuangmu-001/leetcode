@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:26 PM 2020/3/9
  * {@link "https://leetcode.com/problems/maximum-depth-of-binary-tree/"}
  */

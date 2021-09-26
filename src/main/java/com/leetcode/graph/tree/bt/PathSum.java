@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:09 PM 2020/3/15
  * <a href="https://leetcode.com/problems/path-sum/">
  *     Path Sum</a>

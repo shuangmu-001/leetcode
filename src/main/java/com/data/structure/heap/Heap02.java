@@ -3,7 +3,7 @@ package com.data.structure.heap;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:26 下午 2021/5/11
  */
 public class Heap02<T> {

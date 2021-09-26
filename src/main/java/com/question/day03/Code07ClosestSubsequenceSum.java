@@ -9,7 +9,7 @@ import java.util.TreeSet;
  * <a href="https://leetcode.com/problems/closest-subsequence-sum/">
  * Closest Subsequence Sum</a>
  *
- * @author wcl
+ * @author zms
  * @date 8:31 下午 2021/9/19
  */
 public class Code07ClosestSubsequenceSum implements Test {

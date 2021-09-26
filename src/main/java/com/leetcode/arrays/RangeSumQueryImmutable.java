@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:25 PM 2020/2/27
  * {@link "https://leetcode.com/problems/range-sum-query-immutable/"}
  */

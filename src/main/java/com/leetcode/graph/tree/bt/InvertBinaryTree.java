@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:46 AM 2020/3/10
  * {@link "https://leetcode.com/problems/invert-binary-tree/"}
  */

@@ -9,7 +9,7 @@ import java.util.Arrays;
  * <a href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray/">
  * Shortest Unsorted Continuous Subarray</a>
  *
- * @author wcl
+ * @author zms
  * @date 5:36 下午 2021/9/17
  */
 public class Code06MinLengthForSort implements Test {

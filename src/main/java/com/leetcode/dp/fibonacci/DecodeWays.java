@@ -3,7 +3,7 @@ package com.leetcode.dp.fibonacci;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:43 PM 2020/4/1
  * <a href="https://leetcode.com/problems/decode-ways/">
  *     Decode Ways</a>

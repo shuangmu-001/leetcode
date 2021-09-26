@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:05 PM 2020/3/18
  * <a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/">
  *      Construct Binary Tree from Inorder and Postorder Traversal</a>

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:22 下午 2020/9/9
  * <a href="https://leetcode.com/problems/arithmetic-slices-ii-subsequence/">
  * Arithmetic Slices II - Subsequence</a>

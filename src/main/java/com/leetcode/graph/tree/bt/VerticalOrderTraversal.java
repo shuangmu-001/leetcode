@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:31 AM 2020/3/20
  * <a href="https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/">
  *     Vertical Order Traversal of a Binary Tree</a>

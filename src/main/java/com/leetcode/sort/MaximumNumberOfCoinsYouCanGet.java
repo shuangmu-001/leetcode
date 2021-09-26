@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:28 下午 2020/8/27
  * <a href="https://leetcode.com/problems/maximum-number-of-coins-you-can-get/">Maximum Number of Coins You Can Get</a>
  */

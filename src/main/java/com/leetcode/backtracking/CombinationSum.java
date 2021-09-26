@@ -3,7 +3,7 @@ package com.leetcode.backtracking;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:26 AM 2020/5/12
  * <a href="https://leetcode.com/problems/combination-sum/">
  * Combination Sum</a>

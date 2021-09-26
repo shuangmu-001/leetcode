@@ -5,7 +5,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 /**
  * 判断一个树是否是二叉搜索树
  *
- * @author wcl
+ * @author zms
  * @date 5:02 下午 2021/5/11
  */
 public class IsBST {

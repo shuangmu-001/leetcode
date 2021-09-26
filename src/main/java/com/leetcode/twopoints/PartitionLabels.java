@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:45 上午 2020/9/5
  * <a href="https://leetcode.com/problems/partition-labels/">Partition Labels</a>
  */

@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:32 PM 2019/12/26
  */
 public class ContainerWithMostWater {

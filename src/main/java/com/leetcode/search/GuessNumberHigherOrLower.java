@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:07 PM 2020/4/3
  * <a href="https://leetcode.com/problems/guess-number-higher-or-lower/">
  *     Guess Number Higher or Lower</a>

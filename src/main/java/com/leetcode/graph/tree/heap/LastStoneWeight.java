@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.heap;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:12 PM 2020/4/12
  * TODO <a href="https://leetcode.com/problems/last-stone-weight/">
  *     Last Stone Weight</a>

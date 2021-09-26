@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:59 AM 2020/4/22
  * <a href='https://leetcode.com/problems/string-compression/'>
  *     String Compression</a>

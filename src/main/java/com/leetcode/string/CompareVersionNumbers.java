@@ -3,7 +3,7 @@ package com.leetcode.string;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:18 下午 2020/9/9
  * <a href="https://leetcode.com/problems/compare-version-numbers/">Compare Version Numbers</a>
  */

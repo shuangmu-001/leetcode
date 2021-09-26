@@ -1,7 +1,7 @@
 package com.leetcode.dp;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:25 PM 2020/3/30
  * <a href="https://leetcode.com/problems/maximum-length-of-repeated-subarray/">
  *     Maximum Length of Repeated Subarray</a>

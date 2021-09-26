@@ -2,7 +2,7 @@ package com.leetcode.graph.tree.bt;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:34 PM 2020/3/18
  * TODO <a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">
  *     Binary Tree Maximum Path Sum</a>

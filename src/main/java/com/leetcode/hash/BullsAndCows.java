@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:49 下午 2020/9/10
  * <a href="https://leetcode.com/problems/bulls-and-cows/">Bulls and Cows</a>
  */

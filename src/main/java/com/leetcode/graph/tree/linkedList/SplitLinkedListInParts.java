@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.linkedList;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:37 PM 2020/4/20
  * <a href="https://leetcode.com/problems/split-linked-list-in-parts/">
  * Split Linked List in Parts</a>

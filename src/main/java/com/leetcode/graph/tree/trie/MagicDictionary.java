@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:54 上午 2020/9/18
  * <a href="https://leetcode.com/problems/implement-magic-dictionary/">MagicDictionary</a>
  */

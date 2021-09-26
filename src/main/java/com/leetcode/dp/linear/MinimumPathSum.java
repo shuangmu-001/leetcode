@@ -1,7 +1,7 @@
 package com.leetcode.dp.linear;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:28 PM 2020/4/18
  * <a href="https://leetcode.com/problems/minimum-path-sum/">
  *     Minimum Path Sum</a>

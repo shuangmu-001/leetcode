@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:57 PM 2020/3/17
  * <a href="https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/">
  *     Sum of Nodes with Even-Valued Grandparent</a>

@@ -3,7 +3,7 @@ package com.leetcode.dp.knapsack;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:11 下午 2020/9/11
  * <a href="https://leetcode.com/problems/perfect-squares/">Perfect Squares</a>
  */

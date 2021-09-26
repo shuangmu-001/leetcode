@@ -4,7 +4,7 @@ import com.Utils;
 import com.leetcode.dp.linear.LongestCommonSubsequence;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:30 PM 2020/4/26
  * TODO <a href="https://leetcode.com/problems/longest-palindromic-subsequence/">
  * Longest Palindromic Subsequence</a>

@@ -1,7 +1,7 @@
 package com.leetcode.dp.count;
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:40 PM 2020/2/28
  * {@link "https://leetcode.com/problems/unique-paths/"}
  */

@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:36 PM 2020/4/23
  * <a href="https://leetcode.com/problems/power-of-four/">
  *     Power of Four</a>

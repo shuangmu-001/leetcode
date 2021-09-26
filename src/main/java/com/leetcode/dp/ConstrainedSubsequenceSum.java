@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.TreeMap;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:00 PM 2020/4/30
  * <a href="https://leetcode.com/problems/constrained-subsequence-sum/">
  *     Constrained Subsequence Sum</a>

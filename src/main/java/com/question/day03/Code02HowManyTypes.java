@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * 位操作
  *
- * @author wcl
+ * @author zms
  * @date 7:46 下午 2021/9/19
  */
 public class Code02HowManyTypes implements Test {

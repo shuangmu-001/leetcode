@@ -1,7 +1,7 @@
 package com.leetcode.slidingwindow;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:26 PM 2020/5/7
  * <a href="https://leetcode.com/problems/max-consecutive-ones-iii/">
  *     Max Consecutive Ones III</a>

@@ -1,7 +1,7 @@
 package com.leetcode.math;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:33 下午 2020/9/17
  * <a href="https://leetcode.com/problems/robot-bounded-in-circle/">Robot Bounded In Circle</a>
  */

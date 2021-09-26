@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:29 PM 2020/4/30
  * <a href="https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/532/week-5/3315/">
  *     Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree</a>

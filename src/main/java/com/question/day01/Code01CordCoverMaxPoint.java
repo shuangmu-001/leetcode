@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * 给定一个有序数组arr，代表坐落在X轴上的点，给定一个正数K，代表绳子的长度，返回绳子最多压中几个点？即使绳子边缘处盖住点也算盖住
  *
- * @author wcl
+ * @author zms
  * @date 2:36 下午 2021/9/16
  */
 public class Code01CordCoverMaxPoint implements Test {
@@ -59,7 +59,7 @@ public class Code01CordCoverMaxPoint implements Test {
         int index = right;
         while (left <= right) {
             int mid = left + ((right - left) >> 1);
-            // TODO 重复数据 找到最左边
+            // TODO 二分法，数组中有重复数据 找到最左边，最右边
             if (arr[mid] >= target) {
                 index = mid;
                 right = mid - 1;

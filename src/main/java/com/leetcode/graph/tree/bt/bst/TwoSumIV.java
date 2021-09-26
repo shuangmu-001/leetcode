@@ -9,7 +9,7 @@ import java.util.List;
 import static com.leetcode.graph.tree.bt.bst.ConvertSortedArrayToBST.sortedArrayToBST;
 
 /**
- * @author wcl
+ * @author zms
  * @date 8:12 PM 2020/3/12
  * {@link "https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"}
  * @see TwoSum

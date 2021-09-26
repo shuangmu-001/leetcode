@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:32 PM 2020/5/7
  * <a href="https://leetcode.com/problems/max-consecutive-ones/">
  *     Max Consecutive Ones</a>

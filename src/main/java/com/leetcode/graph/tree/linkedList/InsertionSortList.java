@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.linkedList;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:58 AM 2020/4/15
  * <a href="https://leetcode.com/problems/insertion-sort-list/">
  * Insertion Sort List</a>

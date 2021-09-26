@@ -1,7 +1,7 @@
 package com.leetcode.string;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:37 PM 2020/5/3
  * <a href="https://leetcode.com/problems/ransom-note/">
  *     Ransom Note</a>

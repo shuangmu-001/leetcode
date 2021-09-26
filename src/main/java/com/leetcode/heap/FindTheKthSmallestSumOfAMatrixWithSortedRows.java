@@ -1,7 +1,7 @@
 package com.leetcode.heap;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:46 PM 2020/5/7
  * <a href="https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/">
  *     Find the Kth Smallest Sum of a Matrix With Sorted Rows</a>

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:37 PM 2020/3/18
  * <a href="https://leetcode.com/problems/path-sum-ii/">
  *     Path Sum II</a>

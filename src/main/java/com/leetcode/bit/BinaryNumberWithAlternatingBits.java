@@ -1,7 +1,7 @@
 package com.leetcode.bit;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:13 PM 2020/4/23
  * <a href ="https://leetcode.com/problems/binary-number-with-alternating-bits/">
  *     Binary Number with Alternating Bits</a>

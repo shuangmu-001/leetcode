@@ -3,7 +3,7 @@ package com.leetcode.greedy;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:12 PM 2020/2/26
  * TODO {@link "https://leetcode.com/problems/boats-to-save-people/"}
  * TODO 什么是贪心算法，什么情况下应该想到贪心算法

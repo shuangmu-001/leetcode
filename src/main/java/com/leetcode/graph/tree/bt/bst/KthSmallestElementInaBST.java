@@ -3,7 +3,7 @@ package com.leetcode.graph.tree.bt.bst;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:41 PM 2020/3/18
  * <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/">
  *     Kth Smallest Element in a BST</a>

@@ -4,7 +4,7 @@ package com.leetcode.graph.dfs;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:43 下午 2020/7/24
  * <a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">
  * Number of Nodes in the Sub-Tree With the Same Label</a>
@@ -27,8 +27,8 @@ public class NumberOfNodesInTheSubTreeWithTheSameLabel {
      * <p>
      * Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], labels = "abaedcd"
      * Output: [2,1,1,1,1,1,1]
-     * Explanation: Node 0 has label 'a' and its sub-tree has node 2 with label 'a' as well, thus the answer is 2. Notice that any node is part of its sub-tree.
-     * Node 1 has a label 'b'. The sub-tree of node 1 contains nodes 1,4 and 5, as nodes 4 and 5 have different labels than node 1, the answer is just 1 (the node itself).
+     * Explanation: TreeNode 0 has label 'a' and its sub-tree has node 2 with label 'a' as well, thus the answer is 2. Notice that any node is part of its sub-tree.
+     * TreeNode 1 has a label 'b'. The sub-tree of node 1 contains nodes 1,4 and 5, as nodes 4 and 5 have different labels than node 1, the answer is just 1 (the node itself).
      * Example 2:
      * <p>
      * <p>

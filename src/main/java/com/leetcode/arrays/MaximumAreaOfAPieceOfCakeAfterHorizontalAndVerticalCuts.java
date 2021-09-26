@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:10 下午 2020/6/5
  * <a href="https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/">
  *      Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts</a>

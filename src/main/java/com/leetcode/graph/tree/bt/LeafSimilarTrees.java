@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 1:50 PM 2020/3/9
  * {@link "https://leetcode.com/problems/leaf-similar-trees/"}
  */

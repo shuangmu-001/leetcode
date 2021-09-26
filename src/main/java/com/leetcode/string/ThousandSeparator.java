@@ -3,7 +3,7 @@ package com.leetcode.string;
 import java.util.Locale;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:23 下午 2020/8/28
  * <a href="https://leetcode.com/problems/thousand-separator/">
  * Thousand Separator</a>

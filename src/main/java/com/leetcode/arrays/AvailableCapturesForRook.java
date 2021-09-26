@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 1:04 PM 2020/3/26
  * <a href="https://leetcode.com/problems/available-captures-for-rook/">
  *     Available Captures for Rook</a>

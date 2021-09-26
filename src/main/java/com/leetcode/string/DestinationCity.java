@@ -3,7 +3,7 @@ package com.leetcode.string;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:43 AM 2020/5/7
  * <a href="https://leetcode.com/problems/destination-city/">
  *     Destination City</a>

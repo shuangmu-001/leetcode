@@ -2,7 +2,7 @@ package com.leetcode.dp.interval;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:07 PM 2020/4/1
  * TODO <a href="https://leetcode.com/problems/burst-balloons/">
  * Burst Balloons</a>

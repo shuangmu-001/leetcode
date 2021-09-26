@@ -1,7 +1,7 @@
 package com.leetcode.dp;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:21 AM 2020/4/2
  * <a href="https://leetcode.com/problems/continuous-subarray-sum/">
  *     Continuous Subarray Sum</a>

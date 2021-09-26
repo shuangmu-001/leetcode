@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author wcl
+ * @author zms
  * @date 9:15 下午 2020/10/1
  * TODO <a href="https://leetcode-cn.com/problems/number-of-recent-calls/">Number of Recent Calls</a>
  */

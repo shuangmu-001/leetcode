@@ -3,7 +3,7 @@ package com.leetcode.greedy;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:55 PM 2020/5/13
  * <a href="https://leetcode.com/problems/remove-k-digits/">
  * Remove K Digits</a>

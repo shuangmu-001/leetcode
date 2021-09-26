@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:37 上午 2020/9/8
  * <a href="https://leetcode.com/problems/word-pattern/">Word Pattern</a>
  */

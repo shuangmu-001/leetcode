@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:19 PM 2020/5/6
  * <a href="https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/">
  *     Kids With the Greatest Number of Candies</a>

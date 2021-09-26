@@ -2,7 +2,7 @@ package com.leetcode.dp.linear;
 
 
 /**
- * @author wcl
+ * @author zms
  * @date 12:00 PM 2020/2/28
  * {@link "https://leetcode.com/problems/minimum-falling-path-sum/"}
  * @see Triangle

@@ -1,7 +1,7 @@
 package com.leetcode.dp.fibonacci;
 
 /**
- * @author wcl
+ * @author zms
  * @date 7:44 PM 2020/2/25
  * {@link "https://leetcode.com/problems/climbing-stairs/"}
  */

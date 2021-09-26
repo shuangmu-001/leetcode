@@ -3,7 +3,7 @@ package com.leetcode.bit;
 import com.Utils;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:25 AM 2020/4/24
  * <a href="https://leetcode.com/problems/xor-queries-of-a-subarray/">
  *     XOR Queries of a Subarray</a>

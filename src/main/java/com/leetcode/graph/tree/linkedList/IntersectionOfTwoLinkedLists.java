@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:21 PM 2020/4/9
  * <a href="https://leetcode.com/problems/intersection-of-two-linked-lists/">
  *     Intersection of Two Linked Lists</a>

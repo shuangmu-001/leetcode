@@ -2,21 +2,21 @@ package com.leetcode.graph.tree;
 
 import com.leetcode.graph.tree.PopulatingNextRightPointersInEachNode.Node;
 /**
- * @author wcl
+ * @author zms
  * @date 4:47 PM 2020/3/22
  * <a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/">
- *     Populating Next Right Pointers in Each Node II</a>
+ *     Populating Next Right Pointers in Each TreeNode II</a>
  * @see PopulatingNextRightPointersInEachNode
  */
 public class PopulatingNextRightPointersInEachNodeII {
     /**
      * Given a binary tree
      *
-     * struct Node {
+     * struct TreeNode {
      *   int val;
-     *   Node *left;
-     *   Node *right;
-     *   Node *next;
+     *   TreeNode *left;
+     *   TreeNode *right;
+     *   TreeNode *next;
      * }
      * Populate each next pointer to point to its next right node.
      * If there is no next right node, the next pointer should be set to NULL.

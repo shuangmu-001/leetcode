@@ -3,7 +3,7 @@ package com.leetcode.dp;
 import com.leetcode.dp.linear.LongestCommonSubsequence;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:27 AM 2020/4/27
  * <a href="https://leetcode.com/problems/shortest-common-supersequence/">
  *     Shortest Common Supersequence</a>

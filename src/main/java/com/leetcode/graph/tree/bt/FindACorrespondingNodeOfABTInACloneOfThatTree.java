@@ -1,10 +1,10 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:15 PM 2020/3/17
  * <a href="https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/">
- *     Find a Corresponding Node of a Binary Tree in a Clone of That Tree</a>
+ *     Find a Corresponding TreeNode of a Binary Tree in a Clone of That Tree</a>
  */
 public class FindACorrespondingNodeOfABTInACloneOfThatTree {
 

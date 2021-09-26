@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:36 PM 2020/3/21
  * <a href="https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/">
  *     Smallest Subtree with all the Deepest Nodes</a>

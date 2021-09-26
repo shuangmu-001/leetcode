@@ -1,7 +1,7 @@
 package com.leetcode.math;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:18 PM 2020/5/8
  * <a href="https://leetcode.com/problems/check-if-it-is-a-straight-line/">
  * Check If It Is a Straight Line</a>

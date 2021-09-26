@@ -5,7 +5,7 @@ import com.leetcode.graph.tree.bt.TreeNode;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:28 PM 2020/3/15
  * <a href="https://leetcode.com/problems/find-mode-in-binary-search-tree/">
  *     Find Mode in Binary Search Tree</a>

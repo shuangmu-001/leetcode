@@ -6,7 +6,7 @@ import sun.text.normalizer.CharTrie;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:39 PM 2020/4/23
  * <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">
  * Find First and Last Position of Element in Sorted Array</a>

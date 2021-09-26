@@ -1,7 +1,7 @@
 package com.leetcode.arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 10:58 上午 2020/7/14
  * <a href="https://leetcode.com/problems/number-of-good-pairs/">
  * Number of Good Pairs</a>

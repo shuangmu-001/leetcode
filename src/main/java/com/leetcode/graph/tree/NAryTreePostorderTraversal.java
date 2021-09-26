@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:18 PM 2020/3/8
  * {@link "https://leetcode.com/problems/n-ary-tree-postorder-traversal/"}
  * @see TreeTraversal

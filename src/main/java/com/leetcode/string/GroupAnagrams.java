@@ -3,7 +3,7 @@ package com.leetcode.string;
 import java.util.*;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:50 PM 2020/4/6
  * <a href="https://leetcode.com/problems/group-anagrams/">
  *     Group Anagrams</a>

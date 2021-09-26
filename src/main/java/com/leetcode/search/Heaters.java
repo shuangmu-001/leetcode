@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:12 PM 2020/4/3
  * <a href="https://leetcode.com/problems/heaters/">
  *     Heaters</a>

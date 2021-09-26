@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:31 PM 2020/3/13
  * <a href="https://leetcode.com/problems/sum-of-left-leaves/">
  *     Sum of Left Leaves</a>

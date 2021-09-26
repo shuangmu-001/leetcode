@@ -1,7 +1,7 @@
 package com.leetcode.dp.tree;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:33 AM 2020/2/28
  * TODO {@link "https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/"}
  */

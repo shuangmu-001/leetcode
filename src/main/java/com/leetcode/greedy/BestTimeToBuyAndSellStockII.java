@@ -1,7 +1,7 @@
 package com.leetcode.greedy;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:38 PM 2020/2/28
  * <a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">
  *     Best Time to Buy and Sell Stock II</a>

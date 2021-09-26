@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * Definition for a linked list node.
- * @author wcl
+ * @author zms
  * @date 2:18 PM 2020/4/9
  */
 public class Node {
@@ -35,7 +35,7 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node{" +
+        return "TreeNode{" +
                 "val=" + val +
                 ", next=" + next +
                 ", random=" + random +

@@ -1,7 +1,7 @@
 package com.leetcode.graph.tree.bt;
 
 /**
- * @author wcl
+ * @author zms
  * @date 6:32 PM 2020/3/18
  * <a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/">
  *     Sum Root to Leaf Numbers</a>

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author wcl
+ * @author zms
  * @date 11:07 AM 2020/5/12
  * <a href="https://leetcode.com/problems/combination-sum-iii/">
  * Combination Sum III</a>

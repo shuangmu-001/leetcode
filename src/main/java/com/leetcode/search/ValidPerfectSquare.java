@@ -1,7 +1,7 @@
 package com.leetcode.search;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:21 PM 2020/4/3
  * <a href="https://leetcode.com/problems/valid-perfect-square/">
  *     Valid Perfect Square</a>

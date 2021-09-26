@@ -3,7 +3,7 @@ package com.question.day05;
 import com.leetcode.graph.tree.bt.TreeNode;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:20 下午 2021/9/23
  */
 public class Code02LeftRightSameTreeNumber {

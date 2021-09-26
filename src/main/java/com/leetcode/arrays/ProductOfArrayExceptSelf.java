@@ -3,7 +3,7 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:16 PM 2020/4/15
  * <a href="https://leetcode.com/problems/product-of-array-except-self/">
  *     Product of Array Except Self</a>

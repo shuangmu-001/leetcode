@@ -1,7 +1,7 @@
 package com.leetcode.integers;
 
 /**
- * @author wcl
+ * @author zms
  * @date 4:18 PM 2019/12/23
  */
 public class Palindrome {

@@ -1,7 +1,7 @@
 package com.leetcode.greedy;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:03 下午 2020/9/23
  * <a href="https://leetcode.com/problems/gas-station/">Gas Station</a>
  */

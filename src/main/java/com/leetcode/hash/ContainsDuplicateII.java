@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 2:34 PM 2020/5/12
  * <a href="https://leetcode.com/problems/contains-duplicate-ii/">
  * Contains Duplicate II</a>

@@ -3,7 +3,7 @@ package com.leetcode.stack;
 import java.util.Stack;
 
 /**
- * @author wcl
+ * @author zms
  * @date 3:35 PM 2020/4/9
  * <a href="https://leetcode.com/problems/backspace-string-compare/">
  *     Backspace String Compare</a>

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author wcl
+ * @author zms
  * @date 5:41 PM 2020/4/13
  * TODO <a href="https://leetcode.com/problems/contiguous-array/">
  *     Contiguous Array</a>
