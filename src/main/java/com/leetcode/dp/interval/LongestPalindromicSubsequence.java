@@ -4,10 +4,11 @@ import com.Utils;
 import com.leetcode.dp.linear.LongestCommonSubsequence;
 
 /**
+ * <a href="https://leetcode.com/problems/longest-palindromic-subsequence/">
+ * Longest Palindromic Subsequence</a>
+ *
  * @author zms
  * @date 4:30 PM 2020/4/26
- * TODO <a href="https://leetcode.com/problems/longest-palindromic-subsequence/">
- * Longest Palindromic Subsequence</a>
  * @see LongestCommonSubsequence
  * @see LongestPalindromicSubstring
  */
@@ -78,12 +79,59 @@ public class LongestPalindromicSubsequence {
         return dp[0][n - 1];
     }
 
-    // TODO 记忆化搜索的做法
+    // 暴力递归
+    public static int longestPalindromeSubseq03(String s) {
+        int length = s.length();
+        char[] str = s.toCharArray();
+        return process03(str, 0, length - 1);
+    }
 
+    public static int process03(char[] str, int left, int right) {
+        if (left > right) {
+            return 0;
+        }
+        if (left == right) {
+            return 1;
+        }
+        int ans = 0;
+        if (str[left] == str[right]) {
+            ans = process03(str, left + 1, right - 1) + 2;
+        }
+        int l = process03(str, left, right - 1);
+        int r = process03(str, left + 1, right);
+        return Math.max(ans, Math.max(l, r));
+    }
 
+    // 记忆化搜索的做法
+    public static int longestPalindromeSubseq04(String s) {
+        int length = s.length();
+        char[] str = s.toCharArray();
+        int[][] dp = new int[length][length];
+        return process04(str, 0, length - 1, dp);
+    }
 
+    public static int process04(char[] str, int left, int right, int[][] dp) {
+        if (left > right) {
+            return 0;
+        }
+        if (dp[left][right] > 0) {
+            return dp[left][right];
+        }
+        if (left == right) {
+            dp[left][right] = 1;
+            return dp[left][right];
+        }
+        int ans = 0;
+        if (str[left] == str[right]) {
+            ans = process04(str, left + 1, right - 1, dp) + 2;
+        }
+        int l = process04(str, left, right - 1, dp);
+        int r = process04(str, left + 1, right, dp);
+        dp[left][right] = Math.max(ans, Math.max(l, r));
+        return dp[left][right];
+    }
 
     public static void main(String[] args) {
-        System.out.println(longestPalindromeSubseq1("aacdefcaa") == 7);
+        System.out.println(longestPalindromeSubseq04("aacdefcaa") == 7);
     }
 }
