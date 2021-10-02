@@ -42,7 +42,7 @@ public interface Test {
     }
 
     /**
-     * 随意生成一个二维数组
+     * 随意生成一个二维数组（只包含正整数）
      *
      * @param n 数组的长度
      * @return 数组
@@ -57,6 +57,27 @@ public interface Test {
             }
         }
         return ints;
+    }
+
+    default int[][] genRandomTwoArr(int row, int col, int value, boolean flag) {
+        int[][] arr = new int[row][col];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                if (flag) {
+                    arr[i][j] = (int) (Math.random() * value);
+                } else {
+                    arr[i][j] = (int) (Math.random() * value) * (Math.random() > 0.5 ? -1 : 1);
+                }
+            }
+        }
+        return arr;
+    }
+
+    /**
+     * 随意生成一个二维数组（包含正、负、0）
+     */
+    default int[][] genRandomTwoArr(int row, int col, int value) {
+        return genRandomTwoArr(row, col, value, false);
     }
 
     /**
@@ -124,7 +145,7 @@ public interface Test {
      * @return 目标字符串数组
      */
     default TreeNode genRandomTreeNode(int n) {
-       return null;
+        return null;
     }
 
     // 可以生成一个两个随机数组

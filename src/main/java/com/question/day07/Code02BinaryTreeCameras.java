@@ -115,7 +115,8 @@ public class Code02BinaryTreeCameras {
             cameras += 1;
         }
         // 至少有一个子节点有相机，则当前节点不需要安装相机，当前节点的状态就是没有相机被监控
-        else if (CoverStatus.COVERED_HAS_CAMERA.equals(left.status) || CoverStatus.COVERED_HAS_CAMERA.equals(right.status)) {
+        else if (CoverStatus.COVERED_HAS_CAMERA.equals(left.status) ||
+                CoverStatus.COVERED_HAS_CAMERA.equals(right.status)) {
             status = CoverStatus.COVERED_NO_CAMERA;
         }
         return new Info(status, cameras);
