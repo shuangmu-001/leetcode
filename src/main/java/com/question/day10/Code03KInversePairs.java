@@ -1,5 +1,7 @@
 package com.question.day10;
 
+import com.Test;
+
 /**
  * <a href="https://leetcode.com/problems/k-inverse-pairs-array/">
  * k inverse pairs array</a>
@@ -8,7 +10,7 @@ package com.question.day10;
  * @author zms
  * @date 4:42 下午 2021/9/29
  */
-public class Code03KInversePairs {
+public class Code03KInversePairs implements Test {
     /**
      * 给出两个整数n和k，找出所有包含从1到n的数字，且恰好拥有k个逆序对的不同的数组的个数。
      * 逆序对的定义如下：对于数组的第i个和第j个元素，如果满i<j且a[i]>a[j]，则其为一个逆序对；否则不是。
@@ -46,7 +48,8 @@ public class Code03KInversePairs {
                 if (j == 0) {
                     dp[i][j] = 1;
                 } else {
-                    for (int l = j - i + 1; l <= j; l++) {
+                    int start = Math.max(0, j - i + 1);
+                    for (int l = start; l <= j; l++) {
                         dp[i][j] = (dp[i][j] + dp[i - 1][l]) % mod;
                     }
                 }
@@ -71,11 +74,24 @@ public class Code03KInversePairs {
             for (int j = 1; j <= k; j++) {
                 // 斜率优化
                 dp[i][j] = (dp[i - 1][j] + dp[i][j - 1]) % mod;
-                if(j >= i) {
+                if (j >= i) {
                     dp[i][j] = (dp[i][j] - dp[i - 1][j - i] + mod) % mod;
                 }
             }
         }
         return dp[n][k];
+    }
+
+    @Override
+    public void test(int n) {
+        int num = genRandomNum(n);
+        int k = genRandomNum(n);
+        int ans01 = kInversePairs01(num, k);
+        int ans02 = kInversePairs(num, k);
+        if (ans01 != ans02) {
+            System.out.printf("当前入参[n]:%d;[k]:%d\n", num, k);
+            System.out.printf("结果[ans01]:%d;[ans02]:%d\n", ans01, ans02);
+            throw new RuntimeException();
+        }
     }
 }
