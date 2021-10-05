@@ -55,7 +55,7 @@ public class Code05TheNumberOfWeakCharactersInTheGame implements Test {
         return ans;
     }
 
-    public static int numberOfWeakCharacters(int[][] properties) {
+    public static int numberOfWeakCharacters02(int[][] properties) {
         Arrays.sort(properties, (a, b) -> {
             if (a[0] != b[0]) {
                 return Integer.compare(a[0], b[0]);
@@ -79,7 +79,31 @@ public class Code05TheNumberOfWeakCharactersInTheGame implements Test {
         }
         return ans;
     }
-
+    public static int numberOfWeakCharacters(int[][] properties) {
+    	int maxAttack = 0;
+    	for(int[] property: properties) {
+    		maxAttack = Math.max(maxAttack, property[0]);
+    	}
+    	int[] bucket = new int[maxAttack + 1];
+    	for(int[] p : properties) {
+    		bucket[p[0]] = Math.max(bucket[p[0]], p[1]);
+    	}
+    	int rightMax = bucket[maxAttack];
+    	for(int i = maxAttack; i >= 0; i--) {
+    		if(rightMax > bucket[i]) {
+    			bucket[i] = rightMax;
+    		} else {
+    			rightMax = bucket[i];
+    		}
+    	}
+    	int ans = 0;
+    	for(int[] p : properties) {
+    		if(bucket[p[0] + 1] > p[1]) {
+    			ans++;
+    		}
+    	}
+    	return ans;
+    }
     @Override
     public void test(int n) {
         int[][] properties = genRandomTwoArr(n + 1, 2, 10 ^ 5, true);
