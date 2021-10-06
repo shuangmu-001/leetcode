@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class Main {
 
-    private static final int NUM = 10_000;
+    private static final int NUM = 100;
 
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         if (args.length != 1) {

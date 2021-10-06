@@ -1,4 +1,4 @@
-package com.leetcode.dp.interval;
+package com.leetcode.dp;
 
 import java.util.Random;
 
