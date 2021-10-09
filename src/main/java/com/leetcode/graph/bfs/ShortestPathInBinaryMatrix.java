@@ -4,11 +4,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author zms
- * @date 10:35 下午 2021/2/13
  * TODO 广度优先和深度优先的区别是什么？（在二维是数组甚至多维数组中）
  * <a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/">
- * Shortest Path in Binary Matrix</a>
+ *     Shortest Path in Binary Matrix</a>
+ *
+ * @author zms
+ * @date 10:35 下午 2021/2/13
  */
 public class ShortestPathInBinaryMatrix {
     /**

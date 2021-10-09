@@ -4,11 +4,12 @@ package com.leetcode.graph.dfs;
 import java.util.*;
 
 /**
- * @author zms
- * @date 4:43 下午 2020/7/24
  * <a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">
  * Number of Nodes in the Sub-Tree With the Same Label</a>
  * graph(无向，连通图)的遍历 DFS
+ *
+ * @author zms
+ * @date 4:43 下午 2020/7/24
  */
 public class NumberOfNodesInTheSubTreeWithTheSameLabel {
     /**

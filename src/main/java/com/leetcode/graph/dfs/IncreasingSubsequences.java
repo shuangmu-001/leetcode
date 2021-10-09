@@ -3,9 +3,10 @@ package com.leetcode.graph.dfs;
 import java.util.*;
 
 /**
+ * {@link "https://leetcode.com/problems/increasing-subsequences/"}
+ *
  * @author zms
  * @date 4:57 PM 2020/1/15
- * {@link "https://leetcode.com/problems/increasing-subsequences/"}
  * @see com.leetcode.dp.linear.NumberOfLongestIncreasingSubsequence
  */
 public class IncreasingSubsequences {
@@ -24,7 +25,7 @@ public class IncreasingSubsequences {
      * The range of integer in the given array is [-100,100].
      * The given array may contain duplicates,
      * and two equal integers should also be considered as a special case of increasing sequence.
-     *
+     * <p>
      * Runtime: 18 ms, faster than 46.33% of Java online submissions for Increasing Subsequences.
      * Memory Usage: 57.4 MB, less than 14.29% of Java online submissions for Increasing Subsequences.
      */
@@ -120,8 +121,10 @@ public class IncreasingSubsequences {
         System.out.println(con);
         return results;
     }
+
     // dfs
     static Set<List<Integer>> res;
+
     public static List<List<Integer>> findSubsequences(int[] nums) {
         res = new HashSet<>();
         dfs(nums, 0, new ArrayList<>());
@@ -129,17 +132,17 @@ public class IncreasingSubsequences {
     }
 
     public static void dfs(int[] nums, int start, List<Integer> target) {
-        if(start >= nums.length) {
+        if (start >= nums.length) {
             return;
         }
         int size = target.size();
         for (int i = start; i < nums.length; i++) {
-            if(i != start && nums[i] == nums[i - 1]) {
+            if (i != start && nums[i] == nums[i - 1]) {
                 continue;
             }
-            if(size == 0 || nums[i] >= target.get(size - 1)) {
+            if (size == 0 || nums[i] >= target.get(size - 1)) {
                 target.add(nums[i]);
-                if(target.size() > 1) {
+                if (target.size() > 1) {
                     res.add(new ArrayList<>(target));
                 }
                 dfs(nums, i + 1, target);
@@ -172,7 +175,5 @@ public class IncreasingSubsequences {
         //[[1,2],[1,3],[1,1],[1,1,2],[1,1,3],[1,1,1],[1,1,1,2],[1,1,1,3],[1,2,3],[2,3],[1,2,2],[2,2],[1,1,2,3],[1,2,2,3],[2,2,3],[1,1,2,2],[1,2,2,2],[2,2,2],[1,1,1,2,3],[1,1,2,2,3],[1,2,2,2,3],[2,2,2,3],[1,3,3],[1,2,3,3],[2,3,3],[3,3],[1,1,3,3],[1,1,2,3,3],[1,2,2,3,3],[2,2,3,3],[1,3,3,3],[1,2,3,3,3],[2,3,3,3],[3,3,3]]
 
     }
-
-
 
 }
