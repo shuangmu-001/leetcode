@@ -1,7 +1,5 @@
 package com.leetcode.dp.game;
 
-import com.Utils;
-
 /**
  * 区间dp
  * <a href="https://leetcode.com/problems/stone-game-v/">stone-game-v</a>
@@ -114,7 +112,7 @@ public class StoneGameV {
         return ans;
     }
 
-    // TODO 记忆化搜索转dp
+    // 记忆化搜索转dp
     public static int stoneGameV03(int[] stoneValue) {
         if (stoneValue == null || stoneValue.length <= 1) {
             return 0;
@@ -140,12 +138,61 @@ public class StoneGameV {
                 }
             }
         }
-        Utils.printTwoArrays(dp);
         return dp[0][n - 1];
     }
 
+    // 斜率优化
+    public static int stoneGameV04(int[] stoneValue) {
+        if (stoneValue == null || stoneValue.length <= 1) {
+            return 0;
+        }
+        int n = stoneValue.length;
+        int[] sums = preSum(stoneValue);
+        int[][] dp = new int[n][n];
+        // left[l][mid]  l 到 mid 的所有都小于 mid 到r的和
+        // left[l][mid] ==>  dp[l][r] = Math.max(dp[l][r], lSum + dp[l][i]);
+        int[][] left = new int[n][n];
+        // right[mid][r] l 到 mid 的所有都大于 mid 到r的和
+        // right[mid][l] ==> Math.max(dp[l][r], rSum + dp[i + 1][r]);
+        int[][] right = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            left[i][i] = stoneValue[i];
+            right[i][i] = stoneValue[i];
+        }
+        for (int len = 1; len < n; len++) {
+            for (int l = 0; l + len < n; l++) {
+                int r = l + len;
+                int sum = sums[r + 1] - sums[l];
+                // l 到 r 中总能找到 mid 使得 sum(l..mid) < sum (mid + 1, r) && sum(l..mid + 1) > sum(mid + 2, r);
+                int i = search(sums, l, r);
+                int half = sums[i + 1] - sums[l];
+                if((half << 1) == sum) {
+                    dp[l][r] = Math.max(left[l][i], right[i + 1][r]);
+                } else {
+                    dp[l][r] = Math.max(i == l ? 0 : left[l][i - 1], i == r ? 0 : right[i + 1][r]);
+                }
+                left[l][r] = Math.max(left[l][r - 1], dp[l][r] + sum);
+                right[l][r] = Math.max(right[l + 1][r], dp[l][r] + sum);
+            }
+        }
+        return dp[0][n - 1];
+    }
+
+    private static int search(int[] pre, int l, int r) {
+        int sum = pre[r+1] - pre[l], L = l;
+        while(l < r) {
+            int m = l + ((r - l) >> 1);
+            if(((pre[m+1] - pre[L]) << 1) >= sum) {
+                r = m;
+            } else {
+                l = m + 1;
+            }
+        }
+        return l;
+    }
+
     public static void main(String[] args) {
-        System.out.println(stoneGameV02(new int[]{6, 2, 3, 4, 5, 5}));
-//        System.out.println(stoneGameV03(new int[]{7, 7, 7, 7, 7, 7, 7}));
+        System.out.println(stoneGameV04(new int[]{6, 2, 3, 4, 5, 5}));
+        System.out.println(stoneGameV04(new int[]{7, 7, 7, 7, 7, 7, 7}));
     }
 }
