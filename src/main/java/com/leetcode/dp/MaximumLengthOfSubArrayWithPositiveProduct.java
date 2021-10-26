@@ -71,6 +71,7 @@ public class MaximumLengthOfSubArrayWithPositiveProduct {
         ans[0] = Math.max(ans[0], ans[1]);
         return ans;
     }
+
     // 负数
     public static int getMaxLen(int[] nums) {
         int ans = 0;
