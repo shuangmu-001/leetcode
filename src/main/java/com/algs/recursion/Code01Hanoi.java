@@ -131,7 +131,7 @@ public class Code01Hanoi {
 
     public static void main(String[] args) {
         System.out.println("=======================");
-        hanoi01(3);
+        hanoi01(4);
         System.out.println("=======================");
         hanoi02(3);
     }
