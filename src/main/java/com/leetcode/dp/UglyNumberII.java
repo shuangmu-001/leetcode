@@ -129,9 +129,9 @@ public class UglyNumberII {
 
     public static void main(String[] args) {
 
-        System.out.println(new UglyNumberII().nthUglyNumber(1000) == 51200000);
-        System.out.println(new UglyNumberII().nthUglyNumber(10) == 12);
-        System.out.println(new UglyNumberII().nthUglyNumber(1690) == 2123366400);
+        System.out.println(new UglyNumberII().nthUglyNumber3(1000) == 51200000);
+        System.out.println(new UglyNumberII().nthUglyNumber3(10) == 12);
+        System.out.println(new UglyNumberII().nthUglyNumber3(1690) == 2123366400);
 
     }
 
