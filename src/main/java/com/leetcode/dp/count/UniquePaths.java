@@ -34,7 +34,7 @@ public class UniquePaths {
      *           1 1 1 1
      */
     public static int uniquePaths(int m, int n) {
-        if(n == 1) {
+        if(n == 1 || m == 1) {
             return  1;
         }
 
@@ -55,8 +55,26 @@ public class UniquePaths {
         return result;
     }
 
+    public static int uniquePaths01(int m, int n) {
+        if(n == 1 || m == 1) {
+            return  1;
+        }
+
+        int[][] dp = new int[m + 1][n + 1];
+        for(int i = 1; i <= m; i++) {
+            for(int j = 1; j <= n; j++) {
+                if(i == 1 && j == 1) {
+                    dp[i][j] = 1;
+                } else {
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                }
+            }
+        }
+        return dp[m][n];
+    }
+
     public static void main(String[] args) {
-        System.out.println(uniquePaths(3,2) == 3);
-        System.out.println(uniquePaths(7,3) == 28);
+        System.out.println(uniquePaths01(3,2) == 3);
+        System.out.println(uniquePaths01(7,3) == 28);
     }
 }
