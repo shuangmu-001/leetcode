@@ -21,12 +21,12 @@ public class LongestNiceSubString {
      * Output: "aAa"
      * Explanation: "aAa" is a nice string because 'A/a' is the only letter of the alphabet in s, and both 'A' and 'a' appear.
      * "aAa" is the longest nice substring.
-     *
+     * <p>
      * Example 2:
      * Input: s = "Bb"
      * Output: "Bb"
      * Explanation: "Bb" is a nice string because both 'B' and 'b' appear. The whole string is a substring.
-     *
+     * <p>
      * Example 3:
      * <p>
      * Input: s = "c"
@@ -50,19 +50,17 @@ public class LongestNiceSubString {
         int len = 0;
         char[] str = s.toCharArray();
         int n = str.length;
-        for (int i = 0; i < n; i++) {
-            int up = 0;
-            int lower = 0;
+        for (int i = 0; i + len < n; i++) {
+            int up = 0, lower = 0;
             for (int j = i; j < n; j++) {
                 char c = str[j];
-                if(c >= 'A' && c <= 'Z') {
+                if (c >= 'A' && c <= 'Z') {
                     up |= (1 << (c - 'A'));
-                }
-                if(c >= 'a' && c <= 'z') {
+                } else if (c >= 'a' && c <= 'z') {
                     lower |= (1 << (c - 'a'));
                 }
-                if(up == lower && j - i + 1 > len) {
-                    len = j -i + 1;
+                if (up == lower && j - i + 1 > len) {
+                    len = j - i + 1;
                     start = i;
                 }
             }
