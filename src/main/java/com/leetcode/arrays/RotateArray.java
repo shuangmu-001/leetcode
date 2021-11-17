@@ -3,10 +3,10 @@ package com.leetcode.arrays;
 import com.Utils;
 
 /**
+ * <a href="https://leetcode.com/problems/rotate-array/">Rotate Array</a>
+ *
  * @author zms
  * @date 6:30 PM 2020/4/22
- * <a href="https://leetcode.com/problems/rotate-array/">
- * Rotate Array</a>
  */
 public class RotateArray {
     /**
@@ -32,7 +32,7 @@ public class RotateArray {
      * Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
      * Could you do it in-place with O(1) extra space?
      */
-    public static void rotate(int[] nums, int k) {
+    public static void rotate01(int[] nums, int k) {
         if (nums == null || nums.length <= 1) {
             return;
         }
@@ -42,7 +42,7 @@ public class RotateArray {
             return;
         }
         int index = 0;
-        int next = index + k >= len ? index + k - len : index + k;
+        int next = (index + k) % len;
         int firstNext = next;
         int num = nums[index];
         int count = 0;
@@ -50,11 +50,11 @@ public class RotateArray {
             int temp = nums[next];
             nums[next] = num;
             index = next;
-            next = index + k >= len ? index + k - len : index + k;
+            next = (index + k) % len;
             num = temp;
             if (next == firstNext) {
                 index = next + 1;
-                next = index + k >= len ? index + k - len : index + k;
+                next = (index + k) % len;
                 firstNext = next;
                 if (index < len) {
                     num = nums[index];
@@ -65,10 +65,37 @@ public class RotateArray {
         Utils.printArrays(nums);
     }
 
+    public static void rotate(int[] nums, int k) {
+        if (nums == null || nums.length <= 1) {
+            return;
+        }
+        int len = nums.length;
+        k = k % len;
+        if (k == 0) {
+            return;
+        }
+        int num = nums[0];
+        for (int i = 0, index = 0, start = 0; i < len; i++) {
+            int next = (index + k) % len;
+            int temp = nums[next];
+            nums[next] = num;
+            index = next;
+            num = temp;
+            if (index == start) {
+                index = next + 1;
+                start = index;
+                if (index < len) {
+                    num = nums[index];
+                }
+            }
+        }
+        Utils.printArrays(nums);
+    }
+
     public static void main(String[] args) {
-//        rotate(new int[]{1,2,3,4,5,6}, 2);
-//        rotate(new int[]{1,2,3,4,5,6,7}, 1);
-//        rotate(new int[]{1,2,3,4,5,6,7}, 7);
+        rotate(new int[]{1, 2, 3, 4, 5, 6}, 2);
+        rotate(new int[]{1, 2, 3, 4, 5, 6, 7}, 1);
+        rotate(new int[]{1, 2, 3, 4, 5, 6, 7}, 7);
 //        List<int[]> read = Utils.read("/Users/wangchenglin/Documents/GitHub/leetcode/src/main/resources/rotate.txt", 0);
 //        if (read != null) {
 //            rotate(read.get(0), 11939);
