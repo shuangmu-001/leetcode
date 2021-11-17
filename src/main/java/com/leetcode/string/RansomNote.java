@@ -1,10 +1,10 @@
 package com.leetcode.string;
 
 /**
+ * <a href="https://leetcode.com/problems/ransom-note/">Ransom Note</a>
+ *
  * @author zms
  * @date 3:37 PM 2020/5/3
- * <a href="https://leetcode.com/problems/ransom-note/">
- *     Ransom Note</a>
  */
 public class RansomNote {
     /**
@@ -12,10 +12,10 @@ public class RansomNote {
      * write a function that will return true if the ransom note can be constructed from the magazines ;
      * otherwise, it will return false.
      * Each letter in the magazine string can only be used once in your ransom note.
-     *
+     * <p>
      * Note:
      * You may assume that both strings contain only lowercase letters.
-     *
+     * <p>
      * canConstruct("a", "b") -> false
      * canConstruct("aa", "ab") -> false
      * canConstruct("aa", "aab") -> true
@@ -28,11 +28,11 @@ public class RansomNote {
             int index = c - 'a';
             count[index] += 1;
         }
-        length = magazine.length();
+        length = ransomNote.length();
         for (int i = 0; i < length; i++) {
             char c = ransomNote.charAt(i);
             int index = c - 'a';
-            if(count[index] <= 0) {
+            if (count[index] <= 0) {
                 return false;
             }
             count[index] -= 1;

@@ -1,48 +1,67 @@
-package com.leetcode.hash;
+package com.leetcode.string;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * <a href="https://leetcode.com/problems/valid-anagram/">Valid Anagram</a>
+ *
  * @author zms
  * @date 9:53 下午 2021/2/11
- * <a href="https://leetcode.com/problems/valid-anagram/">
- *     Valid Anagram</a>
  */
 public class ValidAnagram {
     /**
      * Given two strings s and t , write a function to determine if t is an anagram of s.
-     *
+     * <p>
      * Example 1:
-     *
+     * <p>
      * Input: s = "anagram", t = "nagaram"
      * Output: true
      * Example 2:
-     *
+     * <p>
      * Input: s = "rat", t = "car"
      * Output: false
      * Note:
      * You may assume the string contains only lowercase alphabets.
-     *
+     * <p>
      * Follow up:
      * What if the inputs contain unicode characters? How would you adapt your solution to such case?
      */
-    public boolean isAnagram(String s, String t) {
+    public boolean isAnagram01(String s, String t) {
         Map<Character, Integer> map = new HashMap<>();
-        for(char c : s.toCharArray()) {
+        for (char c : s.toCharArray()) {
             map.merge(c, 1, Integer::sum);
         }
-        for(char c : t.toCharArray()) {
-            if(!map.containsKey(c)) {
+        for (char c : t.toCharArray()) {
+            if (!map.containsKey(c)) {
                 return false;
             }
             int count = map.get(c);
-            if(count - 1 == 0) {
+            if (count - 1 == 0) {
                 map.remove(c);
             } else {
                 map.put(c, count - 1);
             }
         }
         return map.isEmpty();
+    }
+
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int n = s.length();
+        int[] nums = new int[n];
+        for (char c : s.toCharArray()) {
+            nums[c - 'a']++;
+        }
+        for (char c : t.toCharArray()) {
+            int index = c - 'a';
+            nums[index]--;
+            if (nums[index] < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
