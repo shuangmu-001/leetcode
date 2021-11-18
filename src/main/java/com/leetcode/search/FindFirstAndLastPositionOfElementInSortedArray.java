@@ -1,16 +1,14 @@
 package com.leetcode.search;
 
 
-import sun.text.normalizer.CharTrie;
-
 import java.util.Arrays;
 
 /**
+ * 二分法 有相同的数，最左边和最右边
+ * <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">Find First and Last Position of Element in Sorted Array</a>
+ *
  * @author zms
  * @date 2:39 PM 2020/4/23
- * <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">
- * Find First and Last Position of Element in Sorted Array</a>
- * 二分法 有相同的数，最左边和最右边
  */
 public class FindFirstAndLastPositionOfElementInSortedArray {
     /**
@@ -74,7 +72,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         return res;
     }
 
-    public static int[] searchRange(int[] arr, int target) {
+    public static int[] searchRange01(int[] arr, int target) {
         if (arr == null || arr.length == 0) {
             return new int[]{-1, -1};
         }
@@ -110,5 +108,32 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         System.out.println(Arrays.toString(searchRange(new int[]{5, 7, 7, 8, 8, 10, 11, 12, 14, 15, 15, 16, 18, 19, 20}, 18)));
         System.out.println(Arrays.toString(searchRange(new int[]{5, 7, 7, 8, 8, 10, 11, 12, 14, 15, 15, 16, 18, 19, 20}, 20)));
         System.out.println(Integer.MAX_VALUE);
+        System.out.println(findTarget(new int[]{5, 7, 7, 8, 8, 10}, 4, 0));
+    }
+    // 找到首个大于目标的数
+    public static int findTarget(int[] arr, int target, int start) {
+        int l = start;
+        int r = arr.length - 1;
+        while (l <= r) {
+            int mid = l + ((r - l) >> 1);
+            if(arr[mid] > target) {
+                r = mid - 1;
+            } else {
+                l = mid + 1;
+            }
+        }
+        return l;
+    }
+
+    public static int[] searchRange(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return new int[]{-1, -1};
+        }
+        int first = findTarget(arr, target - 1, 0);
+        if (arr[first] != target) {
+            return new int[]{-1, -1};
+        }
+        int last = findTarget(arr, target, first);
+        return new int[]{first, last - 1};
     }
 }
