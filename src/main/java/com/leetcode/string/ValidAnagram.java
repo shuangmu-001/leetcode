@@ -50,8 +50,7 @@ public class ValidAnagram {
         if (s.length() != t.length()) {
             return false;
         }
-        int n = s.length();
-        int[] nums = new int[n];
+        int[] nums = new int[26];
         for (char c : s.toCharArray()) {
             nums[c - 'a']++;
         }
