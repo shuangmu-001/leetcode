@@ -1,10 +1,10 @@
 package com.leetcode.graph.tree.bt;
 
 /**
+ * <a href="https://leetcode.com/problems/path-sum/">Path Sum</a>
+ *
  * @author zms
  * @date 7:09 PM 2020/3/15
- * <a href="https://leetcode.com/problems/path-sum/">
- *     Path Sum</a>
  * @see SumOfRootToLeafBinaryNumbers
  */
 public class PathSum {
@@ -28,7 +28,7 @@ public class PathSum {
      * return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
      */
     public boolean result = false;
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSum01(TreeNode root, int sum) {
         hasPathSumHelper(root, 0, sum);
         return result;
     }
@@ -47,5 +47,15 @@ public class PathSum {
         } else if(root.left == null) {
             result = before == sum;
         }
+    }
+
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if(root == null) {
+            return false;
+        }
+        if(root.left == null && root.right == null) {
+            return sum == root.val;
+        }
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val );
     }
 }
