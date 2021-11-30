@@ -3,29 +3,28 @@ package com.leetcode.arrays;
 import java.util.Arrays;
 
 /**
+ * <a href="https://leetcode.com/problems/product-of-array-except-self/">Product of Array Except Self</a>
+ *
  * @author zms
  * @date 3:16 PM 2020/4/15
- * <a href="https://leetcode.com/problems/product-of-array-except-self/">
- *     Product of Array Except Self</a>
  */
 public class ProductOfArrayExceptSelf {
     /**
      * Given an array nums of n integers where n > 1,
      * return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
-     *
+     * <p>
      * Example:
-     *
      * Input:  [1,2,3,4]
      * Output: [24,12,8,6]
      * Constraint: It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array) fits in a 32 bit integer.
-     *
+     * <p>
      * Note: Please solve it without division and in O(n).
-     *
      * Follow up:
      * Could you solve it with constant space complexity?
      * (The output array does not count as extra space for the purpose of space complexity analysis.)
      */
-    int[] res ;
+    int[] res;
+
     public int[] productExceptSelf1(int[] nums) {
         res = new int[nums.length];
         productExceptSelfHelper(nums, 1, -1, 0);
@@ -33,13 +32,13 @@ public class ProductOfArrayExceptSelf {
     }
 
     public void productExceptSelfHelper(int[] nums, int product, int index, int cur) {
-        if(cur >= nums.length) {
-            if(index != -1) {
+        if (cur >= nums.length) {
+            if (index != -1) {
                 res[index] = product;
             }
             return;
         }
-        if(index != -1) {
+        if (index != -1) {
             productExceptSelfHelper(nums, product * nums[cur], index, cur + 1);
         } else {
             productExceptSelfHelper(nums, product, cur, cur + 1);
@@ -47,7 +46,8 @@ public class ProductOfArrayExceptSelf {
         }
 
     }
-    public int[] productExceptSelf(int[] nums) {
+
+    public int[] productExceptSelf02(int[] nums) {
         int[] res = new int[nums.length];
         int[] left = new int[nums.length];
         int[] right = new int[nums.length];
@@ -55,7 +55,7 @@ public class ProductOfArrayExceptSelf {
         right[nums.length - 1] = 1;
         int lIndex = 1;
         int rIndex = nums.length - 2;
-        while(lIndex < nums.length && rIndex >= 0) {
+        while (lIndex < nums.length && rIndex >= 0) {
             left[lIndex] = nums[lIndex - 1] * left[lIndex - 1];
             lIndex++;
             right[rIndex] = right[rIndex + 1] * nums[rIndex + 1];
@@ -63,6 +63,21 @@ public class ProductOfArrayExceptSelf {
         }
         for (int i = 0; i < nums.length; i++) {
             res[i] = left[i] * right[i];
+        }
+        return res;
+    }
+
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] res = new int[n];
+        res[0] = 1;
+        for (int i = 1; i < n; i++) {
+            res[i] = res[i - 1] * nums[i - 1];
+        }
+        int pre = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            res[i] *= pre;
+            pre *= nums[i];
         }
         return res;
     }
