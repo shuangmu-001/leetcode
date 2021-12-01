@@ -30,7 +30,7 @@ public class LongestPalindrome {
      * 1 <= s.length <= 2000
      * s consists of lowercase and/or uppercase English letters only.
      */
-    public static int longestPalindrome(String s) {
+    public static int longestPalindrome01(String s) {
         int n = s.length();
         if (n == 1) {
             return 1;
@@ -55,6 +55,30 @@ public class LongestPalindrome {
                 ans += upper[i];
             } else if ((upper[i] & 1) != 0 && (ans & 1) != 0) {
                 ans += upper[i] - 1;
+            }
+        }
+        return ans;
+    }
+
+    public static int longestPalindrome(String s) {
+        int n = s.length();
+        if (n == 1) {
+            return 1;
+        }
+        int[] count = new int[52];
+        int ans = 0;
+        for (char c : s.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                count[c - 'a']++;
+            } else {
+                count[c - 'A' + 26]++;
+            }
+        }
+        for (int i = 0; i < 52; i++) {
+            if ((count[i] & 1) == 0 || (ans & 1) == 0) {
+                ans += count[i];
+            } else if ((count[i] & 1) != 0 && (ans & 1) != 0) {
+                ans += count[i] - 1;
             }
         }
         return ans;
