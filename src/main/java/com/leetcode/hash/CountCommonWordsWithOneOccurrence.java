@@ -2,7 +2,6 @@ package com.leetcode.hash;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * <a href="https://leetcode.com/problems/count-common-words-with-one-occurrence/">Count Common Words With One Occurrence</a>
@@ -46,14 +45,12 @@ public class CountCommonWordsWithOneOccurrence {
             map01.merge(s, 1, Integer::sum);
         }
         for (String s : words2) {
-            map02.merge(s, 1, Integer::sum);
+            if (map01.containsKey(s) && map01.get(s) == 1) {
+                map02.merge(s, 1, Integer::sum);
+            }
         }
-        return (int) map01.entrySet().stream()
+        return (int) map02.entrySet().stream()
                 .filter(entry -> entry.getValue() == 1)
-                .filter(entry -> map02.containsKey(entry.getKey()))
-                .mapToInt(entry -> map02.get(entry.getKey()))
-                .filter(Objects::nonNull)
-                .filter(value -> value == 1)
                 .count();
     }
 }
