@@ -44,7 +44,7 @@ public class KthSmallestElementInaBST {
      * Seems like a database description, isn't it?
      * Let's use here the same logic as for LRU cache design, and combine an indexing structure (we could keep BST here) with a double linked list.
      */
-    public int kthSmallest(TreeNode root, int k) {
+    public int kthSmallest01(TreeNode root, int k) {
         TreeNode curr = root;
         TreeNode pre;
         while(curr != null) {
@@ -66,5 +66,24 @@ public class KthSmallestElementInaBST {
             }
         }
         return 0;
+    }
+
+    public int kthSmallest(TreeNode root, int k) {
+       inorder(root, k);
+        return ans == null ? 0 : ans;
+    }
+    Integer ans = null;
+    int th = 0;
+    public void inorder(TreeNode node, int k) {
+        if(ans != null || node == null) {
+            return;
+        }
+        inorder(node.left, k);
+        th++;
+        if(th == k) {
+            ans = node.val;
+            return;
+        }
+        inorder(node.right, k);
     }
 }
